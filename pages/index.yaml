@@ -176,21 +176,16 @@ body:       |
     assignments in this course, as they are **learning opportunities** that
     will prepare them for the coding **Contests** and **Interviews**.
 
-    For each of the **two Units** in this course:
+    - Only the `6` **Reading** assignments with the highest scores will be
+    counted towards the final grade.
 
-    - Only the `5` **Reading** assignments with the highest scores from the
-      **Unit** will be counted towards the final grade.
+    - Only the `19` **Challenge** assignments with the highest scores from the
+    will be counted towards the final grade.
 
-    - Only the `10` **Challenge** assignment with the highest scores from the
-      **Unit** will be counted towards the final grade.
+    - `2` **External Contests** will be required for the course.
 
-    - Only the **Internal Contest** with the highest score from the **Unit**
-      will be counted towards the final grade.
-
-    - Only `1` **External Contest** will be required for that **Unit**.
-
-    - A coding **Interview** will be conducted during the last week of the
-      **Unit** to assess your learning and development.
+    - `1` Coding **Interview** will be conducted during the last week of the
+    course to assess your learning and development.
 
     </div>
 
@@ -202,17 +197,16 @@ body:       |
     own private [GitHub] repository. Unless specified otherwise:
 
     - **Reading** assignments are due by **noon** on the **Monday** of the
-      assigned week.
+    assigned week.
 
     - **Challenges** assignments are due by **noon** on the **Saturday** of the
-      assigned week.
+    assigned week.
 
-    - **External Contests** are due by **noon** on the **last day** of each
-      **Unit**.
+    - **External Contests** are due by **noon** on the **last day** of the
+    course.
 
-    - Coding **Interviews** take place during the last week of the **Unit** and
-      must be scheduled with a **teaching assistant** or the **instructor**
-      ahead of time.
+    - Coding **Interviews** take place during the last week of the course and
+    must be scheduled with the **instructor** ahead of time.
 
     </div>
 
@@ -236,27 +230,27 @@ body:       |
         <tr class="info-bg">
           <td class="centered"><span class="badge primary-btn">Readings</span></td>
           <td>Weekly reading assignments.</td>
-          <td class="centered">10 &times; 1</td>
+          <td class="centered">6 &times; 1</td>
         </tr>
         <tr class="caution-bg">
           <td class="centered"><span class="badge caution-btn">Challenges</span></td>
           <td>Weekly homework assignments.</td>
-          <td class="centered">20 &times; 1</td>
-        </tr>
-        <tr class="warning-bg">
-          <td class="centered"><span class="badge warning-btn">Contests</span></td>
-          <td>Unit in-class contests.</td>
-          <td class="centered">2 &times; 1</td>
+          <td class="centered">19 &times; 1</td>
         </tr>
         <tr class="special-bg">
           <td class="centered"><span class="badge special-btn">Externals</span></td>
           <td>Unit external contests.</td>
-          <td class="centered">2 &times; 1</td>
+          <td class="centered">2 &times; 5</td>
         </tr>
         <tr class="danger-bg">
           <td class="centered"><span class="badge danger-btn">Interviews</span></td>
-          <td>Unit coding interviews.</td>
-          <td class="centered">2 &times; 13</td>
+          <td>Coding interview.</td>
+          <td class="centered">20</td>
+        </tr>
+        <tr class="warning-bg">
+          <td class="centered"><span class="badge warning-btn">Participation</span></td>
+          <td>Class attendance and participation.</td>
+          <td class="centered">5</td>
         </tr>
         <tr class="success-bg">
           <td class="centered" style="font-weight: bold;">Total</td>
