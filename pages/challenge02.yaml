@@ -1,0 +1,146 @@
+title:      "Challenge 02: Supercalifragilisticexpialidocious"
+body:       |
+
+    After enjoying watching [The Greatest Showman] outside at the [Movies on
+    the Lawn] in the [Orange County Great Park] many years ago, the
+    instructor's children asked to watch more musicals.  Having grown up a huge
+    Disney fan, the instructor's wife showed them the classic [Mary Poppins].
+
+    <div class="centered">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/uZNRzc3hWvE?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+
+    In this musical, there is a song about the peculiar and ridiculous[^1] word
+    [Supercalifragilisticexpialidocious].  The children thought this word was
+    **hilarious** and asked [Alexa] to play the song over and over[^2].
+    Eventually, they asked [Alexa] to spell the word, but the
+    <strike>spy</strike> <strike>nanny</strike> digital assistant didn't
+    understand their command, so the children (begrudgingly) resorted to asking
+    their parents, who wrote down the word for them on some paper[^3].
+
+    Looking at the word on paper, the children realized they could form many
+    smaller words from the letters in [Supercalifragilisticexpialidocious].
+    For instance, they could form the word `is` three times, `ace` twice, and
+    `rage` once using the letters in [Supercalifragilisticexpialidocious] only
+    up to the number times they occurred in the original word.
+
+    Knowing that their father has a bunch of students who do that computer
+    programming thing, they asked him to request that you write a program that
+    determines the number of times a word could be formed out of the letters of
+    another word.
+
+    [The Greatest Showman]: https://www.imdb.com/title/tt1485796/
+    [Movies on the Lawn]:   https://www.cityofirvine.org/news-media/news-article/celebrate-summer-movies-lawn-great-park
+    [Orange County Great Park]: http://www.cityofirvine.org/orange-county-great-park
+    [Mary Poppins]:         https://www.imdb.com/title/tt0058331/?ref_=fn_al_tt_1
+    [Supercalifragilisticexpialidocious]: https://en.wikipedia.org/wiki/Supercalifragilisticexpialidocious
+    [Alexa]: https://developer.amazon.com/alexa
+
+    ## Input
+
+    The input will be a series of space-separated word pairs, `s1` and `s2`,
+    with one pair per line.  Here is an example input:
+
+        ::text
+        supercalifragilisticexpialidocious is
+        supercalifragilisticexpialidocious ace
+        supercalifragilisticexpialidocious rage
+
+    ## Output
+
+    For each pair of words, your program is to determine how many times `s2`
+    can be formed using the letters in `s1` (where each letter in `s1` is only
+    used up to the number of times it appears in `s1`) and print out that
+    number.
+
+    Here is the output for the example input above:
+
+        ::text
+        3
+        2
+        1
+
+    <div class="alert danger-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "scale-balance" | embed_icon }}</i> Algorithmic Complexity
+
+    For each input test case, your solution should have the following targets:
+
+    <table class="bordered" markdown="1">
+    <tbody markdown="1">
+    <tr class="warning-bg" markdown="1">
+      <td width="165px" markdown="1">**Time Complexity**</td>
+      <td markdown="1">`O(S1 + S2)`, where `S1` and `S2` correspond to the lengths of each word in the input pair.</td>
+    </tr>
+    <tr class="caution-bg" markdown="1">
+      <td markdown="1">**Space Complexity**</td>
+      <td markdown="1">`O(1)`</td>
+    </tr>
+    </tbody>
+    </table>
+
+    Your solution may be below the targets, but it **should not exceed them**.
+
+    </div>
+
+    ## Submission
+
+    To submit your work, follow the same procedure you used for [Reading 00]:
+
+        :::bash
+        $ cd path/to/cse-30872-sp26-assignments     # Go to assignments repository
+        $ git switch master                         # Make sure we are on master
+        $ git pull --rebase                         # Pull any changes from GitHub
+
+        $ git switch -c challenge02                 # Create and checkout challenge02 branch
+
+        $ $EDITOR challenge02/program.cpp           # Edit your code
+
+        $ git add challenge02/program.cpp           # Stage your changes
+        $ git commit -m "Challenge 02: Code"        # Commit your changes
+
+        $ git push -u origin challenge02            # Send changes to GitHub
+
+    To check your code, you can use the `.scripts/check.py` script or [curl]:
+
+        :::bash
+        $ .scripts/check.py
+        Checking challenge02 program.cpp ...
+          Result Success
+            Time  0.00
+          --------------------
+           Score  6.00 /  6.00
+           Grade  1.00 /  1.00
+
+        $ curl -F source=@challenge02/program.cpp https://dredd.h4x0r.space/code/cse-30872-sp26/challenge02
+        {"result": "Success", "score": 6, "time": 0.0016994476318359375, "value": 6, "status": 0}
+
+    <div class="alert warning-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "lifebuoy" | embed_icon }}</i> Acknowledgments
+
+    If you collaborated with any other students or received help AI tools on
+    this assignment, please describe this support in the **description** of
+    your **Pull Request**.
+
+    </div>
+
+    <div class="alert success-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "account-question" | embed_icon }}</i> Graders
+
+    Once you have committed your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the **instructor**.
+
+    </div>
+
+    [Reading 00]: reading00.html
+    [GitHub]: https://github.com
+    [HackerRank]: https://www.hackerrank.com
+    [LeetCode]: https://leetcode.com
+    [SearXNG]: https://searx.ndlug.org
+    [curl]: https://curl.haxx.se/
+
+    [^1]: Quite atrocious; makes you sound precocious.
+    [^2]: I hope the NSA likes Disney musicals.
+    [^3]: After consulting the spellchecker in the cloud (ie. [SearXNG]).
