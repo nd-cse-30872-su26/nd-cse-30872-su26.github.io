@@ -119,13 +119,13 @@ function loadQuiz(quiz_url) {
 	    if (data[question].type == 'single') {
 		for (var response in data[question].responses) {
 		    html.push('<div class="radio"><label>');
-		    html.push(`<input type="radio" name="${question}" value="${response}">${data[question].responses[response]}`);
+		    html.push(`<input type="radio" name="${question}" value="${response}"><p>${data[question].responses[response]}</p>`);
 		    html.push('</label></div>');
 		}
 	    } else if (data[question].type == 'multiple') {
 		for (var response in data[question].responses) {
 		    html.push('<div class="checkbox"><label>');
-		    html.push(`<input type="checkbox" name="${question}" value="${response}"><span>${data[question].responses[response]}</span>`);
+		    html.push(`<input type="checkbox" name="${question}" value="${response}"><p>${data[question].responses[response]}</p>`);
 		    html.push('</label></div>');
 		}
 	    } else if (data[question].type == 'order') {
