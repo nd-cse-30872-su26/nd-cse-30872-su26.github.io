@@ -1,0 +1,3 @@
+*.swp
+data/gradebook.csv
+public/*

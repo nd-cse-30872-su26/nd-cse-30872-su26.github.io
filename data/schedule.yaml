@@ -1,0 +1,142 @@
+- name:     "I/O, Sequence Containers"
+  days:
+      - date:           Mon 06/01
+        topics:         Syllabus, I/O, Complexity, Coding Style
+        assignments:
+          - Reading 00
+
+      - date:           Wed 06/03
+        topics:         Arrays, Lists, Stacks, Queues
+        assignments:
+          - Reading 01
+      
+      - date:           Sat 06/06
+        topics:         Programming Challenges
+        assignments:
+          - Challenge 01
+          - Challenge 02
+          - Challenge 03
+
+- name:     "Searching, Sorting, Associative Containers"
+  days:
+      - date:           Mon 06/08
+        topics:         Searching, Sorting
+        assignments:
+          - Reading 02
+      
+      - date:           Wed 06/10
+        topics:         Associative Containers
+
+      - date:           Sat 06/13
+        topics:         Programming Challenges
+        assignments:
+          - Challenge 04
+          - Challenge 05
+          - Challenge 06
+
+- name:     "Complete Search, Bit Manipulation, Greedy Algorithms"
+  days:
+      - date:           Mon 06/15
+        topics:         Subsets, Permutations, Backtracking
+        assignments:
+          - Reading 03
+      
+      - date:           Wed 06/17
+        topics:         Bit Manipulation, Greedy Algorithms
+      
+      - date:           Sat 06/20
+        topics:         Programming Challenges
+        assignments:
+          - Challenge 07
+          - Challenge 08
+          - Challenge 09
+
+- name:     "Dynamic Programming"
+  days:
+      - date:           Mon 06/22
+        topics:         Memoization
+        assignments:
+          - Reading 04
+      
+      - date:           Wed 06/24
+        topics:         Table Building
+      
+      - date:           Sat 06/27
+        topics:         Programming Challenges
+        assignments:
+          - Challenge 10
+          - Challenge 11
+          - Challenge 12
+
+- name:     "Trees"
+  days:
+      - date:           Mon 06/29
+        topics:         Representation, Traversal
+        assignments:
+          - Reading 05
+      
+      - date:           Wed 07/01
+        topics:         Divide and Conquer
+      
+      - date:           Sat 07/04
+        topics:         Programming Challenges
+        assignments:
+          - Challenge 13
+          - Challenge 14
+          - Challenge 15
+
+- name:     "Graphs I"
+  days:
+      - date:           Mon 07/06
+        topics:         Representation, Traversal
+        assignments:
+          - Reading 05
+      
+      - date:           Wed 07/08
+        topics:         Shortest Paths, Spanning Trees
+      
+      - date:           Sat 07/11
+        topics:         Programming Challenges
+        assignments:
+          - Challenge 16
+          - Challenge 17
+          - Challenge 18
+
+- name:     "Graphs II"
+  days:
+      - date:           Mon 07/13
+        topics:         Topological Sorting
+        assignments:
+          - Reading 05
+      
+      - date:           Wed 07/15
+        topics:         Paths, Flows
+      
+      - date:           Sat 07/18
+        topics:         Programming Challenges
+        assignments:
+          - Challenge 19
+          - Challenge 20
+          - Challenge 21
+
+- name:     "Coding Interviews"
+  days:
+      - date:           Mon 07/20
+        topics:         ''
+        items:
+          - name:       Interview
+      
+      - date:           Tue 07/21
+        topics:         ''
+        items:
+          - name:       Interview
+
+      - date:           Wed 07/22
+        topics:         ''
+        items:
+          - name:       Interview
+      
+      - date:           Wed 07/23
+        topics:         ''
+        items:
+          - name:       Interview

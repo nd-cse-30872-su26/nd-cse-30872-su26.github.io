@@ -1,0 +1,563 @@
+title:      Programming Challenges
+navigation:
+    - name: "Logistics"
+      link: "#logistics"
+    - name: "Schedule"
+      link: "#schedule"
+    - name: "Policies"
+      link: "#policies"
+    - name: "Resources"
+      link: "#resources"
+internal:
+external:
+    staff:      'data/staff.yaml'
+    schedule:   'data/schedule.yaml'
+extensions:
+  - toc
+body:       |
+
+    **CSE 30872** is an elective course in the [Computer Science and
+    Engineering] program at the [University of Notre Dame].  This course
+    encourages the development of practical programming and problem solving
+    skills through extensive practice and guided learning. The bulk of the
+    class revolves around solving *brain-teaser* and *puzzle-type* problems
+    that often appear in programming contests, online challenges, and job
+    interviews.  Additionally, basic software engineering practices such as
+    planning, debugging, testing, and source code management may be discussed.
+
+    [Computer Science and Engineering]: http://cse.nd.edu
+    [University of Notre Dame]: http://www.nd.edu
+
+    <div class="flex-row" markdown="1">
+
+      <div class="flex-col" markdown="1">
+
+      Upon successful completion of this course, students will be able to:
+
+      1. **Parse** a variety of inputs and model problems.
+
+      2. **Utilize** appropriate data structures to represent and solve problems.
+
+      3. **Implement** common problem solving techniques and algorithms.
+
+      4. **Employ** modern software development methods and tools.
+
+      5. **Debug** and **test** code within an automated testing environment.
+
+      </div>
+
+      <div class="centered">
+        <img src="static/img/icpclogo.png" class="responsive" style="max-width: 420px;">
+      </div>
+
+    </div>
+
+    ## Logistics
+
+    <div class="flex-row" markdown="1">
+
+    <div class="flex-col" markdown="1">
+    ### Class Information
+
+    <i class="icon">{{ "calendar-clock" | embed_icon }}</i> Date/Time
+    : **M/W** 7:30 PM - 9:00 PM
+
+    <i class="icon">{{ "video" | embed_icon }}</i> Zoom Meeting
+    : [993 2307 3919](https://notredame.zoom.us/j/99323073919)
+
+    <i class="icon">{{ "email" | embed_icon }}</i> Mailing List
+    : [su26-cse-30872-01-group@nd.edu](mailto:su26-cse-30872-01-group@nd.edu)
+
+    <i class="icon">{{ "slack" | embed_icon }}</i> Slack
+    : [#cse-30872-su26](https://nd-cse.slack.com/messages/cse-30872-su26)
+
+    <i class="icon">{{ "github" | embed_icon }}</i> GitHub
+    : [nd-cse-30872-su26](https://github.com/nd-cse-30872-su26)
+
+    </div>
+
+    <div class="flex-col" markdown="1">
+
+    ### Course Staff
+
+    <dl>
+    {% for p in page.external['staff'] %}
+    <dt><i class="icon">{{ p['icon'] | embed_icon }}</i> {{ p['role'] }}</dt>
+    <dd>{{ p['name'] }} (<a href="mailto:{{ p['netid'] }}@nd.edu">{{ p['netid'] }}@nd.edu</a>)</dd>
+    {% endfor %}
+    </dl>
+
+    </div>
+
+    </div>
+
+    ### Office Hours
+
+    <div class="centered">
+      <img src="static/img/office-hours.png" class="responsive">
+    </div>
+
+    ## Schedule
+
+    <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Topics</th>
+        <th>Assignments</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for unit in page.external['schedule'] %}
+    {% if not unit.get('days') %}
+    <tr>
+    {% if 'break' in unit['name'].lower() %}
+    <td colspan="3" class="unit"><i class="muted">{{ unit['name'] }}</i></td>
+    {% else %}
+    <td colspan="3" class="unit">{{ unit['name'] }}</td>
+    {% endif %}
+    </tr>
+    {% endif %}
+    {% for day in unit['days'] %}
+    <tr>
+      <td class="date">{{ day['date'] }}</td>
+      <td class="topics">
+      {{ day['topics'] }}
+      {% for item in day.get('items', []) %}
+      {% if item['name'].lower().startswith('slide') %}
+      {% set item_color = 'success' %}
+      {% elif item['name'].lower().startswith('panopto') %}
+      {% set item_color = 'info' %}
+      {% elif item['name'].lower().startswith('contest') %}
+      {% set item_color = 'warning' %}
+      {% elif item['name'].lower().startswith('interview') %}
+      {% set item_color = 'danger' %}
+      {% else %}
+      {% set item_color = 'default' %}
+      {% endif %}
+      <a class="badge {{ item_color }}-btn" href="{{ item.get('link', '') }}">{{ item['name'] }}</a>
+      {% endfor %}
+      </td>
+      <td class="assignments">
+      {% for assignment in day.get('assignments', []) %}
+      {% if assignment.lower().startswith('reading') %}
+      {% set assignment_color = 'primary' %}
+      {% elif assignment.lower().startswith('challenge') %}
+      {% set assignment_color = 'caution' %}
+      {% elif assignment.lower().startswith('external') %}
+      {% set assignment_color = 'special' %}
+      {% else %}
+      {% set assignment_color = 'default' %}
+      {% endif %}
+      {% set assignment_link = ''.join(assignment.lower().split()) + '.html' %}
+      <a class="badge {{ assignment_color }}-btn" href="{{ assignment_link }}">{{ assignment }}</a>
+      {% endfor %}
+      </td>
+    </tr>
+    {% endfor %}
+    {% if unit.get('days') %}
+    <tr>
+    <td colspan="3" class="week">&nbsp;</td>
+    </tr>
+    {% endif %}
+    {% endfor %}
+    </tbody>
+    </table>
+
+    <div class="alert success-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "scale-balance" | embed_icon }}</i> Assignments and Assessments
+
+    Students are expected to do all the **Reading** and **Challenge**
+    assignments in this course, as they are **learning opportunities** that
+    will prepare them for the coding **Contests** and **Interviews**.
+
+    For each of the **two Units** in this course:
+
+    - Only the `5` **Reading** assignments with the highest scores from the
+      **Unit** will be counted towards the final grade.
+
+    - Only the `10` **Challenge** assignment with the highest scores from the
+      **Unit** will be counted towards the final grade.
+
+    - Only the **Internal Contest** with the highest score from the **Unit**
+      will be counted towards the final grade.
+
+    - Only `1` **External Contest** will be required for that **Unit**.
+
+    - A coding **Interview** will be conducted during the last week of the
+      **Unit** to assess your learning and development.
+
+    </div>
+
+    <div class="alert info-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "calendar-check" | embed_icon }}</i> Due Dates
+
+    All **Reading** and **Homework** assignments are to be submitted to your
+    own private [GitHub] repository. Unless specified otherwise:
+
+    - **Reading** assignments are due by **noon** on the **Monday** of the
+      assigned week.
+
+    - **Challenges** assignments are due by **noon** on the **Saturday** of the
+      assigned week.
+
+    - **External Contests** are due by **noon** on the **last day** of each
+      **Unit**.
+
+    - Coding **Interviews** take place during the last week of the **Unit** and
+      must be scheduled with a **teaching assistant** or the **instructor**
+      ahead of time.
+
+    </div>
+
+    [GitHub]: https://github.com
+
+    ## Policies
+
+    <div class="flex-row" markdown="1">
+
+    <div class="flex-col" markdown="1">
+
+    ### Coursework
+
+    <table class="bordered">
+      <thead>
+        <th>Component</th>
+        <th>Description</th>
+        <th>Points</th>
+      </thead>
+      <tbody>
+        <tr class="info-bg">
+          <td class="centered"><span class="badge primary-btn">Readings</span></td>
+          <td>Weekly reading assignments.</td>
+          <td class="centered">10 &times; 1</td>
+        </tr>
+        <tr class="caution-bg">
+          <td class="centered"><span class="badge caution-btn">Challenges</span></td>
+          <td>Weekly homework assignments.</td>
+          <td class="centered">20 &times; 1</td>
+        </tr>
+        <tr class="warning-bg">
+          <td class="centered"><span class="badge warning-btn">Contests</span></td>
+          <td>Unit in-class contests.</td>
+          <td class="centered">2 &times; 1</td>
+        </tr>
+        <tr class="special-bg">
+          <td class="centered"><span class="badge special-btn">Externals</span></td>
+          <td>Unit external contests.</td>
+          <td class="centered">2 &times; 1</td>
+        </tr>
+        <tr class="danger-bg">
+          <td class="centered"><span class="badge danger-btn">Interviews</span></td>
+          <td>Unit coding interviews.</td>
+          <td class="centered">2 &times; 13</td>
+        </tr>
+        <tr class="success-bg">
+          <td class="centered" style="font-weight: bold;">Total</td>
+          <td></td>
+          <td class="centered" style="font-weight: bold;">60</td>
+        </tr>
+      </tbody>
+    </table>
+
+    </div>
+
+    <div class="flex-col" markdown="1">
+
+    ### Grading
+
+    <table class="bordered">
+      <thead>
+        <th>Grade</th>
+        <th>Points</th>
+        <th>Grade</th>
+        <th>Points</th>
+        <th>Grade</th>
+        <th>Points</th>
+      </thead>
+      <tbody>
+        <tr class="centered success-bg">
+          <td></td>
+          <td></td>
+          <td style="font-weight: bold;">A</td>
+          <td>60 - 56</td>
+          <td style="font-weight: bold;">A-</td>
+          <td>56 - 54</td>
+        </tr>
+        <tr class="centered info-bg">
+          <td style="font-weight: bold;">B+</td>
+          <td>54 - 52</td>
+          <td style="font-weight: bold;">B</td>
+          <td>52 - 50</td>
+          <td style="font-weight: bold;">B-</td>
+          <td>50 - 48</td>
+        </tr>
+        <tr class="centered caution-bg">
+          <td style="font-weight: bold;">C+</td>
+          <td>48 - 46</td>
+          <td style="font-weight: bold;">C</td>
+          <td>46 - 44</td>
+          <td style="font-weight: bold;">C-</td>
+          <td>44 - 42</td>
+        </tr>
+        <tr class="centered danger-bg">
+          <td style="font-weight: bold;">D&nbsp;</td>
+          <td>42 - 39</td>
+          <td style="font-weight: bold;">F</td>
+          <td>39 - 0&nbsp;</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    </div>
+
+    </div>
+
+    <div class="flex-row" markdown="1">
+
+    <div class="flex-col" markdown="1">
+    ### Participation
+
+    Students are expected to **attend** lecture and **participate** regularly
+    during class by answering questions, contributing to discussions, and
+    helping other students.
+
+    Foreseeable absences should be discussed with the instructor ahead of time.
+    </div>
+
+    <div class="flex-col" markdown="1">
+    ### Community
+
+    Recalling one of the tenets of the [Hacker Ethic]:
+
+    > Hackers should be judged by their hacking, not criteria such as degrees,
+    age, race, sex, or position.
+
+    Students are expected to be **respectful** to their fellow classmates and
+    the course staff.
+
+    </div>
+
+    </div>
+
+
+    <div class="flex-row" markdown="1">
+
+    <div class="flex-col" markdown="1">
+    ### Students with Disabilities
+
+    Any student who has a documented disability and is registered with [Sara
+    Bea Accessibility Services] should speak with the professor as soon as
+    possible regarding accommodations. Students who are not registered should
+    contact the [Center for Student Support and Care].
+
+    </div>
+
+    <div class="flex-col" markdown="1">
+    ### Late Work
+
+    In the case of a serious illness or other excused absence, as defined by
+    university policies, coursework will be accepted late by the same number of
+    days as the excused absence.
+
+    Otherwise, there is an automatic penalty of `25%` **late penalty** for
+    assignments turned in `12` hours pass the specified deadline.
+
+    No assignments will be accepted after the **last day of class** without the
+    permission of the instructor.
+
+    </div>
+
+    </div>
+
+
+    <div class="flex-row" markdown="1">
+
+    <div class="flex-col" markdown="1">
+    ### Classroom Recording
+
+    Lectures in this course will be recorded using **Zoom**, uploaded to
+    **Panopto**, and shared on **Canvas** and the course website.
+
+    Except for faculty and staff who require access, no content will be shared
+    with individuals outside of the course without prior authorization.
+
+    These recordings are jointly copyrighted by the [University of Notre Dame]
+    and the instructor. Posting them to other websites (including YouTube,
+    Facebook, SnapChat, etc.) or elsewhere without express, written permission
+    may result in disciplinary action and possible civil prosecution.
+
+    </div>
+
+    <div class="flex-col" markdown="1">
+    ### Academic Dishonesty
+
+    Any academic misconduct in this course is considered a serious offense, and
+    the strongest possible academic penalties will be pursued for such
+    behavior.
+
+    Students may discuss high-level ideas with other students, but at
+    the time of implementation (i.e. programming), each person must do his/her
+    own work. Use of the Internet as a reference is allowed but directly
+    copying code or other information is cheating. It is cheating to copy, to
+    allow another person to copy, all or part of an exam or a assignment, or to
+    fake program output.
+
+    It is also a violation of the [Undergraduate Academic Code of Honor] to
+    observe and then fail to report academic dishonesty. You are responsible
+    for the security and integrity of your own work.
+
+    </div>
+
+    </div>
+
+    [Hacker Ethic]: https://en.wikipedia.org/wiki/Hacker_ethic
+    [Sara Bea Accessibility Services]: https://supportandcare.nd.edu/for-students/current-students/accessibility-support/
+    [Center for Student Support and Care]: https://supportandcare.nd.edu/
+    [Undergraduate Academic Code of Honor]: https://honorcode.nd.edu/
+
+    <div class="alert danger-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "alert" | embed_icon }}</i> CSE Guide to the Honor Code
+
+    For the assignments in this class, students are allowed to consult printed
+    and online resources and to discuss the class material with other students.
+    Students may also consult **AI Tools** such as **CoPilot** or **ChatGPT**
+    for help explaining concepts, debugging problems, or as a reference.
+    Viewing or consulting solutions, such as those from other students,
+    previous semesters, or generated by **AI Tools** is **never allowed**.
+
+    Likewise, students may copy **small and trivial** snippets from books,
+    online sources, and **AI Tools** as long as you **cite them properly**.
+    However, students **may not copy** solutions or **significant** portions of
+    code from other students or online sources, nor may students generate
+    solutions via **AI Tools**.
+
+    Finally, when preparing for interviews or exams in this class, **students
+    may not access exams from previous semesters**, nor may students look at or
+    copy solutions from other current or former students.  Furthermore,
+    **students may not share the contents** of the interviews or exams with
+    classmates who have not not yet taken the assessments.
+
+    <table class="bordered" style="border-color: var(--danger);">
+      <thead>
+        <th></th>
+        <th>Resources</th>
+        <th>Solutions</th>
+      </thead>
+      <tbody>
+        <tr style="font-weight: bold;">
+          <td class="centered">Consulting</td>
+          <td class="centered success-bg">Allowed</td>
+          <td class="centered danger-bg">Not Allowed</td>
+        </tr>
+        <tr style="font-weight: bold;">
+          <td class="centered">Copying</td>
+          <td class="centered caution-bg">Cite</td>
+          <td class="centered danger-bg">Not Allowed</td>
+        </tr>
+      </tbody>
+    </table>
+
+    See the [CSE Guide to the Honor Code] for definitions of the above terms and
+    specific examples of what is allowed and not allowed when consulting
+    resources.
+
+    If students are unclear about whether certain forms of consultation or
+    common work are acceptable or what the standards for citation are, then
+    students are responsible for consulting with the instructor to resolve any
+    confusion.
+
+    If the instructor sees behavior that is, in their judgement, academically
+    dishonest, they are required to file either an [Honor Code Violation Report] or
+    a formal report to the [College of Engineering] Honesty Committee.
+
+
+    </div>
+
+    [CSE Guide to the Honor Code]: https://cse.nd.edu/undergraduate/cse-guide-to-the-honor-code/
+    [Honor Code Violation Report]: https://honorcode.nd.edu/honor-code-violation-report/
+    [College of Engineering]: https://engineering.nd.edu/
+
+    ## Resources
+
+    <div class="flex-row" markdown="1">
+
+    <div class="flex-col" markdown="1">
+    ### Information
+
+    -   <div class="flex-col">
+
+        [Competitive Programmer's Handbook](https://cses.fi/book.html)
+
+        This is our main **textbook** for the semester.  It contains background
+        information regarding the algorithms and data structures we will be
+        utilizing and implementing to solve different problems.
+
+    -   <div class="flex-col">
+
+        [Competitive Programming Library](https://github.com/AhmadElsagheer/Competitive-programming-library/tree/master/curriculum)
+
+        This contains a list of topics and links to resources to help students
+        become competitive at programming contests.
+
+    -   <div class="flex-col">
+
+        [Top 10 Algorithms and Data Structures for Competitive Programming](http://www.geeksforgeeks.org/top-algorithms-and-data-structures-for-competitive-programming/)
+
+        This is another list of common data structures and algorithms.
+
+    -   <div class="flex-col">
+
+        [Neetcode](https://neetcode.io/)
+
+        This is curated list of programming challenges useful for technical interviews.
+
+    </div>
+
+    <div class="flex-col" markdown="1">
+    ### Online Challenges
+
+    -   <div class="flex-col">
+
+        [HackerRank](http://www.hackerrank.com/)
+
+        This site is contains a variety of programming challenges similar to
+        what is found in ACM programming contests. It also includes
+        non-programming contest type problems as well and is a platform for
+        evaluating and testing your programming skills.
+
+    -   <div class="flex-col">
+
+        [LeetCode](https://leetcode.com/)
+
+        This is another site that contains a variety of programming challenges.
+
+    -   <div class="flex-col">
+
+        [TopCoder](https://www.topcoder.com/challenges/)
+
+        This is another site that contains a variety of programming challenges.
+        It also periodically runs contests and provides learning resources.</p>
+
+    -   <div class="flex-col">
+
+        [Project Euler](https://projecteuler.net/)
+
+        This site is a large set of mathematical and programming problems
+        designed to test your abilities and sharpen your skills. The problems
+        make for good practice.
+
+    -   <div class="flex-col">
+
+        [Advent of Code](https://adventofcode.com/)
+
+        This is an annual series of programming challenges.
+
+    </div>
+
+    </div>
