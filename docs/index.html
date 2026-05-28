@@ -1,0 +1,696 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="static/ico/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="static/ico/favicon-16x16.png">
+<link rel="manifest" href="static/ico/site.webmanifest">
+<!-- Stylesheets -->
+<link rel="stylesheet" href="static/css/pnutzh4x0r.css">
+<title>CSE 30872 Programming Challenges (Summer 2026)</title>
+</head>
+<body>
+<header>
+<a class="logo" href="index.html">
+    <h1>Programming Challenges</h1>
+</a>
+<nav>
+    <ul>
+        <li><a href="#logistics"><h4>Logistics</h4></a></li>
+        <li><a href="#schedule"><h4>Schedule</h4></a></li>
+        <li><a href="#policies"><h4>Policies</h4></a></li>
+        <li><a href="#resources"><h4>Resources</h4></a></li>
+        </ul>
+</nav></header>
+<main>
+<p><strong>CSE 30872</strong> is an elective course in the <a href="http://cse.nd.edu">Computer Science and
+Engineering</a> program at the <a href="http://www.nd.edu">University of Notre Dame</a>.  This course
+encourages the development of practical programming and problem solving
+skills through extensive practice and guided learning. The bulk of the
+class revolves around solving <em>brain-teaser</em> and <em>puzzle-type</em> problems
+that often appear in programming contests, online challenges, and job
+interviews.  Additionally, basic software engineering practices such as
+planning, debugging, testing, and source code management may be discussed.</p>
+<div class="flex-row">
+<div class="flex-col">
+<p>Upon successful completion of this course, students will be able to:</p>
+<ol>
+<li>
+<p><strong>Parse</strong> a variety of inputs and model problems.</p>
+</li>
+<li>
+<p><strong>Utilize</strong> appropriate data structures to represent and solve problems.</p>
+</li>
+<li>
+<p><strong>Implement</strong> common problem solving techniques and algorithms.</p>
+</li>
+<li>
+<p><strong>Employ</strong> modern software development methods and tools.</p>
+</li>
+<li>
+<p><strong>Debug</strong> and <strong>test</strong> code within an automated testing environment.</p>
+</li>
+</ol>
+</div>
+<div class="centered">
+    <img src="static/img/icpclogo.png" class="responsive" style="max-width: 420px;">
+  </div>
+</div>
+<h2 id="logistics">Logistics<a class="headerlink" href="#logistics" title="Permanent link">&para;</a></h2>
+<div class="flex-row">
+<div class="flex-col">
+<h3 id="class-information">Class Information<a class="headerlink" href="#class-information" title="Permanent link">&para;</a></h3>
+<dl>
+<dt><i class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>calendar-clock</title><path d="M15,13H16.5V15.82L18.94,17.23L18.19,18.53L15,16.69V13M19,8H5V19H9.67C9.24,18.09 9,17.07 9,16A7,7 0 0,1 16,9C17.07,9 18.09,9.24 19,9.67V8M5,21C3.89,21 3,20.1 3,19V5C3,3.89 3.89,3 5,3H6V1H8V3H16V1H18V3H19A2,2 0 0,1 21,5V11.1C22.24,12.36 23,14.09 23,16A7,7 0 0,1 16,23C14.09,23 12.36,22.24 11.1,21H5M16,11.15A4.85,4.85 0 0,0 11.15,16C11.15,18.68 13.32,20.85 16,20.85A4.85,4.85 0 0,0 20.85,16C20.85,13.32 18.68,11.15 16,11.15Z" /></svg>
+</i> Date/Time</dt>
+<dd><strong>M/W</strong> 7:30 PM - 9:00 PM</dd>
+<dt><i class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>video</title><path d="M17,10.5V7A1,1 0 0,0 16,6H4A1,1 0 0,0 3,7V17A1,1 0 0,0 4,18H16A1,1 0 0,0 17,17V13.5L21,17.5V6.5L17,10.5Z" /></svg>
+</i> Zoom Meeting</dt>
+<dd><a href="https://notredame.zoom.us/j/99323073919">993 2307 3919</a></dd>
+<dt><i class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>email</title><path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" /></svg>
+</i> Mailing List</dt>
+<dd><a href="mailto:su26-cse-30872-01-group@nd.edu">su26-cse-30872-01-group@nd.edu</a></dd>
+<dt><i class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>slack</title><path d="M6,15A2,2 0 0,1 4,17A2,2 0 0,1 2,15A2,2 0 0,1 4,13H6V15M7,15A2,2 0 0,1 9,13A2,2 0 0,1 11,15V20A2,2 0 0,1 9,22A2,2 0 0,1 7,20V15M9,7A2,2 0 0,1 7,5A2,2 0 0,1 9,3A2,2 0 0,1 11,5V7H9M9,8A2,2 0 0,1 11,10A2,2 0 0,1 9,12H4A2,2 0 0,1 2,10A2,2 0 0,1 4,8H9M17,10A2,2 0 0,1 19,8A2,2 0 0,1 21,10A2,2 0 0,1 19,12H17V10M16,10A2,2 0 0,1 14,12A2,2 0 0,1 12,10V5A2,2 0 0,1 14,3A2,2 0 0,1 16,5V10M14,18A2,2 0 0,1 16,20A2,2 0 0,1 14,22A2,2 0 0,1 12,20V18H14M14,17A2,2 0 0,1 12,15A2,2 0 0,1 14,13H19A2,2 0 0,1 21,15A2,2 0 0,1 19,17H14Z" /></svg>
+</i> Slack</dt>
+<dd><a href="https://nd-cse.slack.com/messages/cse-30872-su26">#cse-30872-su26</a></dd>
+<dt><i class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>github</title><path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" /></svg>
+</i> GitHub</dt>
+<dd><a href="https://github.com/nd-cse-30872-su26">nd-cse-30872-su26</a></dd>
+</dl>
+</div>
+<div class="flex-col">
+<h3 id="course-staff">Course Staff<a class="headerlink" href="#course-staff" title="Permanent link">&para;</a></h3>
+<dl>
+<dt><i class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>human-male-board</title><path d="M20,17A2,2 0 0,0 22,15V4A2,2 0 0,0 20,2H9.46C9.81,2.61 10,3.3 10,4H20V15H11V17M15,7V9H9V22H7V16H5V22H3V14H1.5V9A2,2 0 0,1 3.5,7H15M8,4A2,2 0 0,1 6,6A2,2 0 0,1 4,4A2,2 0 0,1 6,2A2,2 0 0,1 8,4Z" /></svg>
+</i> Instructor</dt>
+<dd>Peter Bui (<a href="mailto:pbui@nd.edu">pbui@nd.edu</a>)</dd>
+</dl>
+</div>
+</div>
+<h3 id="office-hours">Office Hours<a class="headerlink" href="#office-hours" title="Permanent link">&para;</a></h3>
+<div class="centered">
+  <img src="static/img/office-hours.png" class="responsive">
+</div>
+
+<h2 id="schedule">Schedule<a class="headerlink" href="#schedule" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+  <tr>
+    <th>Date</th>
+    <th>Topics</th>
+    <th>Assignments</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+  <td class="date">Mon 06/01</td>
+  <td class="topics">
+    Syllabus, I/O, Complexity, Coding Style
+      </td>
+  <td class="assignments">
+            <a class="badge primary-btn" href="reading00.html">Reading 00</a>
+    </td>
+</tr>
+<tr>
+  <td class="date">Wed 06/03</td>
+  <td class="topics">
+    Arrays, Lists, Stacks, Queues
+      </td>
+  <td class="assignments">
+            <a class="badge primary-btn" href="reading01.html">Reading 01</a>
+    </td>
+</tr>
+<tr>
+  <td class="date">Sat 06/06</td>
+  <td class="topics">
+    <i class="muted">Programming Challenges</i>
+      </td>
+  <td class="assignments">
+            <a class="badge caution-btn" href="challenge01.html">Challenge 01</a>
+            <a class="badge caution-btn" href="challenge02.html">Challenge 02</a>
+            <a class="badge caution-btn" href="challenge03.html">Challenge 03</a>
+    </td>
+</tr>
+<tr>
+<td colspan="3" class="week">&nbsp;</td>
+</tr>
+<tr>
+  <td class="date">Mon 06/08</td>
+  <td class="topics">
+    Searching, Sorting
+      </td>
+  <td class="assignments">
+            <a class="badge primary-btn" href="reading02.html">Reading 02</a>
+    </td>
+</tr>
+<tr>
+  <td class="date">Wed 06/10</td>
+  <td class="topics">
+    Associative Containers
+      </td>
+  <td class="assignments">
+    </td>
+</tr>
+<tr>
+  <td class="date">Sat 06/13</td>
+  <td class="topics">
+    <i class="muted">Programming Challenges</i>
+      </td>
+  <td class="assignments">
+            <a class="badge caution-btn" href="challenge04.html">Challenge 04</a>
+            <a class="badge caution-btn" href="challenge05.html">Challenge 05</a>
+            <a class="badge caution-btn" href="challenge06.html">Challenge 06</a>
+    </td>
+</tr>
+<tr>
+<td colspan="3" class="week">&nbsp;</td>
+</tr>
+<tr>
+  <td class="date">Mon 06/15</td>
+  <td class="topics">
+    Subsets, Permutations, Backtracking
+      </td>
+  <td class="assignments">
+            <a class="badge primary-btn" href="reading03.html">Reading 03</a>
+    </td>
+</tr>
+<tr>
+  <td class="date">Wed 06/17</td>
+  <td class="topics">
+    Bit Manipulation, Greedy Algorithms
+      </td>
+  <td class="assignments">
+    </td>
+</tr>
+<tr>
+  <td class="date">Sat 06/20</td>
+  <td class="topics">
+    <i class="muted">Programming Challenges</i>
+      </td>
+  <td class="assignments">
+            <a class="badge caution-btn" href="challenge07.html">Challenge 07</a>
+            <a class="badge caution-btn" href="challenge08.html">Challenge 08</a>
+            <a class="badge caution-btn" href="challenge09.html">Challenge 09</a>
+    </td>
+</tr>
+<tr>
+<td colspan="3" class="week">&nbsp;</td>
+</tr>
+<tr>
+  <td class="date">Mon 06/22</td>
+  <td class="topics">
+    Memoization
+      </td>
+  <td class="assignments">
+            <a class="badge primary-btn" href="reading04.html">Reading 04</a>
+    </td>
+</tr>
+<tr>
+  <td class="date">Wed 06/24</td>
+  <td class="topics">
+    Table Building
+      </td>
+  <td class="assignments">
+    </td>
+</tr>
+<tr>
+  <td class="date">Sat 06/27</td>
+  <td class="topics">
+    <i class="muted">Programming Challenges</i>
+      </td>
+  <td class="assignments">
+            <a class="badge caution-btn" href="challenge10.html">Challenge 10</a>
+            <a class="badge caution-btn" href="challenge11.html">Challenge 11</a>
+            <a class="badge caution-btn" href="challenge12.html">Challenge 12</a>
+    </td>
+</tr>
+<tr>
+<td colspan="3" class="week">&nbsp;</td>
+</tr>
+<tr>
+  <td class="date">Mon 06/29</td>
+  <td class="topics">
+    Representation, Traversal
+      </td>
+  <td class="assignments">
+            <a class="badge primary-btn" href="reading05.html">Reading 05</a>
+    </td>
+</tr>
+<tr>
+  <td class="date">Wed 07/01</td>
+  <td class="topics">
+    Divide and Conquer
+      </td>
+  <td class="assignments">
+    </td>
+</tr>
+<tr>
+  <td class="date">Sat 07/04</td>
+  <td class="topics">
+    <i class="muted">Programming Challenges</i>
+      </td>
+  <td class="assignments">
+            <a class="badge caution-btn" href="challenge13.html">Challenge 13</a>
+            <a class="badge caution-btn" href="challenge14.html">Challenge 14</a>
+            <a class="badge caution-btn" href="challenge15.html">Challenge 15</a>
+    </td>
+</tr>
+<tr>
+<td colspan="3" class="week">&nbsp;</td>
+</tr>
+<tr>
+  <td class="date">Mon 07/06</td>
+  <td class="topics">
+    Representation, Traversal
+      </td>
+  <td class="assignments">
+            <a class="badge primary-btn" href="reading05.html">Reading 05</a>
+    </td>
+</tr>
+<tr>
+  <td class="date">Wed 07/08</td>
+  <td class="topics">
+    Shortest Paths, Spanning Trees
+      </td>
+  <td class="assignments">
+    </td>
+</tr>
+<tr>
+  <td class="date">Sat 07/11</td>
+  <td class="topics">
+    <i class="muted">Programming Challenges</i>
+      </td>
+  <td class="assignments">
+            <a class="badge caution-btn" href="challenge16.html">Challenge 16</a>
+            <a class="badge caution-btn" href="challenge17.html">Challenge 17</a>
+            <a class="badge caution-btn" href="challenge18.html">Challenge 18</a>
+    </td>
+</tr>
+<tr>
+<td colspan="3" class="week">&nbsp;</td>
+</tr>
+<tr>
+  <td class="date">Mon 07/13</td>
+  <td class="topics">
+    Topological Sorting
+      </td>
+  <td class="assignments">
+            <a class="badge primary-btn" href="reading05.html">Reading 05</a>
+    </td>
+</tr>
+<tr>
+  <td class="date">Wed 07/15</td>
+  <td class="topics">
+    Paths, Flows
+      </td>
+  <td class="assignments">
+    </td>
+</tr>
+<tr>
+  <td class="date">Sat 07/18</td>
+  <td class="topics">
+    <i class="muted">Programming Challenges</i>
+      </td>
+  <td class="assignments">
+            <a class="badge caution-btn" href="challenge19.html">Challenge 19</a>
+            <a class="badge caution-btn" href="challenge20.html">Challenge 20</a>
+            <a class="badge caution-btn" href="challenge21.html">Challenge 21</a>
+    </td>
+</tr>
+<tr>
+<td colspan="3" class="week">&nbsp;</td>
+</tr>
+<tr>
+  <td class="date">Mon 07/20</td>
+  <td class="topics">
+    
+            <a class="badge danger-btn" href="">Interview</a>
+    </td>
+  <td class="assignments">
+    </td>
+</tr>
+<tr>
+  <td class="date">Tue 07/21</td>
+  <td class="topics">
+    
+            <a class="badge danger-btn" href="">Interview</a>
+    </td>
+  <td class="assignments">
+    </td>
+</tr>
+<tr>
+  <td class="date">Wed 07/22</td>
+  <td class="topics">
+    
+            <a class="badge danger-btn" href="">Interview</a>
+    </td>
+  <td class="assignments">
+    </td>
+</tr>
+<tr>
+  <td class="date">Thu 07/23</td>
+  <td class="topics">
+    
+            <a class="badge danger-btn" href="">Interview</a>
+    </td>
+  <td class="assignments">
+    </td>
+</tr>
+<tr>
+<td colspan="3" class="week">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+<div class="alert success-bg">
+<h3 id="scale-balance-embed_icon-assignments-and-assessments"><i class="icon icon-medium"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>scale-balance</title><path d="M12,3C10.73,3 9.6,3.8 9.18,5H3V7H4.95L2,14C1.53,16 3,17 5.5,17C8,17 9.56,16 9,14L6.05,7H9.17C9.5,7.85 10.15,8.5 11,8.83V20H2V22H22V20H13V8.82C13.85,8.5 14.5,7.85 14.82,7H17.95L15,14C14.53,16 16,17 18.5,17C21,17 22.56,16 22,14L19.05,7H21V5H14.83C14.4,3.8 13.27,3 12,3M12,5A1,1 0 0,1 13,6A1,1 0 0,1 12,7A1,1 0 0,1 11,6A1,1 0 0,1 12,5M5.5,10.25L7,14H4L5.5,10.25M18.5,10.25L20,14H17L18.5,10.25Z" /></svg>
+</i> Assignments and Assessments<a class="headerlink" href="#scale-balance-embed_icon-assignments-and-assessments" title="Permanent link">&para;</a></h3>
+<p>Students are expected to do all the <strong>Reading</strong> and <strong>Challenge</strong>
+assignments in this course, as they are <strong>learning opportunities</strong> that
+will prepare them for the coding <strong>Contests</strong> and <strong>Interviews</strong>.</p>
+<ul>
+<li>
+<p>Only the <code>6</code> <strong>Reading</strong> assignments with the highest scores will be
+counted towards the final grade.</p>
+</li>
+<li>
+<p>Only the <code>19</code> <strong>Challenge</strong> assignments with the highest scores from the
+will be counted towards the final grade.</p>
+</li>
+<li>
+<p><code>2</code> <strong>External Contests</strong> will be required for the course.</p>
+</li>
+<li>
+<p><code>1</code> Coding <strong>Interview</strong> will be conducted during the last week of the
+course to assess your learning and development.</p>
+</li>
+</ul>
+</div>
+<div class="alert info-bg">
+<h3 id="calendar-check-embed_icon-due-dates"><i class="icon icon-medium"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>calendar-check</title><path d="M19,19H5V8H19M19,3H18V1H16V3H8V1H6V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M16.53,11.06L15.47,10L10.59,14.88L8.47,12.76L7.41,13.82L10.59,17L16.53,11.06Z" /></svg>
+</i> Due Dates<a class="headerlink" href="#calendar-check-embed_icon-due-dates" title="Permanent link">&para;</a></h3>
+<p>All <strong>Reading</strong> and <strong>Homework</strong> assignments are to be submitted to your
+own private <a href="https://github.com">GitHub</a> repository. Unless specified otherwise:</p>
+<ul>
+<li>
+<p><strong>Reading</strong> assignments are due by <strong>noon</strong> on the <strong>Monday</strong> of the
+assigned week.</p>
+</li>
+<li>
+<p><strong>Challenges</strong> assignments are due by <strong>noon</strong> on the <strong>Saturday</strong> of the
+assigned week.</p>
+</li>
+<li>
+<p><strong>External Contests</strong> are due by <strong>noon</strong> on the <strong>last day</strong> of the
+course.</p>
+</li>
+<li>
+<p>Coding <strong>Interviews</strong> take place during the last week of the course and
+must be scheduled with the <strong>instructor</strong> ahead of time.</p>
+</li>
+</ul>
+</div>
+<h2 id="policies">Policies<a class="headerlink" href="#policies" title="Permanent link">&para;</a></h2>
+<div class="flex-row">
+<div class="flex-col">
+<h3 id="coursework">Coursework<a class="headerlink" href="#coursework" title="Permanent link">&para;</a></h3>
+<table class="bordered">
+<thead>
+    <th>Component</th>
+    <th>Description</th>
+    <th>Points</th>
+  </thead>
+<tbody>
+    <tr class="info-bg">
+      <td class="centered"><span class="badge primary-btn">Readings</span></td>
+      <td>Weekly reading assignments.</td>
+      <td class="centered">6 &times; 1</td>
+    </tr>
+    <tr class="caution-bg">
+      <td class="centered"><span class="badge caution-btn">Challenges</span></td>
+      <td>Weekly homework assignments.</td>
+      <td class="centered">19 &times; 1</td>
+    </tr>
+    <tr class="special-bg">
+      <td class="centered"><span class="badge special-btn">Externals</span></td>
+      <td>Unit external contests.</td>
+      <td class="centered">2 &times; 5</td>
+    </tr>
+    <tr class="danger-bg">
+      <td class="centered"><span class="badge danger-btn">Interviews</span></td>
+      <td>Coding interview.</td>
+      <td class="centered">20</td>
+    </tr>
+    <tr class="warning-bg">
+      <td class="centered"><span class="badge warning-btn">Participation</span></td>
+      <td>Class attendance and participation.</td>
+      <td class="centered">5</td>
+    </tr>
+    <tr class="success-bg">
+      <td class="centered" style="font-weight: bold;">Total</td>
+      <td></td>
+      <td class="centered" style="font-weight: bold;">60</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="flex-col">
+<h3 id="grading">Grading<a class="headerlink" href="#grading" title="Permanent link">&para;</a></h3>
+<table class="bordered">
+<thead>
+    <th>Grade</th>
+    <th>Points</th>
+    <th>Grade</th>
+    <th>Points</th>
+    <th>Grade</th>
+    <th>Points</th>
+  </thead>
+<tbody>
+    <tr class="centered success-bg">
+      <td></td>
+      <td></td>
+      <td style="font-weight: bold;">A</td>
+      <td>60 - 56</td>
+      <td style="font-weight: bold;">A-</td>
+      <td>56 - 54</td>
+    </tr>
+    <tr class="centered info-bg">
+      <td style="font-weight: bold;">B+</td>
+      <td>54 - 52</td>
+      <td style="font-weight: bold;">B</td>
+      <td>52 - 50</td>
+      <td style="font-weight: bold;">B-</td>
+      <td>50 - 48</td>
+    </tr>
+    <tr class="centered caution-bg">
+      <td style="font-weight: bold;">C+</td>
+      <td>48 - 46</td>
+      <td style="font-weight: bold;">C</td>
+      <td>46 - 44</td>
+      <td style="font-weight: bold;">C-</td>
+      <td>44 - 42</td>
+    </tr>
+    <tr class="centered danger-bg">
+      <td style="font-weight: bold;">D&nbsp;</td>
+      <td>42 - 39</td>
+      <td style="font-weight: bold;">F</td>
+      <td>39 - 0&nbsp;</td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+<div class="flex-row">
+<div class="flex-col">
+<h3 id="participation">Participation<a class="headerlink" href="#participation" title="Permanent link">&para;</a></h3>
+<p>Students are expected to <strong>attend</strong> lecture and <strong>participate</strong> regularly
+during class by answering questions, contributing to discussions, and
+helping other students.</p>
+<p>Foreseeable absences should be discussed with the instructor ahead of time.</p>
+</div>
+<div class="flex-col">
+<h3 id="community">Community<a class="headerlink" href="#community" title="Permanent link">&para;</a></h3>
+<p>Recalling one of the tenets of the <a href="https://en.wikipedia.org/wiki/Hacker_ethic">Hacker Ethic</a>:</p>
+<blockquote>
+<p>Hackers should be judged by their hacking, not criteria such as degrees,
+age, race, sex, or position.</p>
+</blockquote>
+<p>Students are expected to be <strong>respectful</strong> to their fellow classmates and
+the course staff.</p>
+</div>
+</div>
+<div class="flex-row">
+<div class="flex-col">
+<h3 id="students-with-disabilities">Students with Disabilities<a class="headerlink" href="#students-with-disabilities" title="Permanent link">&para;</a></h3>
+<p>Any student who has a documented disability and is registered with <a href="https://supportandcare.nd.edu/for-students/current-students/accessibility-support/">Sara
+Bea Accessibility Services</a> should speak with the professor as soon as
+possible regarding accommodations. Students who are not registered should
+contact the <a href="https://supportandcare.nd.edu/">Center for Student Support and Care</a>.</p>
+</div>
+<div class="flex-col">
+<h3 id="late-work">Late Work<a class="headerlink" href="#late-work" title="Permanent link">&para;</a></h3>
+<p>In the case of a serious illness or other excused absence, as defined by
+university policies, coursework will be accepted late by the same number of
+days as the excused absence.</p>
+<p>Otherwise, there is an automatic penalty of <code>25%</code> <strong>late penalty</strong> for
+assignments turned in <code>12</code> hours pass the specified deadline.</p>
+<p>No assignments will be accepted after the <strong>last day of class</strong> without the
+permission of the instructor.</p>
+</div>
+</div>
+<div class="flex-row">
+<div class="flex-col">
+<h3 id="classroom-recording">Classroom Recording<a class="headerlink" href="#classroom-recording" title="Permanent link">&para;</a></h3>
+<p>Lectures in this course will be recorded using <strong>Zoom</strong>, uploaded to
+<strong>Panopto</strong>, and shared on <strong>Canvas</strong> and the course website.</p>
+<p>Except for faculty and staff who require access, no content will be shared
+with individuals outside of the course without prior authorization.</p>
+<p>These recordings are jointly copyrighted by the <a href="http://www.nd.edu">University of Notre Dame</a>
+and the instructor. Posting them to other websites (including YouTube,
+Facebook, SnapChat, etc.) or elsewhere without express, written permission
+may result in disciplinary action and possible civil prosecution.</p>
+</div>
+<div class="flex-col">
+<h3 id="academic-dishonesty">Academic Dishonesty<a class="headerlink" href="#academic-dishonesty" title="Permanent link">&para;</a></h3>
+<p>Any academic misconduct in this course is considered a serious offense, and
+the strongest possible academic penalties will be pursued for such
+behavior.</p>
+<p>Students may discuss high-level ideas with other students, but at
+the time of implementation (i.e. programming), each person must do his/her
+own work. Use of the Internet as a reference is allowed but directly
+copying code or other information is cheating. It is cheating to copy, to
+allow another person to copy, all or part of an exam or a assignment, or to
+fake program output.</p>
+<p>It is also a violation of the <a href="https://honorcode.nd.edu/">Undergraduate Academic Code of Honor</a> to
+observe and then fail to report academic dishonesty. You are responsible
+for the security and integrity of your own work.</p>
+</div>
+</div>
+<div class="alert danger-bg">
+<h3 id="alert-embed_icon-cse-guide-to-the-honor-code"><i class="icon icon-medium"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>alert</title><path d="M13 14H11V9H13M13 18H11V16H13M1 21H23L12 2L1 21Z" /></svg>
+</i> CSE Guide to the Honor Code<a class="headerlink" href="#alert-embed_icon-cse-guide-to-the-honor-code" title="Permanent link">&para;</a></h3>
+<p>For the assignments in this class, students are allowed to consult printed
+and online resources and to discuss the class material with other students.
+Students may also consult <strong>AI Tools</strong> such as <strong>CoPilot</strong> or <strong>ChatGPT</strong>
+for help explaining concepts, debugging problems, or as a reference.
+Viewing or consulting solutions, such as those from other students,
+previous semesters, or generated by <strong>AI Tools</strong> is <strong>never allowed</strong>.</p>
+<p>Likewise, students may copy <strong>small and trivial</strong> snippets from books,
+online sources, and <strong>AI Tools</strong> as long as you <strong>cite them properly</strong>.
+However, students <strong>may not copy</strong> solutions or <strong>significant</strong> portions of
+code from other students or online sources, nor may students generate
+solutions via <strong>AI Tools</strong>.</p>
+<p>Finally, when preparing for interviews or exams in this class, <strong>students
+may not access exams from previous semesters</strong>, nor may students look at or
+copy solutions from other current or former students.  Furthermore,
+<strong>students may not share the contents</strong> of the interviews or exams with
+classmates who have not not yet taken the assessments.</p>
+<table class="bordered" style="border-color: var(--danger);">
+<thead>
+    <th></th>
+    <th>Resources</th>
+    <th>Solutions</th>
+  </thead>
+<tbody>
+    <tr style="font-weight: bold;">
+      <td class="centered">Consulting</td>
+      <td class="centered success-bg">Allowed</td>
+      <td class="centered danger-bg">Not Allowed</td>
+    </tr>
+    <tr style="font-weight: bold;">
+      <td class="centered">Copying</td>
+      <td class="centered caution-bg">Cite</td>
+      <td class="centered danger-bg">Not Allowed</td>
+    </tr>
+  </tbody>
+</table>
+<p>See the <a href="https://cse.nd.edu/undergraduate/cse-guide-to-the-honor-code/">CSE Guide to the Honor Code</a> for definitions of the above terms and
+specific examples of what is allowed and not allowed when consulting
+resources.</p>
+<p>If students are unclear about whether certain forms of consultation or
+common work are acceptable or what the standards for citation are, then
+students are responsible for consulting with the instructor to resolve any
+confusion.</p>
+<p>If the instructor sees behavior that is, in their judgement, academically
+dishonest, they are required to file either an <a href="https://honorcode.nd.edu/honor-code-violation-report/">Honor Code Violation Report</a> or
+a formal report to the <a href="https://engineering.nd.edu/">College of Engineering</a> Honesty Committee.</p>
+</div>
+<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
+<div class="flex-row">
+<div class="flex-col">
+<h3 id="information">Information<a class="headerlink" href="#information" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<div class="flex-col">
+<p><a href="https://cses.fi/book.html">Competitive Programmer's Handbook</a></p>
+<p>This is our main <strong>textbook</strong> for the semester.  It contains background
+information regarding the algorithms and data structures we will be
+utilizing and implementing to solve different problems.</p>
+</li>
+<li>
+<div class="flex-col">
+<p><a href="https://github.com/AhmadElsagheer/Competitive-programming-library/tree/master/curriculum">Competitive Programming Library</a></p>
+<p>This contains a list of topics and links to resources to help students
+become competitive at programming contests.</p>
+</li>
+<li>
+<div class="flex-col">
+<p><a href="http://www.geeksforgeeks.org/top-algorithms-and-data-structures-for-competitive-programming/">Top 10 Algorithms and Data Structures for Competitive Programming</a></p>
+<p>This is another list of common data structures and algorithms.</p>
+</li>
+<li>
+<div class="flex-col">
+<p><a href="https://neetcode.io/">Neetcode</a></p>
+<p>This is curated list of programming challenges useful for technical interviews.</p>
+</li>
+</ul>
+</div>
+<div class="flex-col">
+<h3 id="online-challenges">Online Challenges<a class="headerlink" href="#online-challenges" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<div class="flex-col">
+<p><a href="http://www.hackerrank.com/">HackerRank</a></p>
+<p>This site is contains a variety of programming challenges similar to
+what is found in ACM programming contests. It also includes
+non-programming contest type problems as well and is a platform for
+evaluating and testing your programming skills.</p>
+</li>
+<li>
+<div class="flex-col">
+<p><a href="https://leetcode.com/">LeetCode</a></p>
+<p>This is another site that contains a variety of programming challenges.</p>
+</li>
+<li>
+<div class="flex-col">
+<p><a href="https://www.topcoder.com/challenges/">TopCoder</a></p>
+<p>This is another site that contains a variety of programming challenges.
+It also periodically runs contests and provides learning resources.</p></p>
+</li>
+<li>
+<div class="flex-col">
+<p><a href="https://projecteuler.net/">Project Euler</a></p>
+<p>This site is a large set of mathematical and programming problems
+designed to test your abilities and sharpen your skills. The problems
+make for good practice.</p>
+</li>
+<li>
+<div class="flex-col">
+<p><a href="https://adventofcode.com/">Advent of Code</a></p>
+<p>This is an annual series of programming challenges.</p>
+</li>
+</ul>
+</div>
+</div>
+</main>
+<footer>
+Built using <a href="https://python.org">Python</a>
+and <a href="https://jinja.palletsprojects.com">Jinja</a>
+with colors from <a href="https://nordtheme.com">Nord Theme</a>
+and icons from <a href="https://pictogrammers.com/library/mdi/">Material Design Icons</a>.</footer>
+</body>
+</html>
