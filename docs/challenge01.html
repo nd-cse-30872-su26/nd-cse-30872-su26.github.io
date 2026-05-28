@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="static/ico/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="static/ico/favicon-16x16.png">
+<link rel="manifest" href="static/ico/site.webmanifest">
+<!-- Stylesheets -->
+<link rel="stylesheet" href="static/css/pnutzh4x0r.css">
+<title>Challenge 01: Minimum Four Square</title>
+</head>
+<body>
+<header>
+<a class="logo" href="challenge01.html">
+    <h1>Challenge 01: Minimum Four Square</h1>
+</a>
+<nav>
+    <ul>
+        <li><a href="index.html"><h4>Home</h4></a></li>
+        </ul>
+</nav></header>
+<main>
+<div class="flex-row">
+<div class="flex-col">
+<p>You just can't escape the <a href="https://en.wikipedia.org/wiki/The_Matrix_(franchise)">Matrix</a>.  Even in your sleep, you still have
+nightmares of visiting the <code>ORACLE</code> and banging your head against the wall
+doing the assignments in <a href="https://pnutz.h4x0r.space/courses/cse.20289.sp26">Systems Programming</a>.  You are hopeful that the
+instructor is even more <strong>respectful</strong> of your time outside of class, but
+you have your doubts...</p>
+<p>Fortunately, in this problem, you are dealing with a different type of
+<strong>matrix</strong>:</p>
+<blockquote>
+<p>Given an <code>n x m</code> 2D <strong>matrix</strong> consisting of numbers between <code>1</code> and <code>9</code>,
+find the <strong>minimum four square</strong>.  That is, find the smallest total of four
+adjacent cells in the given <strong>matrix</strong> as shown to the right.</p>
+</blockquote>
+<p>In the first example to the right, there is only one <strong>four square</strong>
+consisting of all <code>1</code>s, so the <strong>minimum four square</strong> has a total of <code>4</code>.</p>
+</div>
+<div class="flex-col-33 centered">
+  <img src="static/img/challenge01-minimum-four-square.png" class="responsive">
+</div>
+</div>
+<p>In the second example to the right, there are two <strong>four squares</strong>: The
+first consists of <code>1, 2, 3, 4</code>, which sums to <code>10</code>.  The second consists
+of <code>2, 1, 4, 2</code>, which sums to <code>9</code>.  This means that the <strong>minimum four
+square</strong> has a total of <code>9</code>.</p>
+<p>In the third example to the right, there are four <strong>four squares</strong>.  The
+two top <strong>four squares</strong> consist of <code>1, 2, 2, 3</code> and sum to <code>8</code>, while the
+bottom <strong>four squares</strong> consist of <code>2, 3, 4, 1</code> and sum to <code>10</code>.  This
+means that the <strong>minimum four square</strong> has a total of <code>8</code>.</p>
+<h2 id="input">Input<a class="headerlink" href="#input" title="Permanent link">&para;</a></h2>
+<p>You will be given a series of <strong>matrices</strong> in the following format:</p>
+<div class="codehilite"><pre><span></span><code>N M
+D_1_1 ... D_1_M
+...
+D_N_1 ... D_N_M
+</code></pre></div>
+
+<p>That is, the first line has the numbers <code>N</code> and <code>M</code> (where <code>N</code> and <code>M</code> are
+between <code>2</code> and <code>50</code>), which represents the dimensions of the proceeding
+<strong>matrix</strong>.  This is followed by <code>N x M</code> integers that represent the data
+in the <strong>matrix</strong>.</p>
+<p>Here is an example input:</p>
+<div class="codehilite"><pre><span></span><code>2 2
+1 1
+1 1
+2 3
+1 2 1
+3 4 2
+3 3
+1 2 1
+2 3 2
+4 1 4
+0 0
+</code></pre></div>
+
+<p>This sample input corresponds to the matrixes in the diagram above.</p>
+<div class="alert warning-bg">
+<p><strong>Note</strong>: The input is terminated by a final <code>0 0</code> for the <code>N</code> and <code>M</code> values.</p>
+</div>
+<h2 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h2>
+<p>For each <strong>matrix</strong> in the input stream, you are to find the <strong>minimum four
+square</strong> and print out its total in the following format:</p>
+<blockquote>
+<p>{Matrix #}. Minimum four square is: {Total of Smallest Four Square}</p>
+</blockquote>
+<p>Here is the output given the example input above:</p>
+<div class="codehilite"><pre><span></span><code>1. Minimum four square is: 4
+2. Minimum four square is: 9
+3. Minimum four square is: 8
+</code></pre></div>
+
+<div class="alert warning-bg">
+<p><strong>Note</strong>: You must match the output format <strong>exactly</strong>.</p>
+</div>
+<div class="alert danger-bg">
+<h3 id="scale-balance-embed_icon-algorithmic-complexity"><i class="icon icon-medium"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>scale-balance</title><path d="M12,3C10.73,3 9.6,3.8 9.18,5H3V7H4.95L2,14C1.53,16 3,17 5.5,17C8,17 9.56,16 9,14L6.05,7H9.17C9.5,7.85 10.15,8.5 11,8.83V20H2V22H22V20H13V8.82C13.85,8.5 14.5,7.85 14.82,7H17.95L15,14C14.53,16 16,17 18.5,17C21,17 22.56,16 22,14L19.05,7H21V5H14.83C14.4,3.8 13.27,3 12,3M12,5A1,1 0 0,1 13,6A1,1 0 0,1 12,7A1,1 0 0,1 11,6A1,1 0 0,1 12,5M5.5,10.25L7,14H4L5.5,10.25M18.5,10.25L20,14H17L18.5,10.25Z" /></svg>
+</i> Algorithmic Complexity<a class="headerlink" href="#scale-balance-embed_icon-algorithmic-complexity" title="Permanent link">&para;</a></h3>
+<p>For each input test case, your solution should have the following targets:</p>
+<table class="bordered">
+<tbody>
+<tr class="warning-bg">
+<td width="165px"><strong>Time Complexity</strong></td>
+<td><code>O(N*M)</code>, where <code>N</code> and <code>M</code> correspond to the dimensions of each matrix.</td>
+</tr>
+<tr class="caution-bg">
+<td><strong>Space Complexity</strong></td>
+<td><code>O(1)</code></td>
+</tr>
+</tbody>
+</table>
+<p>Your solution may be below the targets, but it <strong>should not exceed them</strong>.</p>
+</div>
+<h2 id="submission">Submission<a class="headerlink" href="#submission" title="Permanent link">&para;</a></h2>
+<p>To submit your work, follow the same procedure you used for <a href="reading00.html">Reading 00</a>:</p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>path/to/cse-30872-su26-assignments<span class="w">     </span><span class="c1"># Go to assignments repository</span>
+$<span class="w"> </span>git<span class="w"> </span>switch<span class="w"> </span>master<span class="w">                         </span><span class="c1"># Make sure we are on master</span>
+$<span class="w"> </span>git<span class="w"> </span>pull<span class="w"> </span>--rebase<span class="w">                         </span><span class="c1"># Pull any changes from GitHub</span>
+
+$<span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>challenge01<span class="w">               </span><span class="c1"># Create and checkout challenge01 branch</span>
+
+$<span class="w"> </span><span class="nv">$EDITOR</span><span class="w"> </span>challenge01/program.cpp<span class="w">           </span><span class="c1"># Edit your code</span>
+
+$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>challenge01/program.cpp<span class="w">           </span><span class="c1"># Stage your changes</span>
+$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Challenge 01: Code&quot;</span><span class="w">        </span><span class="c1"># Commit your changes</span>
+
+$<span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>challenge01<span class="w">            </span><span class="c1"># Send changes to GitHub</span>
+</code></pre></div>
+
+<div class="alert success-bg">
+<h3 id="code-tags-embed_icon-programming-languages"><i class="icon icon-medium"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>code-tags</title><path d="M14.6,16.6L19.2,12L14.6,7.4L16,6L22,12L16,18L14.6,16.6M9.4,16.6L4.8,12L9.4,7.4L8,6L2,12L8,18L9.4,16.6Z" /></svg>
+</i> Programming Languages<a class="headerlink" href="#code-tags-embed_icon-programming-languages" title="Permanent link">&para;</a></h3>
+<p>Note, <a href="https://dredd.h4x0r.space">dredd</a> supports <a href="https://en.wikipedia.org/wiki/The_C_Programming_Language">C</a>, <a href="https://isocpp.org">C++</a>, <a href="https://www.python.org">Python</a>, <a href="https://www.oracle.com/java/index.html">Java</a>, <a href="https://www.golang.org">Go</a>, <a href="https://www.nodejs.org">Node</a>, <a href="https://www.ruby-lang.org">Ruby</a>,
+and <a href="https://www.gnu.org/software/guile/">Guile</a>.  You may use any of those languages, just be sure to name your
+source file <code>program.$EXTENSION</code> where <code>$EXTENSION</code> is the appropriate file
+extension for your chosen language (e.g. <code>py</code> for <a href="https://www.python.org">Python</a>).</p>
+<p>If you wish to try out another language, please let the instructor know and
+support can be added to <a href="https://dredd.h4x0r.space">dredd</a>.</p>
+</div>
+<p>To check your code, you can use the <code>.scripts/check.py</code> script or <a href="https://curl.haxx.se">curl</a>:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Check code by submitting to dredd using provided script</span>
+$<span class="w"> </span>.scripts/check.py
+Checking<span class="w"> </span>challenge01<span class="w"> </span>program.py<span class="w"> </span>...
+<span class="w">  </span>Result<span class="w"> </span>Success
+<span class="w">    </span>Time<span class="w">  </span><span class="m">0</span>.21
+<span class="w">  </span>--------------------
+<span class="w">   </span>Score<span class="w">  </span><span class="m">6</span>.00<span class="w"> </span>/<span class="w">  </span><span class="m">6</span>.00
+<span class="w">   </span>Grade<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span>/<span class="w">  </span><span class="m">1</span>.00
+
+<span class="c1"># Check code by submitting to dredd using curl</span>
+$<span class="w"> </span>curl<span class="w"> </span>-F<span class="w"> </span><span class="nv">source</span><span class="o">=</span>@challenge01/program.cpp<span class="w"> </span>https://dredd.h4x0r.space/code/cse-30872-su26/challenge01
+<span class="o">{</span><span class="s2">&quot;result&quot;</span>:<span class="w"> </span><span class="s2">&quot;Success&quot;</span>,<span class="w"> </span><span class="s2">&quot;score&quot;</span>:<span class="w"> </span><span class="m">6</span>,<span class="w"> </span><span class="s2">&quot;time&quot;</span>:<span class="w"> </span><span class="m">0</span>.11381292343139648,<span class="w"> </span><span class="s2">&quot;value&quot;</span>:<span class="w"> </span><span class="m">6</span>,<span class="w"> </span><span class="s2">&quot;status&quot;</span>:<span class="w"> </span><span class="m">0</span><span class="o">}</span>
+</code></pre></div>
+
+<p>The <strong>score</strong> returned from <a href="https://dredd.h4x0r.space">dredd</a> will be one of the following:</p>
+<table class="bordered">
+  <thead>
+    <th>Score</th>
+    <th>Description</th>
+    <th>Notes</th>
+  </thead>
+  <tbody>
+    <tr class="success-bg">
+      <td class="centered"><b>6.0</b></td>
+      <td><b>Success</b></td>
+      <td>Program has successfully passed all test cases within the provided time limit.</td>
+    </tr>
+    <tr class="caution-bg">
+      <td class="centered"><b>5.0</b></td>
+      <td><b>Output Format Error</b></td>
+      <td>Output appears mostly correct, except the formatting is wrong (usually a whitespace or spelling error).</td>
+    </tr>
+    <tr class="warning-bg">
+      <td class="centered"><b>4.0</b></td>
+      <td><b>Time Limit Exceeded</b></td>
+      <td>Program did not terminate within the provided time limit (<b>10 seconds</b>).</td>
+    </tr>
+    <tr class="danger-bg">
+      <td class="centered"><b>3.0</b></td>
+      <td><b>Wrong Answer</b></td>
+      <td>Output does not match test cases.</td>
+    </tr>
+    <tr class="danger-bg">
+      <td class="centered"><b>2.0</b></td>
+      <td><b>Execution Error</b></td>
+      <td>Program did not terminate successfully (usually a segmentation fault or exception)</td>
+    </tr>
+    <tr class="danger-bg">
+      <td class="centered"><b>1.0</b></td>
+      <td><b>Compilation Error</b></td>
+      <td>Program failed to compile (usually a syntax error)</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="alert info-bg">
+<h3 id="check-all-embed_icon-test-cases"><i class="icon icon-medium"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>check-all</title><path d="M0.41,13.41L6,19L7.41,17.58L1.83,12M22.24,5.58L11.66,16.17L7.5,12L6.07,13.41L11.66,19L23.66,7M18,7L16.59,5.58L10.24,11.93L11.66,13.34L18,7Z" /></svg>
+</i> Test Cases<a class="headerlink" href="#check-all-embed_icon-test-cases" title="Permanent link">&para;</a></h3>
+<p>Note, <a href="https://dredd.h4x0r.space">dredd</a> contains additional test cases beyond that which is show in
+the examples above.  This means that even if you pass on the input above,
+you are not guaranteed to pass the <a href="https://dredd.h4x0r.space">dredd</a> test if you do not handle
+additional situations.</p>
+<p>This means you should consider what the possible edge cases are and how to
+handle them.  Feel free to create your own input and output test files and
+use them to verify your program:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Manually test program</span>
+$<span class="w"> </span>./program<span class="w"> </span>&lt;<span class="w"> </span>input.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>diff<span class="w"> </span>-u<span class="w"> </span>-<span class="w"> </span>output.txt
+</code></pre></div>
+
+<p>To access a special debugging mode of the <code>check.py</code> script, you can use
+the following to get the output ofr <a href="https://dredd.h4x0r.space">dredd</a>.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Get debugging output from dredd</span>
+$<span class="w"> </span><span class="nv">DEBUG</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>../.scripts/check.py
+</code></pre></div>
+
+</div>
+<div class="alert warning-bg">
+<h3 id="lifebuoy-embed_icon-acknowledgments"><i class="icon icon-medium"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>lifebuoy</title><path d="M19.79,15.41C20.74,13.24 20.74,10.75 19.79,8.59L17.05,9.83C17.65,11.21 17.65,12.78 17.06,14.17L19.79,15.41M15.42,4.21C13.25,3.26 10.76,3.26 8.59,4.21L9.83,6.94C11.22,6.35 12.79,6.35 14.18,6.95L15.42,4.21M4.21,8.58C3.26,10.76 3.26,13.24 4.21,15.42L6.95,14.17C6.35,12.79 6.35,11.21 6.95,9.82L4.21,8.58M8.59,19.79C10.76,20.74 13.25,20.74 15.42,19.78L14.18,17.05C12.8,17.65 11.22,17.65 9.84,17.06L8.59,19.79M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,8A4,4 0 0,0 8,12A4,4 0 0,0 12,16A4,4 0 0,0 16,12A4,4 0 0,0 12,8Z" /></svg>
+</i> Acknowledgments<a class="headerlink" href="#lifebuoy-embed_icon-acknowledgments" title="Permanent link">&para;</a></h3>
+<p>If you collaborated with any other students or received help AI tools on
+this assignment, please describe this support in the <strong>description</strong> of
+your <strong>Pull Request</strong>.</p>
+</div>
+<div class="alert success-bg">
+<h3 id="account-question-embed_icon-graders"><i class="icon icon-medium"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>account-question</title><path d="M13,8A4,4 0 0,1 9,12A4,4 0 0,1 5,8A4,4 0 0,1 9,4A4,4 0 0,1 13,8M17,18V20H1V18C1,15.79 4.58,14 9,14C13.42,14 17,15.79 17,18M20.5,14.5V16H19V14.5H20.5M18.5,9.5H17V9A3,3 0 0,1 20,6A3,3 0 0,1 23,9C23,9.97 22.5,10.88 21.71,11.41L21.41,11.6C20.84,12 20.5,12.61 20.5,13.3V13.5H19V13.3C19,12.11 19.6,11 20.59,10.35L20.88,10.16C21.27,9.9 21.5,9.47 21.5,9A1.5,1.5 0 0,0 20,7.5A1.5,1.5 0 0,0 18.5,9V9.5Z" /></svg>
+</i> Graders<a class="headerlink" href="#account-question-embed_icon-graders" title="Permanent link">&para;</a></h3>
+<p>Once you have committed your work and pushed it to <a href="https://github.com">GitHub</a>, remember to
+create a <strong>pull request</strong> and assign it to the <strong>instructor</strong>.</p>
+</div>
+</main>
+<footer>
+Built using <a href="https://python.org">Python</a>
+and <a href="https://jinja.palletsprojects.com">Jinja</a>
+with colors from <a href="https://nordtheme.com">Nord Theme</a>
+and icons from <a href="https://pictogrammers.com/library/mdi/">Material Design Icons</a>.</footer>
+</body>
+</html>
