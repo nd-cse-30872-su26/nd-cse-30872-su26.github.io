@@ -1,0 +1,173 @@
+title:      "Challenge 03: HTML Tags"
+body:       |
+
+    <div class="flex-row" markdown="1">
+
+    <div class="flex-col" markdown="1">
+
+    You really enjoyed parsing and manipulating [HTML] using [regular
+    expressions] and [Python] in [Systems Programming].  It was interesting to
+    see a [declarative language] that just required you to format data using
+    some [HTML] tags to describe what the text meant and not worry about
+    control flow or anything complex like that.
+
+    In fact, because of how easy it is to use your favorite `$EDITOR` to create
+    some [HTML] documents, you decide to make your own personal website using
+    [GitHub Pages].  This is a free service that let's you make a public
+    webpage using static [HTML], which provides a convenient place to highlight
+    your projects and interests!
+
+    After writing some custom [HTML] though, you realize that there is one
+    problem when it comes to writing [HTML] by hand... it is sometimes
+    difficult to keep track of all of the [HTML] tags and make sure that they
+    are **balanced**.
+
+    </div>
+
+    <div class="flex-col-25 centered">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/250px-HTML5_logo_and_wordmark.svg.png" style="padding: 10px 0 10px 0;">
+    </div>
+
+    </div>
+
+    For instance, the following is considered **balanced**:
+
+        :::html
+        The <i>quick</i> brown fox jumps over the <b>lazy</b> dog
+
+    That is, the *opening* of each tag (ie. `<i>` or `<b>`) is followed by the
+    closing of each tag (ie. `</i>` or `</b>`).
+
+    The following, however, is not **balanced**:
+
+        :::html
+        The <i><u>quick</i></u> brown fox jumps over the <b>lazy</b> dog
+
+    In this example, the `<u>` tag is followed by the `</i>` closing tag before
+    it encounters its corresponding `</u>` closing tag, and is thus considered
+    **unbalanced**.
+
+    Your job is to write a simple [HTML] **linter** that checks if tags are
+    properly **balanced**.
+
+    [Systems Programming]: https://pnutz.h4x0r.space/courses/cse.20289.sp26
+    [HTML]: https://developer.mozilla.org/en-US/docs/Web/HTML
+    [declarative language]: https://en.wikipedia.org/wiki/Declarative_programming
+    [Python]: https://www.python.org/
+    [regular expressions]: https://en.wikipedia.org/wiki/Regular_expression
+    [GitHub Pages]: https://guides.github.com/features/pages/
+
+    ## Input
+
+    The input consists of a series of lines that may or may not contain
+    multiple [HTML] tags.
+
+    Here is an example input:
+
+        ::text
+        A <tt>tag</tt>
+        A <tt>tag
+        A <b><tt>tag</tt></b>
+        A <b><tt>tag</b></tt>
+
+    <div class="alert warning-bg" markdown="1">
+
+    **Note**: You are only concerned with the tags and not with any of the
+    text.  Likewise, there are **no attributes** in these tags (eg. you may
+    assume the tags are in the form `<TAG>` and `</TAG>`.
+
+    </div>
+
+    ## Output
+
+    For each line of [HTML], you are to determine if the tags on that line is
+    balanced or not and report the result.
+
+    Here is the output for the example input above:
+
+        ::text
+        Balanced
+        Unbalanced
+        Balanced
+        Unbalanced
+
+    <div class="alert danger-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "scale-balance" | embed_icon }}</i> Algorithmic Complexity
+
+    For each input test case, your solution should have the following targets:
+
+    <table class="bordered" markdown="1">
+    <tbody markdown="1">
+    <tr class="warning-bg" markdown="1">
+      <td width="165px" markdown="1">**Time Complexity**</td>
+      <td markdown="1">`O(N)`, where `N` corresponds to the length of the input string.</td>
+    </tr>
+    <tr class="caution-bg" markdown="1">
+      <td markdown="1">**Space Complexity**</td>
+      <td markdown="1">`O(N)`, where `N` corresponds to the length of the input string.</td>
+    </tr>
+    </tbody>
+    </table>
+
+    Your solution may be below the targets, but it **should not exceed them**.
+
+    </div>
+
+    ## Submission
+
+    To submit your work, follow the same procedure you used for [Reading 01]:
+
+        :::bash
+        $ cd path/to/cse-30872-sp26-assignments     # Go to assignments repository
+        $ git switch master                         # Make sure we are on master
+        $ git pull --rebase                         # Pull any changes from GitHub
+
+        $ git switch -c challenge03                 # Create and checkout challenge03 branch
+
+        $ $EDITOR challenge03/program.cpp           # Edit your code
+
+        $ git add challenge03/program.cpp           # Stage your changes
+        $ git commit -m "Challenge 03: Code"        # Commit your changes
+
+        $ git push -u origin challenge03            # Send changes to GitHub
+
+    To check your code, you can use the `.scripts/check.py` script or [curl]:
+
+        :::bash
+        $ .scripts/check.py
+        Checking challenge03 program.cpp ...
+          Result Success
+            Time  0.00
+          --------------------
+           Score  6.00 /  6.00
+           Grade  1.00 /  1.00
+
+        $ curl -F source=@challenge03/program.cpp https://dredd.h4x0r.space/code/cse-30872-sp26/challenge03
+        {"result": "Success", "score": 6, "time": 0.016292572021484375, "value": 6, "status": 0}
+
+    <div class="alert warning-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "lifebuoy" | embed_icon }}</i> Acknowledgments
+
+    If you collaborated with any other students or received help AI tools on
+    this assignment, please describe this support in the **description** of
+    your **Pull Request**.
+
+    </div>
+
+    <div class="alert success-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "account-question" | embed_icon }}</i> Graders
+
+    Once you have committed your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the **instructor**.
+
+    </div>
+
+    [GitHub]: https://github.com
+    [HackerRank]: https://www.hackerrank.com
+    [LeetCode]: https://leetcode.com
+    [curl]: https://curl.haxx.se/
+    [Reading 00]: reading00.html
+    [Reading 01 TA List]: reading01_tas.html
