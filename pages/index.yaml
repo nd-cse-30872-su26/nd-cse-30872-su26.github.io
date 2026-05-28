@@ -122,7 +122,11 @@ body:       |
     <tr>
       <td class="date">{{ day['date'] }}</td>
       <td class="topics">
+      {% if day['topics'] == 'Programming Challenges' %}
+      <i class="muted">{{ day['topics'] }}</i>
+      {% else %}
       {{ day['topics'] }}
+      {% endif %}
       {% for item in day.get('items', []) %}
       {% if item['name'].lower().startswith('slide') %}
       {% set item_color = 'success' %}
