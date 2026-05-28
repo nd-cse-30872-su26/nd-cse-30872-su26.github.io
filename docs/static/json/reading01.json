@@ -1,0 +1,92 @@
+{
+    "q01": {
+        "type": "multiple",
+        "question": "\n<p>Which <b>programming languages</b> are normally supported in <b>programming\ncontest environments</b>?</p>\n",
+        "responses": {
+            "bash": "Bash",
+            "c": "C",
+            "cpp": "C++",
+            "ruby": "Rust",
+            "java": "Java",
+            "js": "JavaScript",
+            "perl": "Perl",
+            "python": "Python"
+        }
+    },
+    "q02": {
+        "type": "order",
+        "question": "\n<p>Rank the following <b>complexity classes</b> from <b>lowest (fastest)</b>\nto <b>highest (slowest)</b>.</p>\n",
+        "responses": {
+            "nf": "O(n!)",
+            "logn": "O(log(n))",
+            "n2": "O(n^2)",
+            "1": "O(1)",
+            "n": "O(n)",
+            "sqrtn": "O(sqrt(n))",
+            "nlogn": "O(nlog(n))"
+        }
+    },
+    "q03": {
+        "type": "single",
+        "question": "\n<p>What is the time <b>complexity</b> of the following code (both the\n<b>C++</b> and <b>Python</b> versions have equivalent complexity)?</p>\n\n<pre>\n// C++\nvoid f(vector&lt;string&gt; &a, vector&lt;string&gt; &b, vector&lt;string&gt; &c) {\n    c.clear();\n\n    for (auto e : a) {\n        if (find(b.begin(), b.end(), e) != b.end()) {\n            c.push_back(e);\n        }\n    }\n}\n\n// Python\ndef f(a: list[str], b: list[str]) -> list[str]:\n    c = []\n\n    for e in a:\n        if e in b:\n            c.append(e)\n\n    return c\n</pre>\n",
+        "responses": {
+            "n2": "O(n^2)",
+            "1": "O(1)",
+            "n": "O(n)",
+            "nlogn": "O(nlog(n))"
+        }
+    },
+    "q04": {
+        "type": "single",
+        "question": "\n<p>What is the <b>time complexity</b> of the following code (both the\n<b>C++</b> and <b>Python</b> versions have equivalent complexity)?</p>\n\n<pre>\n// C++\nvoid f(vector&lt;string&gt; &a, vector&lt;string&gt; &b, vector&lt;string&gt; &c) {\n    c.clear();\n\n    sort(b.begin(), b.end());\n\n    for (auto e : a) {\n        if (binary_search(b.begin(), b.end(), e)) {\n            c.push_back(e);\n        }\n    }\n}\n\n// Python\ndef f(a: list[str], b: list[str]) -> list[str]:\n    c = []\n\n    b.sort()\n\n    for e in a:\n        if (i := bisect.bisect_left(b, e)) != len(b) and b[i] == e:\n            c.append(e)\n\n    return c\n</pre>\n",
+        "responses": {
+            "n2": "O(n^2)",
+            "1": "O(1)",
+            "n": "O(n)",
+            "nlogn": "O(nlog(n))"
+        }
+    },
+    "q05": {
+        "type": "multiple",
+        "question": "\n<p>Which of the following statements about <b>dynamic arrays</b> (aka\n<i>vectors</i>) and <b>linked lists</b> (<i>with head and tail\npointers</i>) are true (<i>choose all that apply</i>)?</p>\n",
+        "responses": {
+            "cache_array": "<b>Dynamic arrays</b> generally exhibit poor cache behavior.",
+            "cache_list": "<b>Linked lists</b> generally exhibit poor cache behavior.",
+            "insert_array": "Inserting to the front of a <b>dynamic array</b> is always <code>O(1)</code>.",
+            "insert_list": "Inserting to the front of a <b>linked list</b> is always <code>O(1)</code>.",
+            "append_array": "Appending to the back of a <b>dynamic array</b> is always <code>O(1)</code>.",
+            "append_list": "Appending to the back of a <b>linked list</b> is always <code>O(1)</code>.",
+            "access_array": "Accessing an element in the middle of a <b>dynamic array</b> is <code>O(1)</code>.",
+            "access_list": "Accessing an element in the middle of a <b>linked list</b> is <code>O(1)</code>.",
+            "remove_array": "Removing an element from the middle of a <b>dynamic array</b> is <code>O(n)</code>.",
+            "remove_list": "Removing an element from the middle of a <b>doubly-linked list</b> is <code>O(1)</code>."
+        }
+    },
+    "q06": {
+        "type": "blank",
+        "question": "\n<p>While stacks and queues provide both a <b>(1)</b> ____ operation to add\nitems and a <b>(2)</b> ____ operation to remove items from the collection,\nthe former provides <b>(3)</b> ____ ordering while the latter provides\n<b>(4)</b> ____ ordering.</p>\n"
+    },
+    "q07": {
+        "type": "blank",
+        "question": "\n<p>Below is a <b>C++</b> function whose purpose is to <b>reverse</b> the\ncontents of the given vector.  It does this by copying the elements from\nthe vector into another container and then copying the elements back to the\noriginal vector.</p>\n\n<p><b>Fill in the blanks</b> to complete the implementation.</p>\n\n<pre>\nvoid reverse(vector&lt;string&gt; &v) {\n    ____&lt;string&gt; c;         // 1\n\n    for (auto e : v) {\n        ____;               // 2\n    }\n\n    ____;                   // 3\n    while (____) {          // 4\n        ____;               // 5\n        ____;               // 6\n    }\n}\n</pre>\n"
+    },
+    "q08": {
+        "type": "blank",
+        "question": "\n<p>Below is a <b>Python</b> function whose purpose is to reverse the contents\nof the given list.  It does this by copying the elements from the list into\nanother container and then copying the elements back to the original list.</p>\n\n<p><b>Fill in the blanks</b> to complete the implementation.</p>\n\n<pre>\ndef reverse(v):\n    c = ____                // 1\n\n    for e in v:\n        ____                // 2\n\n    v = ____                // 3\n    while ____:             // 4\n        ____                // 5\n\n    return ____             // 6\n</pre>\n"
+    },
+    "q09": {
+        "type": "multiple",
+        "question": "\n<p>Which of the following statements about the <b>course</b> is true (<i>choose all that apply</i>)?</p>\n",
+        "responses": {
+            "readings": "Students cannot drop any <b>readings</b>.",
+            "challenges": "Students can drop two <b>programming challenges</b>.",
+            "external": "Students must complete at least two <b>external programming contests</b>.",
+            "participation": "Students are expected to <b>attend class</b> regularly and on-time.",
+            "interview": "There is a <b>coding interview</b> in this course.",
+            "deadlines": "There are no <b>deadlines</b> in this class.",
+            "officehours": "There are online <b>office hours</b> (via Slack or Zoom) available to students.",
+            "consulting": "Students may <b>consult</b> online references or copy small code snippets from resources including AI tools if properly cited.",
+            "copying": "Students may <b>copy</b> from solutions found online or from other students or from AI tools."
+        }
+    }
+}
