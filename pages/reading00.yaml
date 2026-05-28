@@ -1,0 +1,295 @@
+title:      "Reading 00: Orientation"
+body:       |
+
+    **Everyone**:
+
+    Welcome to [CSE 30872 Programming Challenges], which (as the syllabus
+    states) is a "course that revolves around solving *brain-teaser* and
+    *puzzle-type* problems that often appear in programming contests, online
+    challenges, and job interviews".  What this means is that we will be
+    studying common data structures, algorithms, and programming techniques
+    that are useful in tackling a variety of problems.
+
+    <div class="alert info-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "book" | embed_icon }}</i> TL;DR
+
+    For this week, you familiarize yourself with using [Zoom] and [Slack] and
+    then setup your [GitHub] assignments repository.
+
+    </div>
+
+    ## Course Overview
+
+    Last year, many of you took the **Data Structures** course where you
+    learned about the properties and characteristics of different data
+    structures (*and perhaps you even implemented a few*).  The focus of this
+    class, however, is not in the *construction* of these data structures, but
+    rather their *application*.  This means we will focus on *when* to use
+    these data structures and algorithms and *how* to utilize them effectively
+    rather than *what* they are.  In concrete terms, we will not be
+    implementing say a [hash table]; instead we will use one to solve a variety
+    of problems.
+
+    Following the [Hands-On Imperative], you will have the opportunity to put
+    the material we discuss in class into practice via a *respectful* number of
+    weekly **programming challenges** (**three a week**).  Along with these
+    challenges will be **reading assignments** to ensure you have a context or
+    background knowledge for what we will be discussing in class.  As with last
+    semester in [Systems Programming], the reading assignments will be
+    automatically graded.
+
+    In fact all of your assignments will be automatically graded by [dredd] via
+    the [continuous integration] system provided by [GitHub].  As you may be
+    realizing during your internship or research experience this summer,
+    **testing** is an important part of software engineering and we will
+    therefore explore various aspects of **software development** including
+    debugging, profiling, testing, and more throughout the course (*if there is
+    time*).
+
+    Although each class will involve some amount of lecture, there will also be
+    a lot of in-class activities and hands-on learning.  Because of this,
+    **participation** is a component of your grade and you are expected to come
+    to class **regularly** and **on-time**.
+
+    Fortunately, however, there are **no exams** in this class.  Instead, we
+    with have an individual **coding interview** where you will have an
+    opportunity to demonstrate your mastery and understanding of the material
+    explored in the course.
+
+    Likewise, you will also have to participate in **two external programming
+    contests** such as those provided by [HackerRank] or [LeetCode].
+
+    [Hands-On Imperative]:      https://en.wikipedia.org/wiki/Hacker_ethic#Hands-On_Imperative
+    [Continuous Integration]:   https://en.wikipedia.org/wiki/Continuous_integration
+    [ACM Programming Contest]:  https://icpc.baylor.edu/
+    [hash table]:               https://en.wikipedia.org/wiki/Hash_table
+    [Systems Programming]:      https://pnutz.h4x0r.space/courses/cse.20289.sp26/
+
+    ## Task 1: Zoom
+
+    For all of our class meetings, we will be using [Zoom] to video conference.
+    Before our first class meeting, make sure you can login to the [Zoom]
+    system and access our [meeting link]:
+
+    > [https://notredame.zoom.us/j/99323073919](https://notredame.zoom.us/j/99323073919)
+
+    <div class="alert warning-bg" markdown="1">
+    #### Notes
+
+    - You will need to use the Notre Dame [Zoom] login system.
+
+    - You will need to download and install the [Zoom] client to perform video
+      conferencing.
+
+    - By default, you microphone will be **muted**.  To speak, you will need to
+      manually unmute it.
+    </div>
+
+    [meeting link]: https://notredame.zoom.us/j/99323073919
+
+    ## Task 2: Slack
+
+    For communication outside of our meeting time, we will be using [Slack],
+    specifically the `#cse-30872-su26` channel:
+
+    > [https://nd-cse.slack.com/messages/cse-30872-su26/](https://nd-cse.slack.com/messages/cse-30872-su26/)
+
+    There is a [class mailing list], but most day-to-day communication
+    (including office hours and homework help) should take place on [Slack].
+
+    [class mailing list]: mailto:su26-cse-30872-01-group@nd.edu
+
+    <div class="alert warning-bg" markdown="1">
+    #### Notes
+
+    - You will need to signup and create a [Slack] account if you don't already
+      have one.
+
+    - You can use the web interface or download the [Slack] desktop client
+      (there are also mobile applications as well).
+
+    - Feel free to join any other channels that may interest you.
+    </div>
+
+    ## Task 3: GitHub
+
+    All of your work will be submitted to [GitHub] using [git]. Your final task
+    is to setup your [GitHub] repository by doing the following:
+
+    1.  **Sign-in** or **create** a [GitHub] account if you do not already have one.
+
+    2.  <div class="flex-col" markdown="1">
+
+        **Fork** the class assignments repository from the following template:
+
+        > [https://classroom.github.com/a/ZdO1lMte](https://classroom.github.com/a/ZdO1lMte)
+
+        This will create a **private** `assignments-$USERNAME`
+        repository under your own account and linked to the [nd-cse-30872-su26]
+        organization.
+
+    <div class="alert danger-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "github" | embed_icon }}</i> GitHub Repository
+
+    You are responsible for ensuring that your [GitHub] assignments repository
+    is in proper order, which means you have the correct settings and
+    permissions set.  Failure to properly configure your repository will
+    adversely impact your grade.
+
+    </div>
+
+    ## Task 4: Student Machines
+
+    While you are free to use any machine you wish to do your work, the
+    department provides a set of **student machines** that you can login to and
+    do remote work in an environment crafted for the course.  The following
+    steps allow you to **clone** the **assigments** you just created to any
+    machine of your choosing.
+
+    <div class="alert warning-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "server" | embed_icon }}</i> Student Machines
+
+    As a reminder, students in this class have access to the following
+    **student** machines:
+
+    - `student05.cse.nd.edu`
+    - `student10.cse.nd.edu`
+    - `student11.cse.nd.edu`
+    - `student12.cse.nd.edu`
+    - `student13.cse.nd.edu`
+
+    To access the **student** machines from off-campus, you can either setup
+    [VPN] access or login to `jumpbox.nd.edu` first, and then to any of the
+    **student** machines.
+
+    </div>
+
+    1.  <div class="flex-col" markdown="1">
+
+        Before you can **clone** your [git] repository, you will need to
+        determine which form of **authentication**, you wish to use with
+        [GitHub].
+
+        To remotely access your repository from the command-line, you have two options:
+
+        1.  <div class="flex-col" markdown="1">
+
+            [Setup SSH Keys]: With this method, you generate a local public and
+            private key pair on your computer and then upload the **public
+            key** to [GitHub].  When accessing [GitHub] from the command-line,
+            you will use the **private key** to authenticate to the server.
+
+            This is the **recommended** way to setup your repository as it will
+            allow for **passwordless** access.
+
+        2.  <div class="flex-col" markdown="1">
+
+            [Setup a Personal Access Token]: With this method, [GitHub] will
+            generate an application specific passsword that you can use with
+            **HTTPS**.  As the **PAT** is a long string of characters, it is
+            recommended that you use it in conjunction with a **password
+            manager** or **keyring**.
+
+        <div class="alert success-bg" markdown="1">
+
+        ### <i class="icon icon-medium">{{ "key-chain" | embed_icon }}</i> Setup SSH Keys
+
+        <p>Here is a quick tutorial on how to [Setup SSH Keys] on the student
+        machines (if you have not already):</p>
+
+        1.  <div class="flex-col" markdown="1">
+
+            Generate SSH keys if you don't have them yet:
+
+                :::bash
+                # Accept the defaults, don't make a password if you want to go passwordless
+                $ ssh-keygen
+
+        2.  <div class="flex-col" markdown="1">
+
+            Copy the contents of `~/.ssh/id_rsa.pub` to the SSH Keys section of
+            your [GitHub] settings page:
+
+            > [https://github.com/settings/keys](https://github.com/settings/keys)
+
+                :::bash
+                # Copy and paste the contents of this file into GitHub
+                $ cat ~/.ssh/id_rsa.pub
+
+        3.  <div class="flex-col" markdown="1">
+
+            Edit/create `~/.ssh/config` to use this key with [GitHub]:
+
+                :::bash
+                # Add the following to your config (replace $NETID with your netid)
+                $ vim ~/.ssh/config
+                Host github.com
+                        User git
+                        Hostname github.com
+                        PreferredAuthentications publickey
+                        IdentityFile /escnfs/home/$NETID/.ssh/id_rsa
+
+        Once this is done, you should be able to do [git] operations without a password.
+        You will need to accept the host key the first time by typing in "yes".
+        </div>
+
+    2.  <div class="flex-col" markdown="1">
+
+        **Clone** your [git] repository to your local machine (or the student machines):
+
+            :::bash
+            # Example of cloning GitHub assignments repository to local or student machine
+            $ git clone git@github.com:nd-cse-30872-su26/assignments-$USERNAME.git
+
+    3.  <div class="flex-col" markdown="1">
+
+        **Edit** the `README.md` file in your **assignments** repository such
+        that the **Name** and **NetID** fields are completed (i.e. replace
+        "Domer McDomerson" and "dmcdomer"). You should **commit** your change
+        and then **push** them to [GitHub].
+
+            :::bash
+            # Example on editing README in assignments repository and pushing changes to GitHub
+
+            $ cd assignments-$USERNAME   # Go into the assignments directory
+
+            $ nano README.md                            # Edit the README.md file
+
+            $ git add README.md                         # Mark the file for recording
+
+            $ git commit -m "Update README"             # Record the change
+            [master c550fa1] Update README
+            1 file changed, 2 insertions(+), 2 deletions(-)
+
+            $ git push                                  # Send your local changes to GitHub
+
+    <div class="alert success-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "check-all" | embed_icon }}</i> Tasks
+
+    Once you have setup [Slack], [GitHub], and have a working development
+    environment on your local machine or on a **student machine**, then you
+    have completed all the necessary tasks for this **reading assignment**.
+
+    </div>
+
+    [Setup a Personal Access Token]: https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token
+    [Setup SSH Keys]: https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/about-ssh
+
+    [clone]:    https://git-scm.com/docs/git-clone
+    [git]:      https://git-scm.com/
+
+    [CSE 30872 Programming Challenges]:     index.html
+    [Competitive Programmer's Handbook]:    https://cses.fi/book.html
+    [GitHub]:                               https://github.com
+    [dredd]:                                https://dredd.h4x0r.space
+    [Zoom]:                                 https://notredame.zoom.us/
+    [Slack]:                                https://nd-cse.slack.com/
+    [HackerRank]:                           https://www.hackerrank.com/
+    [LeetCode]:                             https://leetcode.com/
+    [SSH Keys]:                             https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh
+    [nd-cse-30872-su26]:                    https://github.com/nd-cse-30872-su26
+    [VPN]:                                  https://nd.service-now.com/nd_portal?id=kb_article_view&sys_kb_id=cc03ab0edb17e01069d4088faa96198b
