@@ -4,11 +4,19 @@
         topics:         Syllabus, I/O, Complexity, Coding Style
         assignments:
           - Reading 00
+        items:
+          - name:       Slides 00
+            link:       https://docs.google.com/presentation/d/1482rq7il34YimHMjvEgQMfaWjuzJtBup3SyFkScxY9U/edit?usp=sharing
+          - name:       Slides 01
+            link:       https://docs.google.com/presentation/d/1FL5XBbysclUaMmO8ZiA8Adr-JKEJqxcgvKZRUfogi7Y/edit?usp=sharing
 
       - date:           Wed 06/03
         topics:         Arrays, Lists, Stacks, Queues
         assignments:
           - Reading 01
+        items:
+          - name:       Slides 02
+            link:       https://docs.google.com/presentation/d/1Dl2S8XHQXUCdZI7r1Y-0N0yBv-goo1ptUaJ9uzAUsg4/edit?usp=sharing
       
       - date:           Sat 06/06
         topics:         Programming Challenges
