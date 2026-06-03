@@ -19,7 +19,7 @@
         items:
           - name:       Slides 02
             link:       https://docs.google.com/presentation/d/1Dl2S8XHQXUCdZI7r1Y-0N0yBv-goo1ptUaJ9uzAUsg4/edit?usp=sharing
-      
+
       - date:           Sat 06/06
         topics:         Programming Challenges
         assignments:
@@ -33,9 +33,15 @@
         topics:         Searching, Sorting
         assignments:
           - Reading 02
-      
+        items:
+          - name:       Slides 03
+            link:       https://docs.google.com/presentation/d/1vHgn80pjQx1V3jz0RueFEkexSjyKvQdY23HLbY-zcCs/edit?usp=sharing
+
       - date:           Wed 06/10
         topics:         Associative Containers
+        items:
+          - name:       Slides 04
+            link:       https://docs.google.com/presentation/d/1RzrJqiE_ff0grmfSyCXMvcbFWInOAcfcrGWX1HYrUSs/edit?usp=sharing
 
       - date:           Sat 06/13
         topics:         Programming Challenges
@@ -50,10 +56,10 @@
         topics:         Subsets, Permutations, Backtracking
         assignments:
           - Reading 03
-      
+
       - date:           Wed 06/17
         topics:         Bit Manipulation, Greedy Algorithms
-      
+
       - date:           Sat 06/20
         topics:         Programming Challenges
         assignments:
@@ -67,10 +73,10 @@
         topics:         Memoization
         assignments:
           - Reading 04
-      
+
       - date:           Wed 06/24
         topics:         Table Building
-      
+
       - date:           Sat 06/27
         topics:         Programming Challenges
         assignments:
@@ -84,10 +90,10 @@
         topics:         Representation, Traversal
         assignments:
           - Reading 05
-      
+
       - date:           Wed 07/01
         topics:         Divide and Conquer
-      
+
       - date:           Sat 07/04
         topics:         Programming Challenges
         assignments:
@@ -101,10 +107,10 @@
         topics:         Representation, Traversal
         assignments:
           - Reading 05
-      
+
       - date:           Wed 07/08
         topics:         Shortest Paths, Spanning Trees
-      
+
       - date:           Sat 07/11
         topics:         Programming Challenges
         assignments:
@@ -118,10 +124,10 @@
         topics:         Topological Sorting
         assignments:
           - Reading 05
-      
+
       - date:           Wed 07/15
         topics:         Paths, Flows
-      
+
       - date:           Sat 07/18
         topics:         Programming Challenges
         assignments:
@@ -135,7 +141,7 @@
         topics:         ''
         items:
           - name:       Interview
-      
+
       - date:           Tue 07/21
         topics:         ''
         items:
@@ -145,7 +151,7 @@
         topics:         ''
         items:
           - name:       Interview
-      
+
       - date:           Thu 07/23
         topics:         ''
         items:
