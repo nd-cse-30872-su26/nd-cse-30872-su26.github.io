@@ -1,0 +1,177 @@
+title:      "Challenge 06: Distinct Fruit"
+body:       |
+
+    <div class="flex-row" markdown="1">
+
+    <div class="flex-col" markdown="1">
+
+    Once again, the instructor is engaging[^1] in some [biohacking].  This
+    means that he tries to avoid eating things like red meat and dairy when
+    possible, and instead eats ate a lot of fruits and vegetables.
+
+    Because eating apples everyday is pretty boring, the instructor created a
+    script that generates a sequence of fruits to eat (one per day).  For example:
+
+        ::text
+        banana tangerine banana peach peach banana
+
+    This means that on the first day, he will eat a `banana` and on the second
+    day he will eat a `tangerine` and so on and so forth.
+
+    </div>
+
+    <div class="flex-col-33" markdown="1">
+      <img src="static/img/challenge06-fruitbowl.jpg" class="responsive">
+    </div>
+
+    </div>
+    
+    Since this script uses a random number generator to select the sequence of
+    fruits, there are sometimes duplicates in his fruit eating schedule.  This
+    can be unfortunate, because the instructor doesn't want to eat the same
+    thing everyday [^2].
+
+    Given a sequence of fruits, the instructor wants to know what it is the
+    length of longest subsequence of days with distinct fruits (and what fruits
+    are in that subsequence).
+
+    For instance, in the example above, the longest sequence of days with
+    distinct fruits is `tangerine banana peach` and so the length is `3`.
+
+    [biohacking]: https://www.healthline.com/health/biohacking#takeaway
+
+    ## Input
+
+    You will be given a series of fruit sequences, one sequence per line.  Each
+    line will contain a sequence of fruits separate by spaces as show below:
+
+    ### Example Input
+
+        :::text
+        pineapple
+        orange grape
+        grape coconut pear
+        peach pineapple peach peach
+        grape apple banana peach pineapple
+        banana tangerine banana peach peach banana
+        apple grape tangerine coconut apple coconut grape
+        apple grape banana tangerine pineapple pear orange banana
+        pineapple apple coconut apple pineapple banana pineapple orange coconut
+
+    ## Output
+
+    For each sequence of fruits, you are to report the longest sequence of
+    distinct fruits as show below:
+
+    ### Example Output
+
+        :::text
+        1: pineapple
+        2: orange, grape
+        3: grape, coconut, pear
+        2: peach, pineapple
+        5: grape, apple, banana, peach, pineapple
+        3: tangerine, banana, peach
+        4: apple, grape, tangerine, coconut
+        7: apple, grape, banana, tangerine, pineapple, pear, orange
+        4: coconut, apple, pineapple, banana
+
+    <div class="alert warning-bg" markdown="1">
+
+    **Note**, you should display the **length** of the subsequence, followed by
+    the **fruits**, separated by `", "`.  If there are multiple subsequences
+    with the maximum length, choose the first subsequence. **Make sure there is
+    no trailing space**.
+
+    </div>
+
+    <div class="alert info-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "trophy" | embed_icon }}</i> Programming Challenges
+
+    This problem is inspired by "Problem 13.11" in [Elements of Programming
+    Interviews].
+
+    </div>
+
+    <div class="alert danger-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "scale-balance" | embed_icon }}</i> Algorithmic Complexity
+
+    For each input test case, your solution should have the following targets:
+
+    <table class="bordered" markdown="1">
+    <tbody markdown="1">
+    <tr class="caution-bg" markdown="1">
+      <td width="165px" markdown="1">**Time Complexity**</td>
+      <td markdown="1">`O(N)`, where `N` is the length of each input sequence.</td>
+    </tr>
+    <tr class="warning-bg" markdown="1">
+      <td markdown="1">**Space Complexity**</td>
+      <td markdown="1">`O(N)`, where `N` is the length of each input sequence.</td>
+    </tr>
+    </tbody>
+    </table>
+
+    Your solution may be below the targets, but it **should not exceed them**.
+
+    </div>
+
+    [Elements of Programming Interviews]:   http://elementsofprogramminginterviews.com/
+
+    [^1]:   It's just a diet... kinda.
+    [^2]:   Actually not true.  I do eat basically the same thing everyday...
+
+    ## Submission
+
+    To submit your work, follow the same procedure you used for [Reading 00]:
+
+        :::bash
+        $ cd path/to/cse-30872-su26-assignments     # Go to assignments repository
+        $ git switch master                         # Make sure we are on master
+        $ git pull --rebase                         # Pull any changes from GitHub
+
+        $ git switch -c challenge06                 # Create and checkout challenge06 branch
+
+        $ $EDITOR challenge06/program.cpp           # Edit your code
+
+        $ git add challenge06/program.cpp           # Stage your changes
+        $ git commit -m "Challenge 06: Code"        # Commit your changes
+
+        $ git push -u origin challenge06            # Send changes to GitHub
+
+    To check your code, you can use the `.scripts/check.py` script or [curl]:
+
+        :::bash
+        $ .scripts/check.py
+        Checking challenge06 program.cpp ...
+          Result Success
+            Time  0.02
+          --------------------
+           Score  6.00 /  6.00
+           Grade  1.00 /  1.00
+
+        $ curl -F source=@challenge06/program.cpp https://dredd.h4x0r.space/code/cse-30872-su26/challenge06
+        {"result": "Success", "score": 6, "time": 0.016405344009399414, "value": 6, "status": 0}
+
+    <div class="alert warning-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "lifebuoy" | embed_icon }}</i> Acknowledgments
+
+    If you collaborated with any other students or received help AI tools on
+    this assignment, please describe this support in the **description** of
+    your **Pull Request**.
+
+    </div>
+
+    <div class="alert success-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "account-question" | embed_icon }}</i> Graders
+
+    Once you have committed your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the **instructor**.
+
+    </div>
+
+    [GitHub]: https://github.com
+    [Reading 00]: reading00.html
