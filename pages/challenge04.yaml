@@ -1,0 +1,170 @@
+title:      "Challenge 04: Sam's Search"
+body:       |
+
+    <div class="flex-row" markdown="1">
+
+    <div class="flex-col" markdown="1">
+
+    Not content with a job at a **hot** Silicon Valley startup, **Sam** is
+    still grinding **hard** on [LeetCode] challenges[^1] in hopes of leveling
+    up to another software engineering gig.
+
+    In fact, he was *geeking* out on their **30-day Challenge** during the
+    month of May and came across this problem:
+
+    > Suppose an array of unique numbers sorted in ascending order is **rotated**
+    > at some pivot unknown to you beforehand.
+    > <br><br>
+    > For instance, `[0,1,2,4,5,6,7]` might become `[4,5,6,7,0,1,2]`.
+    > <br><br>
+    > You are given a `target` value to search. If found in the array report its
+    > `index`, otherwise report it is not found.
+
+    Because *Sam* is busy networking with people on [LinkedIn], he asks that
+    you repay him for the help he provided you in [Systems Programming] by
+    coding up a solution to this problem for him.
+
+    <div class="alert warning-bg" markdown="1">
+    **Note**: Your algorithm's runtime complexity must be in the order of `O(log n)`.
+    </div>
+
+    </div>
+
+    <div class="flex-col-25" markdown="1">
+      <img src="static/img/challenge04-sam.jpg" class="responsive">
+      <img src="static/img/challenge04-array.png" class="responsive">
+    </div>
+
+    </div>
+
+    <div class="alert info-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "trophy" | embed_icon }}</i> LeetCode
+
+    This programming challenge is based on [33. Search in Rotated Sorted
+    Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) from
+    [LeetCode].
+
+    </div>
+
+    ## Input
+
+    Each input test case will consist of two lines.  The first line contains
+    the sorted but rotated `array`, while the second line contains the `target`
+    to search for within the `array`.
+
+    Here is an example input:
+
+        ::text
+        4 5 6 7 0 1 2
+        0
+        4 5 6 7 0 1 2
+        3
+        3 5 1
+        3
+
+    ## Output
+
+    For each input test case, you are to output a message in the following
+    format if the `target` is found:
+
+        :::text
+        {target} found at index {index}
+
+    If the `target` is not in the `array`, then report:
+
+        :::text
+        {target} was not found
+
+    Here is the output for the example input above:
+
+        ::text
+        0 found at index 4
+        3 was not found
+        3 found at index 0
+
+    <div class="alert danger-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "scale-balance" | embed_icon }}</i> Algorithmic Complexity
+
+    For each input test case, your solution should have the following targets:
+
+    <table class="bordered" markdown="1">
+    <tbody markdown="1">
+    <tr class="caution-bg" markdown="1">
+      <td width="165px" markdown="1">**Time Complexity**</td>
+      <td markdown="1">`O(log(N))`, where `N` is the length of each input array.</td>
+    </tr>
+    <tr class="warning-bg" markdown="1">
+      <td markdown="1">**Space Complexity**</td>
+      <td markdown="1">`O(log(N))`, where `N` is the length of each input array.</td>
+    </tr>
+    </tbody>
+    </table>
+
+    Your solution may be below the targets, but it **should not exceed them**.
+
+    </div>
+
+    ## Submission
+
+    To submit your work, follow the same procedure you used for [Reading 00]:
+
+        :::bash
+        $ cd path/to/cse-30872-su26-assignments     # Go to assignments repository
+        $ git switch master                         # Make sure we are on master
+        $ git pull --rebase                         # Pull any changes from GitHub
+
+        $ git switch -c challenge04                 # Create and checkout challenge04 branch
+
+        $ $EDITOR challenge04/program.cpp           # Edit your code
+
+        $ git add challenge04/program.cpp           # Stage your changes
+        $ git commit -m "Challenge 04: Code"        # Commit your changes
+
+        $ git push -u origin challenge04            # Send changes to GitHub
+
+    To check your code, you can use the `.scripts/check.py` script or [curl]:
+
+        :::bash
+        $ .scripts/check.py
+        Checking challenge04 program.cpp ...
+          Result Success
+            Time  0.16
+          --------------------
+           Score  6.00 /  6.00
+           Grade  1.00 /  1.00
+
+        $ curl -F source=@challenge04/program.cpp https://dredd.h4x0r.space/code/cse-30872-su26/challenge04
+        {"result": "Success", "score": 6, "time": 0.16451787948608398, "value": 6, "status": 0}
+
+    <div class="alert warning-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "lifebuoy" | embed_icon }}</i> Acknowledgments
+
+    If you collaborated with any other students or received help AI tools on
+    this assignment, please describe this support in the **description** of
+    your **Pull Request**.
+
+    </div>
+
+    <div class="alert success-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "account-question" | embed_icon }}</i> Graders
+
+    Once you have committed your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the **instructor**.
+
+    </div>
+
+    [GitHub]: https://github.com
+    [HackerRank]: https://www.hackerrank.com
+    [LeetCode]: https://leetcode.com
+    [curl]: https://curl.haxx.se/
+    [Reading 00]: reading00.html
+
+    [Systems Programming]:  https://pnutz.h4x0r.space/archive/teaching/cse.20289.sp23
+    [LinkedIn]: https://www.linkedin.com/in/samuelbattalio
+
+    [^1]: You are welcome to do a [LeetCode] weekly challenge as one of your
+    **External** programming contests for the course.
