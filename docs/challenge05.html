@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="static/ico/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="static/ico/favicon-16x16.png">
+<link rel="manifest" href="static/ico/site.webmanifest">
+<!-- Stylesheets -->
+<link rel="stylesheet" href="static/css/pnutzh4x0r.css">
+<title>Challenge 05: Selina's Medicine Bottles</title>
+</head>
+<body>
+<header>
+<a class="logo" href="challenge05.html">
+    <h1>Challenge 05: Selina's Medicine Bottles</h1>
+</a>
+<nav>
+    <ul>
+        <li><a href="index.html"><h4>Home</h4></a></li>
+        </ul>
+</nav></header>
+<main>
+<div class="flex-row">
+<div class="flex-col">
+<p>As usual, <a href="https://www.linkedin.com/in/selinanie">Selina</a> is having <strong>tummy troubles</strong>.  Maybe she ate <em>dairy</em>
+despite having an intolerance<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.  Or maybe she ran around the lake
+despite not having eaten<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>.  Or maybe she is stressed out because the
+instructor hasn't written that thirtieth letter of recommendation yet<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>.
+Or maybe she simply just ate at the dining hall<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>.</p>
+<p>Either way, her stomach is not happy and she needs to find some
+<strong>medicine</strong> to calm it down.</p>
+<p>Unfortunately, <a href="https://www.linkedin.com/in/selinanie">Selina</a> takes a lot of medication.  Like, a lot.  Perhaps
+too many.  In fact, her backpack is a portable pharmacy<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup>... a mini <a href="https://uhs.nd.edu/">St.
+Liam's</a>.</p>
+<p>Because she has so many medicine <strong>bottles</strong>, she decides to organize them
+according to the following rules.</p>
+</div>
+<div class="flex-col-25">
+<p><img src="static/img/challenge05-snie.jpg" class="responsive"></p>
+</div>
+</div>
+<ol>
+<li>
+<div class="flex-col">
+<p>Each <strong>bottle</strong> has three attributes: <code>medication</code> name, bottle <code>size</code>,
+and pill <code>type</code>.</p>
+<ul>
+<li><code>size</code>: can be <code>small</code>, <code>medium</code>, or <code>large</code></li>
+<li><p><code>type</code>: can be <code>gel</code> or <code>tablet</code></p></li>
+</ul>
+</li>
+<li>
+<p>She wants to group all the bottles of the same <code>type</code> together with
+<code>gel</code> pills coming before <code>tablet</code> pills.</p>
+</li>
+<li>
+<p>Within each <code>type</code> she wants to arrange the <strong>bottles</strong> in <strong>ascending</strong>
+order <strong>alphabetically</strong> by <code>medication</code> name.</p>
+</li>
+<li>
+<p>If any of the <strong>bottles</strong> have the same <code>medication</code> name, then she
+wants to order them by in <strong>ascending</strong> order according to <code>size</code> (i.e.
+<code>small</code>, <code>medium</code>, then <code>large</code>).</p>
+</li>
+</ol>
+<p>Of course, she is too busy <a href="https://en.wikipedia.org/wiki/Girlboss">girlbossing</a> to actually do the organization
+herself.  Instead, she wants you to do the work for her so she can go
+socialize, take care of <a href="https://residentiallife.nd.edu/undergraduate/halls/howard-hall/">ducks</a>, or play with <a href="https://www.instagram.com/the_diary_of_indy/">Indy</a>.</p>
+<h2 id="input">Input<a class="headerlink" href="#input" title="Permanent link">&para;</a></h2>
+<p>You will be given a series of input test cases, each representing a
+collection of bottles you need to arrange according to the rules described
+above.</p>
+<p>Each input test case will consist of two parts.  The first line is an
+integer <code>n</code> which denotes how many bottles there are in the collection.  This
+is then followed by a series of <code>n</code> bottles in the following format:</p>
+<div class="codehilite"><pre><span></span><code>MEDICATION_NAME BOTTLE_SIZE PILL_TYPE
+</code></pre></div>
+
+<p>Here is an example input:</p>
+<div class="codehilite"><pre><span></span><code>10
+Omeprazole large gel
+Metoprolol small gel
+Clopidogrel medium tablet
+Clopidogrel large tablet
+Oxycodone large gel
+Clopidogrel small tablet
+Furosemide large tablet
+Clonidine large tablet
+Simvastatin medium tablet
+Amoxicillin medium tablet
+</code></pre></div>
+
+<div class="alert warning-bg">
+<p><strong>Note</strong>: As described above, each <strong>bottle</strong> can be one of three <code>sizes</code>:
+<code>small</code>, <code>medium</code>, or <code>large</code>.  Likewise, each <strong>bottle</strong> can be one of
+two <code>types</code>: <code>gel</code> or <code>tablet</code>.</p>
+</div>
+<h2 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h2>
+<p>For each input test case, you are to order the bottles as described above
+and then display a <strong>silhouette</strong> of the bottles in the cabinet in the
+ordered arranged.</p>
+<p>For each bottle size, use the following <strong>letter</strong> to represent the bottle
+based on its <strong>size</strong> in the <strong>silhouette</strong>:</p>
+<table class="bordered">
+<tbody>
+<tr class="success-bg">
+<td><strong>small</strong></td>
+<td><code>.</code></td>
+</tr>
+<tr class="warning-bg">
+<td><strong>medium</strong></td>
+<td><code>:</code></td>
+</tr>
+<tr class="danger-bg">
+<td><strong>large</strong></td>
+<td><code>|</code></td>
+</tr>
+</tbody>
+</table>
+<p>Here is the output for the example input above:</p>
+<div class="codehilite"><pre><span></span><code>.||:|.:||:
+</code></pre></div>
+
+<p>Arranging the input of <strong>bottles</strong> by the rules described above, would give the
+following sequence of <strong>bottles</strong>:</p>
+<table class="bordered">
+<thead>
+<th>Medication</th>
+<th>Size</th>
+<th>Type</th>
+<th>Letter</th>
+</thead>
+<tbody>
+<tr class="success-bg">
+<td><strong>Metoprolol</strong></td>
+<td><strong>small</strong></td>
+<td><strong>gel</strong></td>
+<td><code>.</code></td>
+</tr>
+<tr class="warning-bg">
+<td><strong>Omeprazole</strong></td>
+<td><strong>large</strong></td>
+<td><strong>gel</strong></td>
+<td><code>|</code></td>
+</tr>
+<tr class="danger-bg">
+<td><strong>Oxycodone</strong></td>
+<td><strong>large</strong></td>
+<td><strong>gel</strong></td>
+<td><code>|</code></td>
+</tr>
+<tr class="success-bg">
+<td><strong>Amoxicillin</strong></td>
+<td><strong>medium</strong></td>
+<td><strong>tablet</strong></td>
+<td><code>:</code></td>
+</tr>
+<tr class="warning-bg">
+<td><strong>Clonidine</strong></td>
+<td><strong>large</strong></td>
+<td><strong>tablet</strong></td>
+<td><code>|</code></td>
+</tr>
+<tr class="danger-bg">
+<td><strong>Clopidogrel</strong></td>
+<td><strong>small</strong></td>
+<td><strong>tablet</strong></td>
+<td><code>.</code></td>
+</tr>
+<tr class="success-bg">
+<td><strong>Clopidogrel</strong></td>
+<td><strong>medium</strong></td>
+<td><strong>tablet</strong></td>
+<td><code>:</code></td>
+</tr>
+<tr class="warning-bg">
+<td><strong>Clopidogrel</strong></td>
+<td><strong>large</strong></td>
+<td><strong>tablet</strong></td>
+<td><code>|</code></td>
+</tr>
+<tr class="danger-bg">
+<td><strong>Furosemide</strong></td>
+<td><strong>large</strong></td>
+<td><strong>tablet</strong></td>
+<td><code>|</code></td>
+</tr>
+<tr class="success-bg">
+<td><strong>Simvastatin</strong></td>
+<td><strong>medium</strong></td>
+<td><strong>tablet</strong></td>
+<td><code>:</code></td>
+</tr>
+</tbody>
+</table>
+<p>As can be seen, the bottles are arranged by pill <code>type</code>, then
+alphabetically <code>medication</code> name, and then by bottle <code>size</code>.</p>
+<p>Once arranged properly, simply combine all the <code>letters</code> corresponding to
+the bottle <code>sizes</code> into a single line to form the <strong>silhouette</strong> and print
+that out.</p>
+<div class="alert danger-bg">
+<h3 id="scale-balance-embed_icon-algorithmic-complexity"><i class="icon icon-medium"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>scale-balance</title><path d="M12,3C10.73,3 9.6,3.8 9.18,5H3V7H4.95L2,14C1.53,16 3,17 5.5,17C8,17 9.56,16 9,14L6.05,7H9.17C9.5,7.85 10.15,8.5 11,8.83V20H2V22H22V20H13V8.82C13.85,8.5 14.5,7.85 14.82,7H17.95L15,14C14.53,16 16,17 18.5,17C21,17 22.56,16 22,14L19.05,7H21V5H14.83C14.4,3.8 13.27,3 12,3M12,5A1,1 0 0,1 13,6A1,1 0 0,1 12,7A1,1 0 0,1 11,6A1,1 0 0,1 12,5M5.5,10.25L7,14H4L5.5,10.25M18.5,10.25L20,14H17L18.5,10.25Z" /></svg>
+</i> Algorithmic Complexity<a class="headerlink" href="#scale-balance-embed_icon-algorithmic-complexity" title="Permanent link">&para;</a></h3>
+<p>For each input test case, your solution should have the following targets:</p>
+<table class="bordered">
+<tbody>
+<tr class="caution-bg">
+<td width="165px"><strong>Time Complexity</strong></td>
+<td><code>O(Nlog(N))</code>, where <code>N</code> is the number of bottles for each input test case.</td>
+</tr>
+<tr class="warning-bg">
+<td><strong>Space Complexity</strong></td>
+<td><code>O(N)</code>, where <code>N</code> is the number of bottles for each input test case.</td>
+</tr>
+</tbody>
+</table>
+<p>Your solution may be below the targets, but it <strong>should not exceed them</strong>.</p>
+</div>
+<h2 id="submission">Submission<a class="headerlink" href="#submission" title="Permanent link">&para;</a></h2>
+<p>To submit your work, follow the same procedure you used for [Reading 01]:</p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>path/to/cse-30872-su26-assignments<span class="w">     </span><span class="c1"># Go to assignments repository</span>
+$<span class="w"> </span>git<span class="w"> </span>switch<span class="w"> </span>master<span class="w">                         </span><span class="c1"># Make sure we are on master</span>
+$<span class="w"> </span>git<span class="w"> </span>pull<span class="w"> </span>--rebase<span class="w">                         </span><span class="c1"># Pull any changes from GitHub</span>
+
+$<span class="w"> </span>git<span class="w"> </span>switch<span class="w"> </span>-c<span class="w"> </span>challenge05<span class="w">                 </span><span class="c1"># Create and checkout challenge05 branch</span>
+
+$<span class="w"> </span><span class="nv">$EDITOR</span><span class="w"> </span>challenge05/program.cpp<span class="w">           </span><span class="c1"># Edit your code</span>
+
+$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>challenge05/program.cpp<span class="w">           </span><span class="c1"># Stage your changes</span>
+$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Challenge 05: Code&quot;</span><span class="w">        </span><span class="c1"># Commit your changes</span>
+
+$<span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>challenge05<span class="w">            </span><span class="c1"># Send changes to GitHub</span>
+</code></pre></div>
+
+<p>To check your code, you can use the <code>.scripts/check.py</code> script or <a href="https://curl.haxx.se/">curl</a>:</p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>.scripts/check.py
+Checking<span class="w"> </span>challenge05<span class="w"> </span>program.cpp<span class="w"> </span>...
+<span class="w">  </span>Result<span class="w"> </span>Success
+<span class="w">    </span>Time<span class="w">  </span><span class="m">0</span>.56
+<span class="w">  </span>--------------------
+<span class="w">   </span>Score<span class="w">  </span><span class="m">6</span>.00<span class="w"> </span>/<span class="w">  </span><span class="m">6</span>.00
+<span class="w">   </span>Grade<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span>/<span class="w">  </span><span class="m">1</span>.00
+
+$<span class="w"> </span>curl<span class="w"> </span>-F<span class="w"> </span><span class="nv">source</span><span class="o">=</span>@challenge05/program.cpp<span class="w"> </span>https://dredd.h4x0r.space/code/cse-30872-su26/challenge05
+<span class="o">{</span><span class="s2">&quot;result&quot;</span>:<span class="w"> </span><span class="s2">&quot;Success&quot;</span>,<span class="w"> </span><span class="s2">&quot;score&quot;</span>:<span class="w"> </span><span class="m">6</span>,<span class="w"> </span><span class="s2">&quot;time&quot;</span>:<span class="w"> </span><span class="m">0</span>.6157994270324707,<span class="w"> </span><span class="s2">&quot;value&quot;</span>:<span class="w"> </span><span class="m">6</span>,<span class="w"> </span><span class="s2">&quot;status&quot;</span>:<span class="w"> </span><span class="m">0</span><span class="o">}</span>
+</code></pre></div>
+
+<div class="alert warning-bg">
+<h3 id="lifebuoy-embed_icon-acknowledgments"><i class="icon icon-medium"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>lifebuoy</title><path d="M19.79,15.41C20.74,13.24 20.74,10.75 19.79,8.59L17.05,9.83C17.65,11.21 17.65,12.78 17.06,14.17L19.79,15.41M15.42,4.21C13.25,3.26 10.76,3.26 8.59,4.21L9.83,6.94C11.22,6.35 12.79,6.35 14.18,6.95L15.42,4.21M4.21,8.58C3.26,10.76 3.26,13.24 4.21,15.42L6.95,14.17C6.35,12.79 6.35,11.21 6.95,9.82L4.21,8.58M8.59,19.79C10.76,20.74 13.25,20.74 15.42,19.78L14.18,17.05C12.8,17.65 11.22,17.65 9.84,17.06L8.59,19.79M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,8A4,4 0 0,0 8,12A4,4 0 0,0 12,16A4,4 0 0,0 16,12A4,4 0 0,0 12,8Z" /></svg>
+</i> Acknowledgments<a class="headerlink" href="#lifebuoy-embed_icon-acknowledgments" title="Permanent link">&para;</a></h3>
+<p>If you collaborated with any other students or received help AI tools on
+this assignment, please describe this support in the <strong>description</strong> of
+your <strong>Pull Request</strong>.</p>
+</div>
+<div class="alert success-bg">
+<h3 id="account-question-embed_icon-graders"><i class="icon icon-medium"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>account-question</title><path d="M13,8A4,4 0 0,1 9,12A4,4 0 0,1 5,8A4,4 0 0,1 9,4A4,4 0 0,1 13,8M17,18V20H1V18C1,15.79 4.58,14 9,14C13.42,14 17,15.79 17,18M20.5,14.5V16H19V14.5H20.5M18.5,9.5H17V9A3,3 0 0,1 20,6A3,3 0 0,1 23,9C23,9.97 22.5,10.88 21.71,11.41L21.41,11.6C20.84,12 20.5,12.61 20.5,13.3V13.5H19V13.3C19,12.11 19.6,11 20.59,10.35L20.88,10.16C21.27,9.9 21.5,9.47 21.5,9A1.5,1.5 0 0,0 20,7.5A1.5,1.5 0 0,0 18.5,9V9.5Z" /></svg>
+</i> Graders<a class="headerlink" href="#account-question-embed_icon-graders" title="Permanent link">&para;</a></h3>
+<p>Once you have committed your work and pushed it to <a href="https://github.com">GitHub</a>, remember to
+create a <strong>pull request</strong> and assign it to the <strong>instructor</strong>.</p>
+</div>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Me too :|&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Negative feedback loop.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>Never again.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>True story.&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>Just Kidding.  Maybe.  Not really.&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+</main>
+<footer>
+Built using <a href="https://python.org">Python</a>
+and <a href="https://jinja.palletsprojects.com">Jinja</a>
+with colors from <a href="https://nordtheme.com">Nord Theme</a>
+and icons from <a href="https://pictogrammers.com/library/mdi/">Material Design Icons</a>.</footer>
+</body>
+</html>

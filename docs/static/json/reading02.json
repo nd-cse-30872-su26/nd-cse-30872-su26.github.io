@@ -1,0 +1,78 @@
+{
+    "q01": {
+        "type": "multiple",
+        "question": "\n<p>Suppose we wanted to <b>sort</b> a million integers where each integer\nis between <code>0</code> and <code>1,000</code>.  Which of the following\nstatements are <b>false</b> (<i>choose all that apply</i>)?</p>\n",
+        "responses": {
+            "bubble_bigo": "<b>Bubble sort</b> would order the integers in <b>O(nlogn)</b> time in the worst case.",
+            "merge_bigo": "<b>Merge sort</b> would order the integers in <b>O(nlogn)</b> time in the worst case.",
+            "quick_bigo": "<b>Quick sort</b> would order the integers in <b>O(nlogn)</b> time in the worst case.",
+            "count_bigo": "<b>Counting sort</b> would order the integers in <b>O(nlogn)</b> time in the worst case.",
+            "insert_bigo": "<b>Insertion sort</b> would order the integers in <b>O(nlogn)</b> time in the worst case."
+        }
+    },
+    "q02": {
+        "type": "blank",
+        "question": "\n<p>Given the following <b>vector</b> in <b>C++</b>:<p>\n\n<pre>\nvector&lt;int&gt; v = {4, 6, 6, 3, 7, 5, 4, 7, 0, 1};\n</pre>\n\n<p>To <b>sort</b> the <b>vector</b> in <b>ascending order</b> we would\ndo:</p>\n\n<pre>\n____(____, ____);\n</pre>\n\n<p>To <b>sort</b> the <b>vector</b> in <b>descending order</b> we would\ndo:</p>\n\n<pre>\n____(____, ____);\n</pre>\n"
+    },
+    "q03": {
+        "type": "blank",
+        "question": "\n<p>Given the same <b>vector</b> in question 2, what would be the output of\nthe following statements after <b>sorting</b> the <b>vector</b> in\n<b>ascending order</b>:</p>\n\n<pre>\ncout &lt;&lt; lower_bound(v.begin(), v.end(), 4) - v.begin() &lt;&lt; endl; // 1. ____\ncout &lt;&lt; upper_bound(v.begin(), v.end(), 6) - v.begin() &lt;&lt; endl; // 2. ____\n</pre>\n"
+    },
+    "q04": {
+        "type": "blank",
+        "question": "\n<p>Complete the following implementation of <b>binary search</b> in <b>C++</b>:</p>\n\n<pre>\ntemplate &lt;typename IT, typename T&gt;\nbool binary_search(IT start, IT end, const T &target) {\n    while (____) {                  // 1\n        auto length   = ____;       // 2\n        auto middle   = ____;       // 3\n        auto midpoint = *(____);    // 4\n\n        if (____) {                 // 5\n            end   = ____;           // 6\n        } else if (____) {          // 7\n            start = ____;           // 8\n        } else {\n            return true;\n        }\n    }\n    return false;\n}\n\n</pre>\n"
+    },
+    "q05": {
+        "type": "single",
+        "question": "\n<p>Suppose you wanted to build a music playlist so you can play all of your\nfavorite Taylor Swift songs in order.  Which of the following would be the\nmost appropriate <b>data structure</b> to store your playlist?</p>\n",
+        "responses": {
+            "vector": "Vector",
+            "map": "Map",
+            "set": "Set"
+        }
+    },
+    "q06": {
+        "type": "single",
+        "question": "\n<p>Suppose you wanted your music player to keep track of whether or not you\nhave played a Taylor Swift song before.  Which of the following would be\nthe most appropriate <b>data structure</b> to track this information?</p>\n",
+        "responses": {
+            "vector": "Vector",
+            "map": "Map",
+            "set": "Set"
+        }
+    },
+    "q07": {
+        "type": "single",
+        "question": "\n<p>Suppose you wanted your music player to keep of how many times you have\nplayed a Taylor Swift song.  Which of the following would be the most\nappropriate <b>data structure</b> to track this information?</p>\n",
+        "responses": {
+            "vector": "Vector",
+            "map": "Map",
+            "set": "Set"
+        }
+    },
+    "q08": {
+        "type": "blank",
+        "question": "\n<p>Complete the <code>has_duplicates</code> Python function below, which returns\n<code>True</code> if the given list has any duplicates (otherwise\n<code>False</code>).</p>\n\n<pre>\ndef has_duplicates(lst):\n    return ____\n</pre>\n"
+    },
+    "q09": {
+        "type": "multiple",
+        "question": "\n<p>Which of the following statements regarding <b>maps</b> and <b>sets</b>\nin <b>C++</b> are <b>true</b> (<i>choose all that apply</i>)?</p>\n",
+        "responses": {
+            "ordered_sets_search": "<b>Ordered sets</b> have <b>O(logn)</b> average search times.",
+            "unordered_sets_search": "<b>Unordered sets</b> have <b>O(logn)</b> average search times.",
+            "sets_order": "An <b>ordered set</b> and <b>unordered set</b> with the same elements may iterate through a different sequence of elements.",
+            "ordered_maps_hash": "<b>Ordered maps</b> utilize a <b>hash table</b>.",
+            "unordered_maps_hash": "<b>Unordered maps</b> utilize a <b>hash table</b>."
+        }
+    },
+    "q10": {
+        "type": "multiple",
+        "question": "\n<p>Which of the following statements regarding <b>maps</b> and <b>sets</b>\nin <b>Python</b> are <b>true</b> (<i>choose all that apply</i>)?</p>\n",
+        "responses": {
+            "sets_immutable": "<b>Sets</b> are <b>immutable</b>.",
+            "sets_declaration": "A <b>set</b> can be declared with <code>{item0, item1, ..., itemN}</code>.",
+            "sets_order": "Iterating over two <b>sets</b> with the same elements always yields the same order.",
+            "dicts_key": "<b>Dictionary</b> keys can be any object including <code>strings</code>, <code>ints</code>, <code>floats</code>, and <code>lists</code>.",
+            "dicts_declaration": "An empty <b>dictionary</b> can be delared with either <code>dict()</code> or <code>{}</code>."
+        }
+    }
+}
