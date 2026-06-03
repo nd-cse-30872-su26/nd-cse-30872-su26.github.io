@@ -1,0 +1,288 @@
+title:      "Challenge 05: Selina's Medicine Bottles"
+body:       |
+
+    <div class="flex-row" markdown="1">
+    <div class="flex-col" markdown="1">
+
+    As usual, [Selina] is having **tummy troubles**.  Maybe she ate *dairy*
+    despite having an intolerance[^1].  Or maybe she ran around the lake
+    despite not having eaten[^2].  Or maybe she is stressed out because the
+    instructor hasn't written that thirtieth letter of recommendation yet[^3].
+    Or maybe she simply just ate at the dining hall[^4].
+
+    Either way, her stomach is not happy and she needs to find some
+    **medicine** to calm it down.
+
+    Unfortunately, [Selina] takes a lot of medication.  Like, a lot.  Perhaps
+    too many.  In fact, her backpack is a portable pharmacy[^5]... a mini [St.
+    Liam's].
+
+    Because she has so many medicine **bottles**, she decides to organize them
+    according to the following rules.
+
+    </div>
+
+    <div class="flex-col-25" markdown="1">
+      <img src="static/img/challenge05-snie.jpg" class="responsive">
+    </div>
+    </div>
+
+    1.  <div class="flex-col">
+
+        Each **bottle** has three attributes: `medication` name, bottle `size`,
+        and pill `type`.
+
+        - `size`: can be `small`, `medium`, or `large`
+        - <p>`type`: can be `gel` or `tablet`</p>
+
+    2. She wants to group all the bottles of the same `type` together with
+    `gel` pills coming before `tablet` pills.
+
+    3. Within each `type` she wants to arrange the **bottles** in **ascending**
+    order **alphabetically** by `medication` name.
+
+    4. If any of the **bottles** have the same `medication` name, then she
+    wants to order them by in **ascending** order according to `size` (i.e.
+    `small`, `medium`, then `large`).
+
+    Of course, she is too busy [girlbossing] to actually do the organization
+    herself.  Instead, she wants you to do the work for her so she can go
+    socialize, take care of [ducks], or play with [Indy].
+
+    [Selina]: https://www.linkedin.com/in/selinanie
+    [St. Liam's]: https://uhs.nd.edu/
+    [Girlbossing]: https://en.wikipedia.org/wiki/Girlboss
+    [ducks]: https://residentiallife.nd.edu/undergraduate/halls/howard-hall/
+    [Indy]: https://www.instagram.com/the_diary_of_indy/
+
+    [^1]: Me too :|
+    [^2]: Negative feedback loop.
+    [^3]: Never again.
+    [^4]: True story.
+    [^5]: Just Kidding.  Maybe.  Not really.
+
+    ## Input
+
+    You will be given a series of input test cases, each representing a
+    collection of bottles you need to arrange according to the rules described
+    above.
+
+    Each input test case will consist of two parts.  The first line is an
+    integer `n` which denotes how many bottles there are in the collection.  This
+    is then followed by a series of `n` bottles in the following format:
+
+        :::text
+        MEDICATION_NAME BOTTLE_SIZE PILL_TYPE
+
+    Here is an example input:
+
+        ::text
+        10
+        Omeprazole large gel
+        Metoprolol small gel
+        Clopidogrel medium tablet
+        Clopidogrel large tablet
+        Oxycodone large gel
+        Clopidogrel small tablet
+        Furosemide large tablet
+        Clonidine large tablet
+        Simvastatin medium tablet
+        Amoxicillin medium tablet
+
+    <div class="alert warning-bg" markdown="1">
+    **Note**: As described above, each **bottle** can be one of three `sizes`:
+    `small`, `medium`, or `large`.  Likewise, each **bottle** can be one of
+    two `types`: `gel` or `tablet`.
+    </div>
+
+    ## Output
+
+    For each input test case, you are to order the bottles as described above
+    and then display a **silhouette** of the bottles in the cabinet in the
+    ordered arranged.
+
+    For each bottle size, use the following **letter** to represent the bottle
+    based on its **size** in the **silhouette**:
+
+    <table class="bordered" markdown="1">
+    <tbody markdown="1">
+    <tr class="success-bg" markdown="1">
+      <td markdown="1">**small**</td>
+      <td markdown="1">`.`</td>
+    </tr>
+    <tr class="warning-bg" markdown="1">
+      <td markdown="1">**medium**</td>
+      <td markdown="1">`:`</td>
+    </tr>
+    <tr class="danger-bg" markdown="1">
+      <td markdown="1">**large**</td>
+      <td markdown="1">`|`</td>
+    </tr>
+    </tbody>
+    </table>
+
+    Here is the output for the example input above:
+
+        ::text
+        .||:|.:||:
+
+    Arranging the input of **bottles** by the rules described above, would give the
+    following sequence of **bottles**:
+
+    <table class="bordered" markdown="1">
+    <thead markdown="1">
+      <th>Medication</th>
+      <th>Size</th>
+      <th>Type</th>
+      <th>Letter</th>
+    </thead>
+    <tbody markdown="1">
+    <tr class="success-bg" markdown="1">
+    <td markdown="1">**Metoprolol**</td>
+    <td markdown="1">**small**</td>
+    <td markdown="1">**gel**</td>
+    <td markdown="1">`.`</td>
+    </tr>
+    <tr class="warning-bg" markdown="1">
+    <td markdown="1">**Omeprazole**</td>
+    <td markdown="1">**large**</td>
+    <td markdown="1">**gel**</td>
+    <td markdown="1">`|`</td>
+    </tr>
+    <tr class="danger-bg" markdown="1">
+    <td markdown="1">**Oxycodone**</td>
+    <td markdown="1">**large**</td>
+    <td markdown="1">**gel**</td>
+    <td markdown="1">`|`</td>
+    </tr>
+    <tr class="success-bg" markdown="1">
+    <td markdown="1">**Amoxicillin**</td>
+    <td markdown="1">**medium**</td>
+    <td markdown="1">**tablet**</td>
+    <td markdown="1">`:`</td>
+    </tr>
+    <tr class="warning-bg" markdown="1">
+    <td markdown="1">**Clonidine**</td>
+    <td markdown="1">**large**</td>
+    <td markdown="1">**tablet**</td>
+    <td markdown="1">`|`</td>
+    </tr>
+    <tr class="danger-bg" markdown="1">
+    <td markdown="1">**Clopidogrel**</td>
+    <td markdown="1">**small**</td>
+    <td markdown="1">**tablet**</td>
+    <td markdown="1">`.`</td>
+    </tr>
+    <tr class="success-bg" markdown="1">
+    <td markdown="1">**Clopidogrel**</td>
+    <td markdown="1">**medium**</td>
+    <td markdown="1">**tablet**</td>
+    <td markdown="1">`:`</td>
+    </tr>
+    <tr class="warning-bg" markdown="1">
+    <td markdown="1">**Clopidogrel**</td>
+    <td markdown="1">**large**</td>
+    <td markdown="1">**tablet**</td>
+    <td markdown="1">`|`</td>
+    </tr>
+    <tr class="danger-bg" markdown="1">
+    <td markdown="1">**Furosemide**</td>
+    <td markdown="1">**large**</td>
+    <td markdown="1">**tablet**</td>
+    <td markdown="1">`|`</td>
+    </tr>
+    <tr class="success-bg" markdown="1">
+    <td markdown="1">**Simvastatin**</td>
+    <td markdown="1">**medium**</td>
+    <td markdown="1">**tablet**</td>
+    <td markdown="1">`:`</td>
+    </tr>
+    </tbody>
+    </table>
+
+    As can be seen, the bottles are arranged by pill `type`, then
+    alphabetically `medication` name, and then by bottle `size`.
+
+    Once arranged properly, simply combine all the `letters` corresponding to
+    the bottle `sizes` into a single line to form the **silhouette** and print
+    that out.
+
+    <div class="alert danger-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "scale-balance" | embed_icon }}</i> Algorithmic Complexity
+
+    For each input test case, your solution should have the following targets:
+
+    <table class="bordered" markdown="1">
+    <tbody markdown="1">
+    <tr class="caution-bg" markdown="1">
+      <td width="165px" markdown="1">**Time Complexity**</td>
+      <td markdown="1">`O(Nlog(N))`, where `N` is the number of bottles for each input test case.</td>
+    </tr>
+    <tr class="warning-bg" markdown="1">
+      <td markdown="1">**Space Complexity**</td>
+      <td markdown="1">`O(N)`, where `N` is the number of bottles for each input test case.</td>
+    </tr>
+    </tbody>
+    </table>
+
+    Your solution may be below the targets, but it **should not exceed them**.
+
+    </div>
+
+    ## Submission
+
+    To submit your work, follow the same procedure you used for [Reading 01]:
+
+        :::bash
+        $ cd path/to/cse-30872-su26-assignments     # Go to assignments repository
+        $ git switch master                         # Make sure we are on master
+        $ git pull --rebase                         # Pull any changes from GitHub
+
+        $ git switch -c challenge05                 # Create and checkout challenge05 branch
+
+        $ $EDITOR challenge05/program.cpp           # Edit your code
+
+        $ git add challenge05/program.cpp           # Stage your changes
+        $ git commit -m "Challenge 05: Code"        # Commit your changes
+
+        $ git push -u origin challenge05            # Send changes to GitHub
+
+    To check your code, you can use the `.scripts/check.py` script or [curl]:
+
+        :::bash
+        $ .scripts/check.py
+        Checking challenge05 program.cpp ...
+          Result Success
+            Time  0.56
+          --------------------
+           Score  6.00 /  6.00
+           Grade  1.00 /  1.00
+
+        $ curl -F source=@challenge05/program.cpp https://dredd.h4x0r.space/code/cse-30872-su26/challenge05
+        {"result": "Success", "score": 6, "time": 0.6157994270324707, "value": 6, "status": 0}
+
+    <div class="alert warning-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "lifebuoy" | embed_icon }}</i> Acknowledgments
+
+    If you collaborated with any other students or received help AI tools on
+    this assignment, please describe this support in the **description** of
+    your **Pull Request**.
+
+    </div>
+
+    <div class="alert success-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "account-question" | embed_icon }}</i> Graders
+
+    Once you have committed your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the **instructor**.
+
+    </div>
+
+    [GitHub]: https://github.com
+    [HackerRank]: https://www.hackerrank.com
+    [LeetCode]: https://leetcode.com
+    [curl]: https://curl.haxx.se/
+    [Reading 00]: reading00.html
