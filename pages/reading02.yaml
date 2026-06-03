@@ -1,0 +1,154 @@
+title:      "Reading 02: Searching, Sorting, and Associative Containers"
+body:       |
+
+    **Everyone**:
+
+    Next week, we will work on problems related to [searching], [sorting], and
+    [associative containers] such as [sets], [maps], and [hash tables].
+    Knowing how to apply these techniques will come in handy for [Challenge
+    04], [Challenge 05], and [Challenge 06].
+
+    [Challenge 04]: challenge04.html
+    [Challenge 05]: challenge05.html
+    [Challenge 06]: challenge06.html
+
+    [searching]: https://en.wikipedia.org/wiki/Search_algorithm
+    [sorting]: https://en.wikipedia.org/wiki/Sorting_algorithm
+
+    [associative containers]: https://en.wikipedia.org/wiki/Associative_containers
+    [sets]: https://en.wikipedia.org/wiki/Set_(abstract_data_type)
+    [maps]: https://en.wikipedia.org/wiki/Associative_array
+    [hash tables]: https://en.wikipedia.org/wiki/Hash_table
+    [C++]: https://isocpp.org/
+    [Python]: https://www.python.org/
+
+    ## Reading
+
+    <div class="flex-row" markdown="1">
+
+    <div class="flex-col" markdown="1">
+
+    The readings for this week are:
+
+    1.  <div class="flex-col" markdown="1">
+
+        [Competitive Programmer's Handbook]
+
+        - Chapter 3 Sorting
+
+        - <div class="flex-col" markdown="1">
+
+            Chapter 4 Data Structures
+
+            *Focus on sections 4.2 Set structures and 4.3 Map structures.*
+
+    </div>
+
+    <div class="flex-col" markdown="1">
+
+    ### Optional
+
+    Here are some optional resources:
+
+    1.  <div class="flex-col" markdown="1">
+
+        [C++] standard library:
+
+        - [sort](https://en.cppreference.com/w/cpp/algorithm/sort)
+        - [set](http://en.cppreference.com/w/cpp/container/set)
+        - [map](http://en.cppreference.com/w/cpp/container/map)
+        - [unordered_set](http://en.cppreference.com/w/cpp/container/unordered_set)
+        - [unordered_map](http://en.cppreference.com/w/cpp/container/unordered_map)
+
+    2.  <div class="flex-col" markdown="1">
+
+        [Python] standard library:
+
+        - [sorting](https://docs.python.org/3/howto/sorting.html)
+        - [set](https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset)
+        - [dict](https://docs.python.org/3/library/stdtypes.html#typesmapping)
+
+    </div>
+
+    </div>
+
+    ## Quiz
+
+    Once you have done the readings, answer the following [Reading 02 Quiz]
+    questions:
+
+    <div id="quiz-questions"></div>
+
+    <div id="quiz-responses"></div>
+
+    <script src="static/js/dredd-quiz.js"></script>
+    <script>
+    loadQuiz('static/json/reading02.json');
+    </script>
+
+    <pre style="display: none;" id="dr-container" class="codehilite"><code id="dredd-response"></code></pre>
+
+    ## Submission
+
+    To submit you work, follow the same process outlined in [Reading 01]:
+
+        :::bash
+        $ git switch master                   # Make sure we are in master branch
+
+        $ git pull --rebase                   # Make sure we are up-to-date with GitHub
+
+        $ git switch -c reading02             # Create reading02 branch and check it out
+
+        $ cd reading02                        # Go into reading02 folder
+
+        $ $EDITOR answers.json                # Edit your answers.json file
+
+        $ ../.scripts/check.py                # Check reading02 quiz
+        Checking reading02 quiz ...
+             Q01  4.00 /  4.00
+             Q02  6.00 /  6.00
+             Q03  2.00 /  2.00
+             Q04  8.00 /  8.00
+             Q05  1.00 /  1.00
+             Q06  1.00 /  1.00
+             Q07  1.00 /  1.00
+             Q08  1.00 /  1.00
+             Q09  3.00 /  3.00
+             Q10  2.00 /  2.00
+          --------------------
+           Score 29.00 / 29.00
+           Grade  1.00 /  1.00
+          Status Success
+
+        $ git add answers.json                # Add answers.json to staging area
+
+        $ git commit -m "Reading 02: Quiz"    # Commit work
+
+        $ git push -u origin reading02        # Push branch to GitHub
+
+    <div class="alert warning-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "lifebuoy" | embed_icon }}</i> Acknowledgments
+
+    If you collaborated with any other students or received help from AI tools
+    on this assignment, please described this support in the **description** of
+    your **Pull Request**.
+
+    </div>
+
+    <div class="alert success-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "account-question" | embed_icon }}</i> Graders
+
+    Once you have committed your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the **instructor**.
+
+    </div>
+
+    [GitHub]:                               https://github.com
+    [Reading 01]:                           reading01.html
+    [Reading 02 Quiz]:                      static/json/reading02.json
+    [JSON]:                                 http://www.json.org/
+    [git-branch]:                           https://git-scm.com/docs/git-branch
+    [dredd]:                                https://dredd.h4x0r.space
+    [Competitive Programmer's Handbook]:    https://cses.fi/book.html
