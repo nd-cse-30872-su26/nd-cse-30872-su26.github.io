@@ -1,0 +1,150 @@
+title:      "Challenge 08: Masked Bits"
+body:       |
+
+    <div class="flex-row" markdown="1">
+
+    <div class="flex-col" markdown="1">
+
+    Tanner and Josh[^1] are in the **Logic Design** lab helping [Siddharth]
+    debug some finicky **FPGAs**.  To track down one of the errors in their
+    circuit, they have to analyze a series of **bitstreams** (ie. **32-bit
+    integers**) and count how many times a particular **mask** appears in each
+    **bitstream**.
+
+    For instance, given a **mask** of `1001` (ie. `9` in **hexadecimal**) and a
+    **bitstream** of `10010010` (ie. `146` in **decimal**), then the **mask**
+    occurs `2` times in the sequence of bits.
+
+    Likewise, given a **mask** of `1111` (ie. `F` in **hexadecimal**) and a
+    **bitstream** of `1111111` (ie. `127` in **decimal**), then the **mask**
+    occurs `4` times in the sequence of bits.
+
+    </div>
+
+    <div class="flex-col-33" markdown="1">
+      <img src="static/img/challenge08-joshi.jpg" class="responsive">
+    </div>
+
+    </div>
+
+    Both of these examples are demonstrated below.
+
+    <div class="centered">
+      <img src="static/img/challenge08-masked-bits.png" class="responsive">
+    </div>
+
+    Unfortunately, since Tanner and Josh are **CPEGs**, software is not really
+    their strong suit[^2].  Therefore, they want you to help them write a
+    program that analyzes **bitstreams** and counts the number of times a
+    **mask** appears in the sequence of bits.
+
+    [Siddharth]: https://siddharth-joshi.com/
+    [^1]: Winners of the [CSE 34872 Programming Challenges (Summer 2020)](https://pnutz.h4x0r.space/archive//teaching/cse.34872.su20) Programming Contest.
+    [^2]: Not *really* true.  Some of the best programmers in the department are **CPEGs**.
+
+    ## Input
+
+    You will be given a series of masks and bitstreams in the form of a
+    **hexadecimal** `mask` and **integer** `bitstream`:
+
+    ### Example Input
+
+        :::text
+        9 146
+        F 127
+
+    <div class="alert warning-bg" markdown="1">
+
+    **Note**: Each **mask** is **4 bits**, while **integer** `bitstream` is a
+      **32-bit integer**.
+
+    </div>
+
+    ## Output
+
+    For each pair of `mask` and `bitstream`, computer the number of times the
+    `mask` appears in the `bitstream` and then output a message in the following
+    format:
+
+    ### Example Output
+
+        :::text
+        1. 146 contains 0x9 2 times
+        2. 127 contains 0xF 4 times
+
+    <div class="alert danger-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "scale-balance" | embed_icon }}</i> Algorithmic Complexity
+
+    For each input test case, your solution should have the following targets:
+
+    <table class="bordered" markdown="1">
+    <tbody markdown="1">
+    <tr class="caution-bg" markdown="1">
+      <td width="165px" markdown="1">**Time Complexity**</td>
+      <td markdown="1">`O(N)`, where `N` is the number of bits in each input bitstream.</td>
+    </tr>
+    <tr class="warning-bg" markdown="1">
+      <td markdown="1">**Space Complexity**</td>
+      <td markdown="1">`O(1)`</td>
+    </tr>
+    </tbody>
+    </table>
+
+    Your solution may be below the targets, but it **should not exceed them**.
+
+    </div>
+
+    ## Submission
+
+    To submit your work, follow the same procedure you used for [Reading 00]:
+
+        :::bash
+        $ cd path/to/cse-30872-su26-assignments     # Go to assignments repository
+        $ git switch master                         # Make sure we are on master
+        $ git pull --rebase                         # Pull any changes from GitHub
+
+        $ git switch -c challenge08                 # Create and checkout challenge08 branch
+
+        $ $EDITOR challenge08/program.cpp           # Edit your code
+
+        $ git add challenge08/program.cpp           # Stage your changes
+        $ git commit -m "Challenge 08: Code"        # Commit your changes
+
+        $ git push -u origin challenge08            # Send changes to GitHub
+
+    To check your code, you can use the `.scripts/check.py` script or [curl]:
+
+        :::bash
+        $ .scripts/check.py
+        Checking challenge08 program.cpp ...
+        Result Success
+          Time  1.97
+        --------------------
+         Score  6.00 /  6.00
+         Grade  1.00 /  1.00
+
+        $ curl -F source=@challenge08/program.cpp https://dredd.h4x0r.space/code/cse-30872-su26/challenge08
+        {"result": "Success", "score": 6, "time": 1.917165756225586, "value": 6, "status": 0}
+
+    <div class="alert warning-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "lifebuoy" | embed_icon }}</i> Acknowledgments
+
+    If you collaborated with any other students or received help AI tools on
+    this assignment, please describe this support in the **description** of
+    your **Pull Request**.
+
+    </div>
+
+    <div class="alert success-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "account-question" | embed_icon }}</i> Graders
+
+    Once you have committed your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the **instructor**.
+
+    </div>
+
+    [GitHub]: https://github.com
+    [Reading 00]: reading00.html
