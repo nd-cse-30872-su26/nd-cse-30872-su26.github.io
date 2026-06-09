@@ -1,0 +1,36 @@
+{
+    "q01": {
+        "type": "blank",
+        "question": "\n<p>How many <b>subsets</b> of <code>{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}</code>\nare divisible by <code>3</code> (<i>that is the sum of the all the elements\nin the subset is divisble by <code>3</code></i>)?</p>\n\n<p>Write a program that computes this and enter in the number below.</p>\n\n____\n\n<div class=\"alert warning-bg\">\nNote: As shown in the book, order does not matter when defining a\nsubset.  Therefore, <code>{0, 1, 2}</code> and <code>{1, 0, 2}</code> counts as one\nset.\n</div>\n"
+    },
+    "q02": {
+        "type": "blank",
+        "question": "\n<p>\nComplete the C++ code below so that the program prints all <b>permutations</b> of\n\"ABC\": <code>ABC, ACB, BAC, BCA, CAB, CBA</code>.</p>\n\n<pre>\nint main(int argc, char *argv[]) {\n    string s = \"ABC\";\n    ____(s.begin(), s.end());\n    do {\n        cout << s << endl;\n    } while (____(s.begin(), s.end()))\n\n    return 0;\n}\n</pre>\n"
+    },
+    "q03": {
+        "type": "blank",
+        "question": "\n<p>Complete the Python code below so that the program prints all\n<b>permutations</b> of \"ABC\": <code>ABC, ACB, BAC, BCA, CAB, CBA</code>.</p>\n\n<pre>\nimport ____\n\ns = \"ABC\"\nfor p in ____(s):\n    print ''.____(p)\n\n</pre>\n"
+    },
+    "q04": {
+        "type": "blank",
+        "question": "\n<p>Complete the following script utilizing bitsets in Python:</strong>\n\n<pre>\nelements = (1, 2, 4)\nbitset   = ____                     # 1. Initialize bitset\n\n# Add elements to bitset\nfor i in elements:\n    bitset = ____                   # 2. Add element to bitset\n\n# Print contents of bitset\nprint(bitset)                       # A. After adding alements to bitset\n\n# Test for elements in bitset\nfor i in range(6):\n    if ____:                        # 3. Test if element is in bitset\n        print(i)\n\n# Remove elements from bitset\nfor i in elements:\n    bitset = _____                  # 4. Remove element from bitset\n\n# Print contents of bitset\nprint(bitset)                       # B. After removing elements from bitset\n</pre>\n"
+    },
+    "q05": {
+        "type": "blank",
+        "question": "\n<p>Given a completed version of the <b>bitset</b> Python script above, what\nvalues are printed at the lines marked by the comments:</p>\n\n<p>A. ____ After adding elements to bitset.</p>\n\n<p>B. ____ After removing elements from bitset.</p>\n"
+    },
+    "q06": {
+        "type": "blank",
+        "question": "\n<p>A <b>(1)</b> ____ algorithm starts with an empty solution and extends\nthe solution step by step by <b>(2)</b> ____ searching through all the\ndifferent ways a solution can be constructed.  Because this can be quite\nexhaustive, we may wish to add \"intelligence\" to our search by <b>(3)</b>\n____ the search tree, which mean to eliminate a candidate solution if we\ncan determine that it is a dead-end.</p>\n"
+    },
+    "q07": {
+        "type": "multiple",
+        "question": "\n<p>In regards to <b>greedy algorithms</b>, which of the following\nstatements are <b>true</b> (<i>choose all that apply</i>)?</p>\n",
+        "responses": {
+            "approach": "A <b>greedy algorithm</b> constructs a solution by choosing the best option at the moment.",
+            "backtrack": "A <b>greedy algorithm</b> will backtrack when it finds a suboptimal solution.",
+            "guarantee": "A <b>greedy algorithm</b> is guaranteed to find the optimal solution.",
+            "efficiency": "A <b>greedy algorithm</b> tends to be very efficient."
+        }
+    }
+}
