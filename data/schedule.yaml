@@ -38,6 +38,8 @@
         items:
           - name:       Slides 03
             link:       https://docs.google.com/presentation/d/1vHgn80pjQx1V3jz0RueFEkexSjyKvQdY23HLbY-zcCs/edit?usp=sharing
+          - name:       Panopto
+            link:       https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e2698f3e-301a-4e59-89a2-b46400170b91
 
       - date:           Wed 06/10
         topics:         Associative Containers
