@@ -1,0 +1,195 @@
+title:      "Challenge 09: Seb's Horchata Hustle"
+body:       |
+
+    <div class="flex-row" markdown="1">
+
+    <div class="flex-col" markdown="1">
+
+    Despite securing employment at the international [fruit farm], [Seb] is not
+    quite done hustling yet.  In between [sigma grinding] this summer,
+    surveilling peers and colleagues on social media, and experimenting with
+    advanced **emoji** generation algorithms, [Seb] has decided to setup a
+    booth selling fresh [horchata][^1]!
+
+    An enterprising fellow, [Seb] decides to sell each delicious cup of rice
+    milk with cinnamon at reasonable price of `$5`[^2].  Moreover to keep things
+    simple, he only will accept bills in the following denominations: `$5`, `$10`,
+    and `$20`.
+
+    Unfortunately, his small business is a bit underresourced, so he doesn't
+    have any capital left after making his batch of [horchata].  This means
+    that if any customer requires change (ie. pays `$10` or `$20` instead of
+    `$5`), he must make change out of the money he has already collected from
+    previous customers...  which is quite the challenge in this economy and
+    highly dependent on the sequence of customers.
+
+    </div>
+
+    <div class="flex-col-33" markdown="1">
+      <img src="static/img/challenge09-seb.jpg" class="responsive">
+    </div>
+
+    </div>
+
+    For instance, given the following sequence of customers, represented by the
+    bills they are using to pay for their [horchata]:
+
+        :::text
+        5 5 5 10 20
+
+    The first three customers don't need any change because they paid the exact
+    amount for a cup of [horchata].  The fourth customer requires `$5` which is
+    fine since you have `3` of those bills.  The fifth customer requires `$15`
+    which is also fine since you can give them the `$10` and one of your
+    remaining `$5`.  So in this sequence, [Seb] can successfully provide each
+    customer the exact amount of change they each required.
+
+    However, given the following sequence of customers
+
+        :::
+        5 5 10 10 20
+
+    The first two customers don't need any change because they paid the exact
+    amount of a cup of [horchata].  The third customer requires `$5` which is
+    fine since you have two of those bills.  Likewise, the fourth customer also
+    requires `$5` in change which is okay since you have one left.
+    Unfortunately, the last customer, requires `$15` in change, but you can't
+    do this since you only have two `$10` bills left and thus **cannot make
+    exact change** for each customer.
+
+    Because of this volatility and to determine if this business model is even
+    feasible, [Seb] wants to write a simulator that takes in a sequence of
+    customers (represented by the **dollar bills** they are spending) and
+    **determines whether or not he can give each customer the correct amount of
+    change** despite starting the business with `0` money.
+
+    Unfortunately, he is busy doing hero office hours late at night in the
+    library again and needs you to write the simulator for him.
+
+    <div class="alert info-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "trophy" | embed_icon }}</i> Programming Challenges
+
+    This programming challenge is based on [860. Lemonade
+    Change](https://leetcode.com/problems/lemonade-change) from [LeetCode].
+
+    </div>
+
+    [Seb]: https://www.linkedin.com/in/sgutier5
+    [fruit farm]: https://www.apple.com/
+    [sigma grinding]: https://knowyourmeme.com/memes/cultures/sigma-grindset-hustle-culture-memes
+    [horchata]: https://en.wikipedia.org/wiki/Horchata
+    [faculty choice award]: https://twitter.com/pnutzh4x0r/status/1660381814236631041
+
+    [^1]: It's this sort of hustle that earned [Seb] the [faculty choice award]
+      at graduation!
+    [^2]: Inflation is bad.
+
+    ## Input
+
+    You will be given a series of input test cases.  Each input test case is a
+    sequence of customers and the bills (ie. `5`, `10`, or `20`) they are using
+    to pay for their [horchata].
+
+    ### Example Input
+
+        :::text
+        5 5 5 10 20
+        5 5 10 10 20
+
+    ## Output
+
+    For each input test case, output `Yeah` if Seb can provide every customer
+    in the sequence the correct amount of change.  Otherwise, output `Nope`.
+
+    Prefix each output with the test case number, starting with `1`.
+
+    ### Example Output
+
+
+    Here is the output for the example input above:
+
+        :::text
+        1. Yeah
+        2. Nope
+
+    <div class="alert danger-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "scale-balance" | embed_icon }}</i> Algorithmic Complexity
+
+    For each input test case, your solution should have the following targets:
+
+    <table class="bordered" markdown="1">
+    <tbody markdown="1">
+    <tr class="caution-bg" markdown="1">
+      <td width="165px" markdown="1">**Time Complexity**</td>
+      <td markdown="1">`O(N)`, where `N` is the number of customers in each input case.</td>
+    </tr>
+    <tr class="danger-bg" markdown="1">
+      <td markdown="1">**Space Complexity**</td>
+      <td markdown="1">`O(N)`, where `N` is the number of customers in each input case.</td>
+    </tr>
+    </tbody>
+    </table>
+
+    Your solution may be below the targets, but it **should not exceed them**.
+
+    </div>
+
+    ## Submission
+
+    To submit your work, follow the same procedure you used for [Reading 00]:
+
+        :::bash
+        $ cd path/to/cse-30872-su26-assignments     # Go to assignments repository
+        $ git switch master                         # Make sure we are on master
+        $ git pull --rebase                         # Pull any changes from GitHub
+
+        $ git switch -c challenge09                 # Create and checkout challenge09 branch
+
+        $ $EDITOR challenge09/program.cpp           # Edit your code
+
+        $ git add challenge09/program.cpp           # Stage your changes
+        $ git commit -m "challenge09: done"         # Commit your changes
+
+        $ git push -u origin challenge09            # Send changes to GitHub
+
+    To check your code, you can use the `.scripts/check.py` script or [curl]:
+
+        :::bash
+        $ .scripts/check.py
+        Checking challenge09 program.cpp ...
+          Result Success
+            Time  0.00
+          --------------------
+           Score  6.00 /  6.00
+           Grade  1.00 /  1.00
+
+        $ curl -F source=@challenge09/program.cpp https://dredd.h4x0r.space/code/cse-30872-su26/challenge09
+        {"result": "Success", "score": 6, "time": 0.0033686161041259766, "value": 6, "status": 0}
+
+    <div class="alert warning-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "lifebuoy" | embed_icon }}</i> Acknowledgments
+
+    If you collaborated with any other students or received help AI tools on
+    this assignment, please describe this support in the **description** of
+    your **Pull Request**.
+
+    </div>
+
+    <div class="alert success-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "account-question" | embed_icon }}</i> Graders
+
+    Once you have committed your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the **instructor**.
+
+    </div>
+
+    [GitHub]: https://github.com
+    [Reading 00]: reading00.html
+
+    [HackerRank]: https://www.hackerrank.com
+    [LeetCode]: https://leetcode.com
+    [curl]: https://curl.haxx.se/
