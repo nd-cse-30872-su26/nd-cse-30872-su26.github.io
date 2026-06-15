@@ -46,6 +46,8 @@
         items:
           - name:       Slides 04
             link:       https://docs.google.com/presentation/d/1RzrJqiE_ff0grmfSyCXMvcbFWInOAcfcrGWX1HYrUSs/edit?usp=sharing
+          - name:       Panopto
+            link:       https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2eed0f2e-e3ec-4c0a-8fe2-b466001d4469
 
       - date:           Sat 06/13
         topics:         Programming Challenges
