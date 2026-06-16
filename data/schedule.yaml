@@ -89,9 +89,15 @@
         topics:         Memoization
         assignments:
           - Reading 04
+        items:
+          - name:       Slides 08
+            link:       https://docs.google.com/presentation/d/1pSUQstmIYDE0DuLJnsERgeOlHTxcGUw9PmuUDOcXQvQ/edit?usp=sharing
 
       - date:           Wed 06/24
         topics:         Table Building
+        items:
+          - name:       Slides 08
+            link:       https://docs.google.com/presentation/d/1pSUQstmIYDE0DuLJnsERgeOlHTxcGUw9PmuUDOcXQvQ/edit?usp=sharing
 
       - date:           Sat 06/27
         topics:         Programming Challenges
