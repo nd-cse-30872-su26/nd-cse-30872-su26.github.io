@@ -1,0 +1,184 @@
+title:      "Challenge 10: Deckard's Recursive Replacement"
+body:       |
+
+    <div class="flex-row" markdown="1">
+
+    <div class="flex-col" markdown="1">
+
+    [Deckard] loves math.  He also loves coding.  What he doesn't like is
+    [recursion][^1].
+
+    After graduating from Notre Dame with a degree from [ACMS][^2], he's still
+    grinding [LeetCode] in hopes of securing employment as a software engineer and
+    comes across this tricky recursive problem:
+
+    > For any given `n`, you can apply one of the two following operations:
+    >
+    > <br>
+    >
+    > 1. If `n` is even, replace `n` with `n / 2`.
+    > 2. If `n` is odd, replace `n` with either `n + 1` or `n - 1`.
+    >
+    > <br>
+    >
+    > Define a function `f(n)` such that it returns the **minimum number of
+    > operations required for `n` to become `1`**.
+
+    </div>
+
+    <div class="flex-col-33" markdown="1">
+
+    <img src="static/img/challenge10-deckard.jpg" class="responsive">
+
+    </div>
+
+    </div>
+
+    Normally [Deckard] would just sit down, sketch out a solution on paper, and
+    then code up his approach (probably in [golang]), but he is currently too
+    busy updating [PKGBUILDs] for [Arch Linux], maintaining [artoo] in the
+    [NDLUG] IRC channel, and [contributing fixes] to [Alpine Linux].
+
+    Therefore, he wants to give you a first crack at implementing this
+    recursive function.  Of course, he would like for you to do this as
+    efficiently as possible and will allow you to use any programming language
+    of your choice.
+
+    <div class="alert info-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "trophy" | embed_icon }}</i> LeetCode
+
+    This programming challenge is based on [397. Integer Replacement](https://leetcode.com/problems/integer-replacement/) from [LeetCode].
+
+    </div>
+
+    [Deckard]: https://github.com/tfaughnan
+    [recursion]: https://en.wikipedia.org/wiki/Recursion
+    [ACMS]: https://acms.nd.edu/
+
+    [golang]:   https://go.dev
+    [PKGBUILDs]: https://git.sr.ht/~deckard/pkgbuilds
+    [Arch Linux]: https://www.archlinux.org
+    [artoo]: https://github.com/tfaughnan/artoo
+    [NDLUG]: https://www.ndlug.org
+    [contributing fixes]: https://gitlab.alpinelinux.org/deckard
+    [Alpine Linux]: https://alpinelinux.org
+
+    [^1]: Actually, I'm pretty sure he likes [recursion].  He's weird like that.
+    [^2]: Really should have been [CSE](https://cse.nd.edu).
+
+    ## Input
+
+    You will be given a series of input integers `n` (one per line) that need
+    replaced (one at a time).
+
+    ### Example Input
+
+        :::text
+        8
+        7
+        4
+
+    ## Output
+
+    For each input `n`, perform the operations described above and output the
+    **minimum number of replacements required for `n` to become `1`**.
+
+    For each output, prefix the number of replacements with the input test case
+    number.
+
+    ### Example Output
+
+    Here is the output for the example input above:
+
+        :::text
+        1. 3
+        2. 4
+        3. 2
+
+    <div class="alert warning-bg" markdown="1">
+
+    **Note**: If `n` is already `1`, then `0` operations are required.
+
+    </div>
+
+    <div class="alert danger-bg" markdown="1">
+
+    #### <i class="fa fa-balance-scale"></i> Algorithmic Complexity
+
+    For each input test case, your solution should have the following targets:
+
+    <table class="bordered" markdown="1">
+    <tbody markdown="1">
+    <tr class="caution-bg" markdown="1">
+      <td width="165px" markdown="1">**Time Complexity**</td>
+      <td markdown="1">`O(log(N))`, where `N` is the integer to replace.</td>
+    </tr>
+    <tr class="danger-bg" markdown="1">
+      <td markdown="1">**Space Complexity**</td>
+      <td markdown="1">`O(N)`, where `N` is the integer to replace.</td>
+    </tr>
+    </tbody>
+    </table>
+
+    Your solution may be below the targets, but it **should not exceed them**.
+
+    </div>
+
+    ## Submission
+
+    To submit your work, follow the same procedure you used for [Reading 01]:
+
+        :::bash
+        $ cd path/to/cse-30872-su26-assignments     # Go to assignments repository
+        $ git switch master                         # Make sure we are on master
+        $ git pull --rebase                         # Pull any changes from GitHub
+
+        $ git switch -c challenge10                 # Create and checkout challenge10 branch
+
+        $ $EDITOR challenge10/program.cpp           # Edit your code
+
+        $ git add challenge10/program.cpp           # Stage your changes
+        $ git commit -m "challenge10: done"         # Commit your changes
+
+        $ git push -u origin challenge10            # Send changes to GitHub
+
+    To check your code, you can use the `.scripts/check.py` script or [curl]:
+
+        :::bash
+        $ .scripts/check.py
+        Checking challenge10 program.cpp ...
+          Result Success
+            Time  0.06
+          --------------------
+           Score  6.00 /  6.00
+           Grade  1.00 /  1.00
+
+        $ curl -F source=@challenge10/program.cpp https://dredd.h4x0r.space/code/cse-30872-su25/challenge10
+        {"result": "Success", "score": 6, "time": 0.06438255310058594, "value": 6, "status": 0}
+
+    <div class="alert warning-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "lifebuoy" | embed_icon }}</i> Acknowledgments
+
+    If you collaborated with any other students or received help AI tools on
+    this assignment, please describe this support in the **description** of
+    your **Pull Request**.
+
+    </div>
+
+    <div class="alert success-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "account-question" | embed_icon }}</i> Graders
+
+    Once you have committed your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the **instructor**.
+
+    </div>
+
+    [GitHub]: https://github.com
+    [Reading 01]: reading01.html
+
+    [HackerRank]: https://www.hackerrank.com
+    [LeetCode]: https://leetcode.com
+    [curl]: https://curl.haxx.se/
