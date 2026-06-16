@@ -1,0 +1,125 @@
+title:      "Reading 04: Dynamic Programming"
+body:       |
+
+    **Everyone**:
+
+    Next week, we will work on problems related to the following problem
+    solving technique:
+
+    > [Dynamic Programming]: This is a problem solving technique that can be
+    viewed as a combination of [complete search] (*correctness*) and [greedy
+    algorithms] (*efficiency*).
+
+    This technique will come in handy for solving [Challenge 10], [Challenge
+    11], and [Challenge 12].
+
+    ## Reading
+
+    <div class="flex-row" markdown="1">
+
+    <div class="flex-col" markdown="1">
+
+    The readings for this week are:
+
+    1.  <div class="flex-col" markdown="1">
+
+        [Competitive Programmer's Handbook]
+
+        - Chapter 7 Dynamic Programming
+
+    2. [A graphical introduction to dynamic programming](https://medium.com/future-vision/a-graphical-introduction-to-dynamic-programming-2e981fa7ca2?sk=37cd14642cf1a83eb0bb33d231442837)
+
+    </div>
+
+    <div class="flex-col" markdown="1">
+
+    ### Optional
+
+    - [Dynamic Programming for Brute-Forcers](https://hackernoon.com/dynamic-programming-for-brute-forcers-36f26c2466cf)
+
+    - [Demystifying Dynamic Programming](https://medium.freecodecamp.org/demystifying-dynamic-programming-3efafb8d4296)
+
+    </div>
+
+    </div>
+
+    ## Quiz
+
+    Once you have done the readings, answer the following [Reading 04 Quiz]
+    questions:
+
+    <div id="quiz-questions"></div>
+
+    <div id="quiz-responses"></div>
+
+    <script src="static/js/dredd-quiz.js"></script>
+    <script>
+    loadQuiz('static/json/reading04.json');
+    </script>
+
+    <pre style="display: none;" id="dr-container" class="codehilite"><code id="dredd-response"></code></pre>
+
+    ## Submission
+
+    To submit you work, follow the same process outlined in [Reading 01]:
+
+        :::bash
+        $ git switch master                   # Make sure we are in master branch
+        $ git pull --rebase                   # Make sure we are up-to-date with github
+
+        $ git switch -c reading04             # Create reading04 branch and check it out
+
+        $ cd reading04                        # Go into reading04 folder
+        $ $EDITOR answers.json                # Edit your answers.json file
+
+        $ ../.scripts/check.py                # Check reading04 quiz
+        Checking reading04 quiz ...
+             Q01  5.00 /  5.00
+             Q02  5.00 /  5.00
+             Q03  5.00 /  5.00
+          --------------------
+           Score 15.00 / 15.00
+           Grade  1.00 /  1.00
+          Status Success
+
+        $ git add answers.json                # Add answers.json to staging area
+        $ git commit -m "Reading 04: Quiz"    # Commit work
+
+        $ git push -u origin reading04        # Push branch to github
+
+    <div class="alert warning-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "lifebuoy" | embed_icon }}</i> Acknowledgments
+
+    If you collaborated with any other students or received help from AI tools
+    on this assignment, please described this support in the **description** of
+    your **Pull Request**.
+
+    </div>
+
+    <div class="alert success-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "account-question" | embed_icon }}</i> Graders
+
+    Once you have committed your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the **instructor**.
+
+    </div>
+
+    [GitHub]: https://github.com
+    [Reading 01]: reading01.html
+    [Reading 04 Quiz]: static/json/reading04.json
+    [JSON]: http://www.json.org/
+    [git-branch]: https://git-scm.com/docs/git-branch
+    [dredd]: https://dredd.h4x0r.space
+    [Competitive Programmer's Handbook]: https://cses.fi/book.html
+    [C++]: https://isocpp.org/
+    [Python]: https://www.python.org/
+
+    [Challenge 10]: challenge10.html
+    [Challenge 11]: challenge11.html
+    [Challenge 12]: challenge12.html
+
+    [dynamic programming]: https://en.wikipedia.org/wiki/Dynamic_programming
+    [complete search]: https://en.wikipedia.org/wiki/Brute-force_search
+    [greedy algorithms]: https://en.wikipedia.org/wiki/Greedy_algorithm
