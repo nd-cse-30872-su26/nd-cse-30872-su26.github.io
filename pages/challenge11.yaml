@@ -1,0 +1,156 @@
+title:      "Challenge 11: Sussy Dogecoin Transactions"
+body:       |
+
+    <div class="flex-row" markdown="1">
+
+    <div class="flex-col" markdown="1">
+
+    Ever since his graduation, [AKK] has been devoting more and more time into
+    investing in cryptocurrencies even while working at the [NSA].
+
+    In particular, his favorite cryptocurrency is [Dogecoin]. Being the hacker
+    he is, he was able to find an exploit to artificially create [Dogecoin] via
+    clandestine **transactions**.  This discovery, along with his desire for
+    [Fortnite Gift Cards], has naturally led him to the goal of taking
+    advantage of this exploit to acquire unlimited V-Bucks.
+
+    Unfortunately, the methods in which he can create his [Dogecoin] are
+    **limited**, as he can only **double** or **add one** to his current
+    amount, starting at `0`. In addition, he needs to **minimize** the number
+    of transactions he performs so that his actions won't appear [sussy] and
+    garner unwanted attention.  On top of this, in order to purchase the gift
+    cards, he needs to exchange his Dogecoin to match the exact value of them.
+
+    </div>
+
+    <div class="flex-col-25" markdown="1">
+      <img src="static/img/challenge11-akk.png" class="responsive">
+    </div>
+
+    </div>
+
+    More specifically:
+
+    > Given a value `N`, the worth (in [Dogecoin]) of a **Fortnite Gift Card**,
+    find the **minimum number of transactions** needed to acquire `N` Dogecoin
+    starting with none. Valid transactions include either **doubling** or
+    **adding one** to the current amount.
+
+    An example is shown below. Given a target value `N = 7`, the minimum number
+    of transactions to acquire `7` Dogecoin when starting from `0` is `5` transactions.
+
+    <div class="centered">
+      <img src="static/img/challenge11-much-suspicious.png" class="responsive">
+    </div>
+
+    [AKK]: https://github.com/AndroidKitKat
+    [NSA]: https://www.nsa.gov/
+    [Dogecoin]: https://dogecoin.com/
+    [Fortnite Gift Cards]: https://www.youtube.com/watch?v=tuQN5OVAupY
+    [sussy]: https://www.youtube.com/watch?v=S3PkD8n4bUE
+
+    ## Input
+
+    You will be given target values to attain, representing gift card values.
+
+    ### Example Input
+
+        :::text
+        7
+        8
+        14
+        23
+
+    ## Output
+
+    For each target value, output the minimum number of allowed transactions
+    required to attain that value, as shown below.
+
+    ### Example Output
+
+        :::text
+        1. Minimum number of doge transactions: 5
+        2. Minimum number of doge transactions: 4
+        3. Minimum number of doge transactions: 6
+        4. Minimum number of doge transactions: 8
+
+    <div class="alert danger-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "scale-balance" | embed_icon }}</i> Algorithmic Complexity
+
+    For each input test case, your solution should have the following targets:
+
+    <table class="bordered" markdown="1">
+    <tbody markdown="1">
+    <tr class="caution-bg" markdown="1">
+      <td width="165px" markdown="1">**Time Complexity**</td>
+      <td markdown="1">`O(N)`, where `N` is the target number of [Dogecoin].</td>
+    </tr>
+    <tr class="danger-bg" markdown="1">
+      <td markdown="1">**Space Complexity**</td>
+      <td markdown="1">`O(N)`, where `N` is the target number of [Dogecoin].</td>
+    </tr>
+    </tbody>
+    </table>
+
+    Your solution may be below the targets, but it **should not exceed them**.
+
+    </div>
+
+    ## Submission
+
+    To submit your work, follow the same procedure you used for [Reading 01]:
+
+        :::bash
+        $ cd path/to/cse-30872-su26-assignments     # Go to assignments repository
+        $ git switch master                         # Make sure we are on master
+        $ git pull --rebase                         # Pull any changes from GitHub
+
+        $ git switch -c challenge11                 # Create and checkout challenge11 branch
+
+        $ $EDITOR challenge11/program.cpp           # Edit your code
+
+        $ git add challenge11/program.cpp           # Stage your changes
+        $ git commit -m "Challenge 11: Code"        # Commit your changes
+
+        $ git push -u origin challenge11            # Send changes to GitHub
+
+    To check your code, you can use the `.scripts/check.py` script or [curl]:
+
+        :::bash
+        $ .scripts/check.py
+        Checking challenge11 program.cpp ...
+          Result Success
+            Time  0.01
+          --------------------
+           Score  6.00 /  6.00
+           Grade  1.00 /  1.00
+
+        $ curl -F source=@challenge11/program.cpp https://dredd.h4x0r.space/code/cse-30872-su26/challenge11
+        {"result": "Success", "score": 6, "time": 0.016405344009399414, "value": 6, "status": 0}
+
+    <div class="alert warning-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "lifebuoy" | embed_icon }}</i> Acknowledgments
+
+    If you collaborated with any other students or received help AI tools on
+    this assignment, please describe this support in the **description** of
+    your **Pull Request**.
+
+    </div>
+
+    <div class="alert success-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "account-question" | embed_icon }}</i> Graders
+
+    Once you have committed your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the **instructor**.
+
+    </div>
+
+    [GitHub]: https://github.com
+    [Reading 01]: reading01.html
+
+    [HackerRank]: https://www.hackerrank.com
+    [LeetCode]: https://leetcode.com
+    [curl]: https://curl.haxx.se/
