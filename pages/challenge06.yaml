@@ -124,7 +124,7 @@ body:       |
 
     ## Submission
 
-    To submit your work, follow the same procedure you used for [Reading 00]:
+    To submit your work, follow the same procedure you used for [Reading 01]:
 
         :::bash
         $ cd path/to/cse-30872-su26-assignments     # Go to assignments repository
@@ -174,4 +174,4 @@ body:       |
     </div>
 
     [GitHub]: https://github.com
-    [Reading 00]: reading00.html
+    [Reading 01]: reading01.html

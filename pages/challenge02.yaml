@@ -85,7 +85,7 @@ body:       |
 
     ## Submission
 
-    To submit your work, follow the same procedure you used for [Reading 00]:
+    To submit your work, follow the same procedure you used for [Reading 01]:
 
         :::bash
         $ cd path/to/cse-30872-sp26-assignments     # Go to assignments repository
@@ -134,7 +134,7 @@ body:       |
 
     </div>
 
-    [Reading 00]: reading00.html
+    [Reading 01]: reading01.html
     [GitHub]: https://github.com
     [HackerRank]: https://www.hackerrank.com
     [LeetCode]: https://leetcode.com
