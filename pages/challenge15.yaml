@@ -1,0 +1,169 @@
+title:      "Challenge 15: Maximum Concurrency"
+body:       |
+
+    <div class="flex-row" markdown="1">
+
+    <div class="flex-col" markdown="1">
+
+    While working for [Dr. Thain] in the [Cooperative Computing Lab], the
+    instructor had to compose large scientific workflows that ran across many
+    (ie. **hundreds**) of machines spread across the country in different
+    compute clusters and data centers.  To maximize the efficiency of these
+    large scale computations, it was necessary to determine if there were any
+    concurrent structures and thus opportunities for parallelization.
+
+    Fortunately, most scientific workflows involve composing many different
+    utilities that perform a specialized task by taking the outputs of one
+    program and using them as inputs to other utilities.  One way to visualize
+    such workflows is by forming a tree or [DAG] as shown below.
+
+    </div>
+
+    <div class="flex-col-25" markdown="1">
+
+      <img src="static/img/challenge15-ccl-mar2012-small.jpg" class="responsive">
+
+    </div>
+
+    </div>
+
+    In the tree below, we have four levels of nodes:
+
+    1. **Level 1**: This has the root node and has a width of `1`.
+
+    2. **Level 2**: This is the second level and has a width of `2` since it
+      only has the nodes `1` and `3`.
+
+    3. **Level 3**: This is the third level and has a width of `3` since it has
+      the nodes `4`, `6`, and `8`.
+
+    4. **Level 4**: This is the last level and has a with of `1`.
+
+    As can be seen, the **maximum width** of this tree is `3`.  This means if
+    that if we were to execute this workflow on multiple machines, then we
+    could have a maximum of `3` concurrent tasks (and thus only need `3`
+    different machines for maximum efficiency).
+
+    <div class="centered">
+      <img src="static/img/challenge15-maximum-width.png" class="responsive">
+    </div>
+
+    Since it has been a long time since the instructor has done anything
+    related to [distributed systems], your task is to read in workflows
+    represented as binary trees and identify which level in each tree has the
+    most nodes (and thus concurrency).
+
+    [Dr. Thain]: https://www3.nd.edu/~dthain/
+    [Cooperative Computing Lab]: http://ccl.cse.nd.edu/
+    [DAG]: https://en.wikipedia.org/wiki/Directed_acyclic_graph
+    [distributed systems]: https://dthain.github.io/distsys-sp23/
+
+    ## Input
+
+    You will be given a series of workflows represented by binary trees in
+    [pre-order traversal] order.
+
+    ### Example Input
+
+        :::text
+        2 1 4 -1 -1 6 5 -1 -1 -1 3 -1 8 -1 -1
+
+    Note, the `-1` in the input denotes that there is no `Node` there (ie. `NULL`).
+
+    [pre-order traversal]: https://en.wikipedia.org/wiki/Tree_traversal#Pre-order,_NLR
+
+    ## Output
+
+    For each workflow, determine where it has its maximum concurrency by
+    finding the level with the most nodes in the binary tree and output a message
+    in the following format:
+
+        :::text
+        Level $MAX_LEVEL has the most nodes: $MAX_NODES
+
+    ### Example Output
+
+        :::text
+        Level 3 has the most nodes: 3
+
+    Note, if there are multiple levels with the maximum number of nodes, then
+    choose the level with the lowest value (ie. nearer to the root).
+
+    <div class="alert danger-bg" markdown="1">
+    #### <i class="fa fa-balance-scale"></i> Algorithmic Complexity
+
+    For each input test case, your solution should have the following targets:
+
+    <table class="bordered" markdown="1">
+    <tbody markdown="1">
+    <tr width="165px" class="caution-bg" markdown="1">
+      <td markdown="1">**Time Complexity**</td>
+      <td markdown="1">`O(N)`, where `N` is the number of nodes in the binary tree.</td>
+    </tr>
+    <tr class="warning-bg" markdown="1">
+      <td markdown="1">**Space Complexity**</td>
+      <td markdown="1">`O(N)`, where `N` is the number of nodes in the binary tree.</td>
+    </tr>
+    </tbody>
+    </table>
+
+    Your solution may be below the targets, but it **should not exceed them**.
+
+    </div>
+
+    ## Submission
+
+    To submit your work, follow the same procedure you used for [Reading 01]:
+
+        :::bash
+        $ cd path/to/cse-30872-su26-assignments     # Go to assignments repository
+        $ git switch master                         # Make sure we are on master
+        $ git pull --rebase                         # Pull any changes from GitHub
+
+        $ git switch -c challenge15                 # Create and checkout challenge15 branch
+
+        $ $EDITOR challenge15/program.cpp           # Edit your code
+
+        $ git add challenge15/program.cpp           # Stage your changes
+        $ git commit -m "challenge15: done"         # Commit your changes
+
+        $ git push -u origin challenge15            # Send changes to GitHub
+
+    To check your code, you can use the `.scripts/check.py` script or [curl]:
+
+        :::bash
+        $ .scripts/check.py
+        Checking challenge15 program.cpp ...
+          Result Success
+            Time  0.00
+          --------------------
+           Score  6.00 /  6.00
+           Grade  1.00 /  1.00
+
+        $ curl -F source=@challenge15/program.cpp https://dredd.h4x0r.space/code/cse-30872-su26/challenge15
+        {"result": "Success", "score": 6, "time": 0.0319976806640625, "value": 6, "status": 0}
+
+    <div class="alert warning-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "lifebuoy" | embed_icon }}</i> Acknowledgments
+
+    If you collaborated with any other students or received help from AI tools
+    on this assignment, please described this support in the **description** of
+    your **Pull Request**.
+
+    </div>
+
+    <div class="alert success-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "account-question" | embed_icon }}</i> Graders
+
+    Once you have committed your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the **instructor**.
+
+    </div>
+
+    [GitHub]: https://github.com
+    [HackerRank]: https://www.hackerrank.com
+    [LeetCode]: https://leetcode.com
+    [Reading 01]: reading01.html
+    [curl]: https://curl.haxx.se/
