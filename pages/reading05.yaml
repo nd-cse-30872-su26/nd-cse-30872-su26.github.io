@@ -1,0 +1,116 @@
+title:      "Reading 05: Trees"
+body:       |
+
+    **Everyone**:
+
+    Next week, we will work on problems related to [trees] and in particular
+    [binary trees], [heaps], and [binary search trees].  Understanding how to
+    represent, manipulate, and operating on these data structures will be
+    necessary to solve [Challenge 13], [Challenge 14], and [Challenge 15].
+
+    [Challenge 13]: challenge13.html
+    [Challenge 14]: challenge14.html
+    [Challenge 15]: challenge15.html
+
+    [trees]: https://en.wikipedia.org/wiki/Binary_tree
+    [binary trees]: https://en.wikipedia.org/wiki/Binary_tree
+    [heaps]: https://en.wikipedia.org/wiki/Heap_(data_structure)
+    [binary search trees]: https://en.wikipedia.org/wiki/Binary_search_tree
+
+    ## Reading
+
+    The readings for this week are:
+
+    1.  <div class="flex-col" markdown="1">
+
+        [Competitive Programmer's Handbook]
+
+        - Chapter 14 - Tree Algorithms
+        - Chapter 18 - Tree Queries
+
+    2.  <div class="flex-col" markdown="1">
+
+        [Data Structures Handbook](https://www.thedshandbook.com/)
+
+        - [Trees](https://www.thedshandbook.com/trees/)
+        - [Tree Traverals](https://www.thedshandbook.com/tree-traversals/)
+        - [Binary Trees](https://www.thedshandbook.com/binary-trees/)
+        - [Binary Search Trees](https://www.thedshandbook.com/binary-search-trees/)
+
+    [C++]:      https://isocpp.org/
+    [Python]:   https://www.python.org/
+
+    ## Quiz
+
+    Once you have done the readings, answer the following [Reading 05 Quiz]
+    questions:
+
+    <div id="quiz-questions"></div>
+
+    <div id="quiz-responses"></div>
+
+    <script src="static/js/dredd-quiz.js"></script>
+    <script>
+    loadQuiz('static/json/reading05.json');
+    </script>
+
+    <pre style="display: none;" id="dr-container" class="codehilite"><code id="dredd-response"></code></pre>
+
+    ## Submission
+
+    To submit you work, follow the same process outlined in [Reading 01]:
+
+        :::bash
+        $ git switch master                   # Make sure we are in master branch
+        $ git pull --rebase                   # Make sure we are up-to-date with github
+
+        $ git switch -c reading05             # Create reading05 branch and check it out
+
+        $ cd reading05                        # Go into reading05 folder
+        $ $EDITOR answers.json                # Edit your answers.json file
+
+        $ ../.scripts/check.py                # Check reading05 quiz
+        Checking reading05 quiz ...
+             Q01  7.00 /  7.00
+             Q02  5.00 /  5.00
+             Q03  9.00 /  9.00
+             Q04  9.00 /  9.00
+             Q05  9.00 /  9.00
+          --------------------
+           Score 39.00 / 39.00
+           Grade  1.00 /  1.00
+          Status Success
+
+        $ git add answers.json                # Add answers.json to staging area
+        $ git commit -m "Reading 05: Quiz"    # Commit work
+
+        $ git push -u origin reading05        # Push branch to github
+
+    <div class="alert warning-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "lifebuoy" | embed_icon }}</i> Acknowledgments
+
+    If you collaborated with any other students or received help from AI tools
+    on this assignment, please described this support in the **description** of
+    your **Pull Request**.
+
+    </div>
+
+    <div class="alert success-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "account-question" | embed_icon }}</i> Graders
+
+    Once you have committed your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the **instructor**.
+
+    </div>
+
+    [GitHub]: https://github.com
+    [Reading 01]: reading01.html
+    [Reading 05 Quiz]: static/json/reading05.json
+    [JSON]: http://www.json.org/
+    [git-branch]: https://git-scm.com/docs/git-branch
+    [dredd]: https://dredd.h4x0r.space
+    [Competitive Programmer's Handbook]:    https://cses.fi/book.html
+    [C++]: https://isocpp.org/
+    [Python]: https://www.python.org/
