@@ -1,0 +1,146 @@
+title:      "Challenge 13: Taeho's Tree"
+body:       |
+
+    <div class="flex-row" markdown="1">
+
+    <div class="flex-col" markdown="1">
+
+    When [Taeho] isn't busy working on crazy crypto research in his [DSP] lab,
+    he is most likely thinking of devious ways of *destroying* the students in
+    [algorithms] (or [discrete math]).  For example, he recently came up with the following challenge:
+
+    > Given a sequence of integers in ascending order, create a minimal binary
+    search tree (that is, the tree has the minimum necessary height) and
+    display all the nodes in the tree level by level.
+
+    Since most of his students have already taken [Data Structures], they
+    immediately suggested an approach that involves reading the sequence of
+    integers and inserting into a [binary search tree].  Once the [BST] is
+    constructed, it could be printed out by using a simple traversal.
+
+    [Taeho] smirked at this suggestion and politely said that while this works,
+    it runs in `O(nlogn)` time... and that there is a better approach that
+    utilizes [divide and conquer] to run in `O(N)` time.
+
+    You are to implement this more efficient version.
+
+    </div>
+
+    <div class="flex-col-25" markdown="1">
+      <img src="static/img/challenge13-taeho.jpg" class="responsive">
+    </div>
+
+    </div>
+
+    [Taeho]: https://sites.nd.edu/taeho-jung/
+    [DSP]: https://sites.nd.edu/taeho-jung/dsp-lab/
+    [algorithms]: https://en.wikipedia.org/wiki/Algorithm
+    [data structures]: https://en.wikipedia.org/wiki/Data_structure
+    [discrete math]: https://en.wikipedia.org/wiki/Discrete_mathematics
+    [binary search tree]: https://en.wikipedia.org/wiki/Binary_search_tree
+    [bst]: https://en.wikipedia.org/wiki/Binary_search_tree
+    [divide and conquer]: https://en.wikipedia.org/wiki/Divide_and_conquer_algorithm
+
+    ## Input
+
+    You will be given a series of lines, where each line contain a sequence of
+    integers in ascending order:
+
+    ### Example Input
+
+        :::text
+        0 1 2 3 4 5 6
+
+    ## Output
+
+    For each sequence of integers, you are to output the [binary search tree]
+    constructed from the sequence of integers by displaying all the nodes in
+    the [BST] level by level:
+
+    ### Example Output
+
+        :::text
+        3
+        1 5
+        0 2 4 6
+
+    <div class="alert danger-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "scale-balance" | embed_icon }}</i> Algorithmic Complexity
+
+    For each input test case, your solution should have the following targets:
+
+    <table class="bordered" markdown="1">
+    <tbody markdown="1">
+    <tr class="caution-bg" markdown="1">
+      <td width="165px" markdown="1">**Time Complexity**</td>
+      <td markdown="1">`O(N)`, where `N` is the number of nodes in each [BST].</td>
+    </tr>
+    <tr class="danger-bg" markdown="1">
+      <td markdown="1">**Space Complexity**</td>
+      <td markdown="1">`O(N)`, where `N` is the number of nodes in each [BST].</td>
+    </tr>
+    </tbody>
+    </table>
+
+    Your solution may be below the targets, but it **should not exceed them**.
+
+    </div>
+
+    ## Submission
+
+    To submit your work, follow the same procedure you used for [Reading 01]:
+
+        :::bash
+        $ cd path/to/cse-30872-su26-assignments     # Go to assignments repository
+        $ git switch master                         # Make sure we are on master
+        $ git pull --rebase                         # Pull any changes from GitHub
+
+        $ git switch -c challenge13                 # Create and checkout challenge13 branch
+
+        $ $EDITOR challenge13/program.cpp           # Edit your code
+
+        $ git add challenge13/program.cpp           # Stage your changes
+        $ git commit -m "Challenge 13: Code"        # Commit your changes
+
+        $ git push -u origin challenge13            # Send changes to GitHub
+
+    To check your code, you can use the `.scripts/check.py` script or [curl]:
+
+        :::bash
+        $ .scripts/check.py
+        Checking challenge13 program.cpp ...
+          Result Success
+            Time  0.16
+          --------------------
+           Score  6.00 /  6.00
+           Grade  1.00 /  1.00
+
+        $ curl -F source=@challenge13/program.cpp https://dredd.h4x0r.space/code/cse-30872-su26/challenge13
+        {"result": "Success", "score": 6, "time": 0.1645359992980957, "value": 6, "status": 0}
+
+    <div class="alert warning-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "lifebuoy" | embed_icon }}</i> Acknowledgments
+
+    If you collaborated with any other students or received help from AI tools
+    on this assignment, please described this support in the **description** of
+    your **Pull Request**.
+
+    </div>
+
+    <div class="alert success-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "account-question" | embed_icon }}</i> Graders
+
+    Once you have committed your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the **instructor**.
+
+    </div>
+
+    [GitHub]: https://github.com
+    [Reading 01]: reading01.html
+
+    [HackerRank]: https://www.hackerrank.com
+    [LeetCode]: https://leetcode.com
+    [curl]: https://curl.haxx.se/
