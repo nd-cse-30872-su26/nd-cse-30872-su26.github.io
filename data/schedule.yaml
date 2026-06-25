@@ -94,12 +94,16 @@
         items:
           - name:       Slides 08
             link:       https://docs.google.com/presentation/d/1pSUQstmIYDE0DuLJnsERgeOlHTxcGUw9PmuUDOcXQvQ/edit?usp=sharing
+          - name:       Panopto
+            link:       https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=dd162dad-99ea-46f8-918e-b47200199d8c
 
       - date:           Wed 06/24
         topics:         Table Building
         items:
           - name:       Slides 08
             link:       https://docs.google.com/presentation/d/1pSUQstmIYDE0DuLJnsERgeOlHTxcGUw9PmuUDOcXQvQ/edit?usp=sharing
+          - name:       Panopto
+            link:       https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=cac450c7-fdcc-4b0e-ac6a-b4740018deb9
 
       - date:           Sat 06/27
         topics:         Programming Challenges
