@@ -240,7 +240,7 @@ td.assignments {
 }
 
 input, select, option {
-    font-family: "Ubuntu Sans Mono", monospace;
+    font-family: "JetBrains Mono", monospace;
     font-size: 1rem;
     height: 2.0rem;
     border: 1px solid var(--foreground);
@@ -274,7 +274,7 @@ input[type=text] {
 }
 
 textarea {
-    font-family: "Ubuntu Sans Mono", monospace;
+    font-family: "JetBrains Mono", monospace;
     font-size: 1rem;
 }
 
