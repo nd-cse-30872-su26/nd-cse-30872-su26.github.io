@@ -1,0 +1,106 @@
+title:      "Reading 06: Graphs (Representation, Traversals, Shortest Paths, MSTs)"
+body:       |
+
+    **Everyone**:
+
+    Next week, we will work on problems related to [graphs] and will focus on
+    representing them, traversing them, computing the shortest path in a graph,
+    and forming a minimum spanning tree.  Understanding these concepts will be
+    necessary to solve [Challenge 16], [Challenge 17], and [Challenge 18].
+
+    [Challenge 16]: challenge16.html
+    [Challenge 17]: challenge17.html
+    [Challenge 18]: challenge18.html
+    [graphs]:       https://en.wikipedia.org/wiki/Graph_(abstract_data_type)
+
+    ## Reading
+
+    The readings for this week are:
+
+    1.  <div class="flex-col" markdown="1">
+
+        [Competitive Programmer's Handbook]
+
+        - Chapter 11 - Basics of graphs
+        - Chapter 12 - Graph traversal
+        - Chapter 13 - Shortest paths
+        - Chapter 15 - Spanning Trees
+
+    [C++]:      https://isocpp.org/
+    [Python]:   https://www.python.org/
+
+    ## Quiz
+
+    Once you have done the readings, answer the following [Reading 06 Quiz]
+    questions:
+
+    <div id="quiz-questions"></div>
+
+    <div id="quiz-responses"></div>
+
+    <script src="static/js/dredd-quiz.js"></script>
+    <script>
+    loadQuiz('static/json/reading06.json');
+    </script>
+
+    <pre style="display: none;" id="dr-container" class="codehilite"><code id="dredd-response"></code></pre>
+
+    ## Submission
+
+    To submit you work, follow the same process outlined in [Reading 01]:
+
+        :::bash
+        $ git switch master                   # Make sure we are in master branch
+        $ git pull --rebase                   # Make sure we are up-to-date with github
+
+        $ git switch -c reading06             # Create reading06 branch and check it out
+
+        $ cd reading06                        # Go into reading06 folder
+        $ $EDITOR answers.json                # Edit your answers.json file
+
+        $ ../.scripts/check.py                # Check reading06 quiz
+        Checking reading06 quiz ...
+             Q01  3.00 /  3.00
+             Q02  5.00 /  5.00
+             Q03  2.00 /  2.00
+             Q04  2.00 /  2.00
+             Q05  5.00 /  5.00
+             Q06  5.00 /  5.00
+          --------------------
+           Score 22.00 / 22.00
+           Grade  1.00 /  1.00
+          Status Success
+
+        $ git add answers.json                # Add answers.json to staging area
+        $ git commit -m "Reading 06: Quiz"    # Commit work
+
+        $ git push -u origin reading06        # Push branch to github
+
+    <div class="alert warning-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "lifebuoy" | embed_icon }}</i> Acknowledgments
+
+    If you collaborated with any other students or received help from AI tools
+    on this assignment, please described this support in the **description** of
+    your **Pull Request**.
+
+    </div>
+
+    <div class="alert success-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "account-question" | embed_icon }}</i> Graders
+
+    Once you have committed your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the **instructor**.
+
+    </div>
+
+    [GitHub]: https://github.com
+    [Reading 01]: reading01.html
+    [Reading 06 Quiz]: static/json/reading06.json
+    [JSON]: http://www.json.org/
+    [git-branch]: https://git-scm.com/docs/git-branch
+    [dredd]: https://dredd.h4x0r.space
+    [Competitive Programmer's Handbook]: https://cses.fi/book.html
+    [C++]: https://isocpp.org/
+    [Python]: https://www.python.org/

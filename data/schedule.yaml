@@ -130,7 +130,7 @@
       - date:           Mon 07/06
         topics:         Representation, Traversal
         assignments:
-          - Reading 05
+          - Reading 06
 
       - date:           Wed 07/08
         topics:         Shortest Paths, Spanning Trees
@@ -147,7 +147,7 @@
       - date:           Mon 07/13
         topics:         Topological Sorting
         assignments:
-          - Reading 05
+          - Reading 07
 
       - date:           Wed 07/15
         topics:         Paths, Flows
