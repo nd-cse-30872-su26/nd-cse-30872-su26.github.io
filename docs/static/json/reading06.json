@@ -1,0 +1,70 @@
+{
+    "q01": {
+        "type": "order",
+        "question": "\n<p>Match the <b>path</b> terms below to the following definitions:</p>\n\n<ol>\n  <li>Number of <b>edges</b> in a <b>path</b>.</li>\n  <li>When the first and last <b>node</b> in a <b>path</b> is the same.</li>\n  <li>When each <b>node</b> appears at most once in a <b>path</b>.</li>\n</ol>\n",
+        "responses": {
+            "cycle": "Cycle",
+            "length": "Length",
+            "simple": "Simple"
+        }
+    },
+    "q02": {
+        "type": "order",
+        "question": "\n<p>Match the <b>graph</b> terms below to the following definitions:</p>\n\n<ol>\n  <li>There exists a <b>path</b> between any two <b>nodes</b> in a <b>graph</b>.</li>\n  <li>When <b>edges</b> can only be traversed in one <b>direction</b>.</li>\n  <li>When each <b>edge</b> has a corresponding cost.</li>\n  <li>When every <b>node</b> has the same <b>degree</b>.</li>\n  <li>When every <b>node</b> has a <b>degree</b> <code>n - 1</code>.</li>\n</ol>\n",
+        "responses": {
+            "connected": "Connected",
+            "complete": "Complete",
+            "directed": "Directed",
+            "regular": "Regular",
+            "weighted": "Weighted"
+        }
+    },
+    "q03": {
+        "type": "multiple",
+        "question": "\n<p>Given the following <b>graph representations</b>:</p>\n\n<pre>\nGraph 1 (Adjacency Matrix)        Graph 2 (Adjacency List)\n0 1 0 1                           A: B D\n0 0 0 1                           B: A C D\n0 1 0 0                           C: B D\n0 0 1 0                           D: A B C\n</pre>\n\n<p>Which of the following statements are <b>true</b> (<i>choose all that\napply</i>)?</p>\n",
+        "responses": {
+            "graph1directed": "Graph <code>1</code> is <b>directed</b>.",
+            "graph2directed": "Graph <code>2</code> is <b>directed</b>.",
+            "graph1acyclic": "Graph <code>1</code> is <b>acyclic</b>.",
+            "graph2acyclic": "Graph <code>2</code> is <b>acyclic</b>.",
+            "graph1connected": "Graph <code>1</code> is <b>connected</b>.",
+            "graph2connected": "Graph <code>2</code> is <b>connected</b>."
+        }
+    },
+    "q04": {
+        "type": "multiple",
+        "question": "\n<p>Given Graph <code>1</code> (assume you have nodes labeled\n<code>A</code>, <code>B</code>, <code>C</code>, <code>D</code>) in\n<b>Question 3</b>, which of the following are valid <b>traversal orders</b>\nstarting from <code>A</code> (<i>choose all that apply</i>)?</p>\n",
+        "responses": {
+            "dfs1": "DFS: A, B, D, C",
+            "dfs2": "DFS: A, C, B, D",
+            "bfs1": "BFS: A, D, B, C",
+            "bfs2": "BFS: A, C, B, D"
+        }
+    },
+    "q05": {
+        "type": "multiple",
+        "question": "\n<p>Which of the following statements are <b>true</b> regarding\n<b>Dijkstra's algorithm</b> for finding shortest paths (<i>choose all that\napply</i>)?</p>\n",
+        "responses": {
+            "negative": "The algorithm requires that there are <b>no negative edge weights</b>.",
+            "efficient": "The algorithm is <b>efficient</b> and can proccess large graphs.",
+            "shortest": "The algorithm only computes the <b>shortest path</b> from one node to another specific node.",
+            "greedy": "The algorithm is an example of a <b>greedy algorithm</b>.",
+            "dynamic": "The algorithm is an example of <b>dynamic programming</b>.",
+            "priority": "The algorithm can be implemented with a <b>priority queue</b>."
+        }
+    },
+    "q06": {
+        "type": "multiple",
+        "question": "\n<p>Which of the following statements regarding <b>spanning trees</b> is\n<b>true</b> (<i>choose all that apply</i>)?</p>\n",
+        "responses": {
+            "spanning": "In a <b>spanning tree</b>, there is <b>path</b> between any two <b>nodes</b> in the <b>graph</b>.",
+            "acyclic": "<b>Spanning trees</b> are both <b>connected</b> and <b>acyclic</b>.",
+            "single": "There is usually only one way to form a <b>spanning tree</b>.",
+            "minimum": "A <b>minimum spanning tree</b> is a <b>spanning tree</b> that has the least amount of weight as possible.",
+            "maximum": "A <b>maximum spanning tree</b> is a <b>spanning tree</b> that has the most amount of edges as possible.",
+            "unique": "There is usually only one unique <b>minimum spanning tree</b> in a <b>graph</b>.",
+            "greedy": "We can use <b>greedy algorithms</b> to construct <b>minimum spanning trees</b>.",
+            "priority": "To implement <b>Prim's algorithm</b>, we can use a <b>priority queue</b>."
+        }
+    }
+}

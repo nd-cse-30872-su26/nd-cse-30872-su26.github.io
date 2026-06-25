@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="static/ico/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="static/ico/favicon-16x16.png">
+<link rel="manifest" href="static/ico/site.webmanifest">
+<!-- Stylesheets -->
+<link rel="stylesheet" href="static/css/pnutzh4x0r.css">
+<title>Challenge 15: Maximum Concurrency</title>
+</head>
+<body>
+<header>
+<a class="logo" href="challenge15.html">
+    <h1>Challenge 15: Maximum Concurrency</h1>
+</a>
+<nav>
+    <ul>
+        <li><a href="index.html"><h4>Home</h4></a></li>
+        </ul>
+</nav></header>
+<main>
+<div class="flex-row">
+<div class="flex-col">
+<p>While working for <a href="https://www3.nd.edu/~dthain/">Dr. Thain</a> in the <a href="http://ccl.cse.nd.edu/">Cooperative Computing Lab</a>, the
+instructor had to compose large scientific workflows that ran across many
+(ie. <strong>hundreds</strong>) of machines spread across the country in different
+compute clusters and data centers.  To maximize the efficiency of these
+large scale computations, it was necessary to determine if there were any
+concurrent structures and thus opportunities for parallelization.</p>
+<p>Fortunately, most scientific workflows involve composing many different
+utilities that perform a specialized task by taking the outputs of one
+program and using them as inputs to other utilities.  One way to visualize
+such workflows is by forming a tree or <a href="https://en.wikipedia.org/wiki/Directed_acyclic_graph">DAG</a> as shown below.</p>
+</div>
+<div class="flex-col-25">
+<p><img src="static/img/challenge15-ccl-mar2012-small.jpg" class="responsive"></p>
+</div>
+</div>
+<p>In the tree below, we have four levels of nodes:</p>
+<ol>
+<li>
+<p><strong>Level 1</strong>: This has the root node and has a width of <code>1</code>.</p>
+</li>
+<li>
+<p><strong>Level 2</strong>: This is the second level and has a width of <code>2</code> since it
+  only has the nodes <code>1</code> and <code>3</code>.</p>
+</li>
+<li>
+<p><strong>Level 3</strong>: This is the third level and has a width of <code>3</code> since it has
+  the nodes <code>4</code>, <code>6</code>, and <code>8</code>.</p>
+</li>
+<li>
+<p><strong>Level 4</strong>: This is the last level and has a with of <code>1</code>.</p>
+</li>
+</ol>
+<p>As can be seen, the <strong>maximum width</strong> of this tree is <code>3</code>.  This means if
+that if we were to execute this workflow on multiple machines, then we
+could have a maximum of <code>3</code> concurrent tasks (and thus only need <code>3</code>
+different machines for maximum efficiency).</p>
+<div class="centered">
+  <img src="static/img/challenge15-maximum-width.png" class="responsive">
+</div>
+
+<p>Since it has been a long time since the instructor has done anything
+related to <a href="https://dthain.github.io/distsys-sp23/">distributed systems</a>, your task is to read in workflows
+represented as binary trees and identify which level in each tree has the
+most nodes (and thus concurrency).</p>
+<h2 id="input">Input<a class="headerlink" href="#input" title="Permanent link">&para;</a></h2>
+<p>You will be given a series of workflows represented by binary trees in
+<a href="https://en.wikipedia.org/wiki/Tree_traversal#Pre-order,_NLR">pre-order traversal</a> order.</p>
+<h3 id="example-input">Example Input<a class="headerlink" href="#example-input" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>2 1 4 -1 -1 6 5 -1 -1 -1 3 -1 8 -1 -1
+</code></pre></div>
+
+<p>Note, the <code>-1</code> in the input denotes that there is no <code>Node</code> there (ie. <code>NULL</code>).</p>
+<h2 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h2>
+<p>For each workflow, determine where it has its maximum concurrency by
+finding the level with the most nodes in the binary tree and output a message
+in the following format:</p>
+<div class="codehilite"><pre><span></span><code>Level $MAX_LEVEL has the most nodes: $MAX_NODES
+</code></pre></div>
+
+<h3 id="example-output">Example Output<a class="headerlink" href="#example-output" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Level 3 has the most nodes: 3
+</code></pre></div>
+
+<p>Note, if there are multiple levels with the maximum number of nodes, then
+choose the level with the lowest value (ie. nearer to the root).</p>
+<div class="alert danger-bg">
+<h4 id="algorithmic-complexity"><i class="fa fa-balance-scale"></i> Algorithmic Complexity<a class="headerlink" href="#algorithmic-complexity" title="Permanent link">&para;</a></h4>
+<p>For each input test case, your solution should have the following targets:</p>
+<table class="bordered">
+<tbody>
+<tr class="caution-bg" width="165px">
+<td><strong>Time Complexity</strong></td>
+<td><code>O(N)</code>, where <code>N</code> is the number of nodes in the binary tree.</td>
+</tr>
+<tr class="warning-bg">
+<td><strong>Space Complexity</strong></td>
+<td><code>O(N)</code>, where <code>N</code> is the number of nodes in the binary tree.</td>
+</tr>
+</tbody>
+</table>
+<p>Your solution may be below the targets, but it <strong>should not exceed them</strong>.</p>
+</div>
+<h2 id="submission">Submission<a class="headerlink" href="#submission" title="Permanent link">&para;</a></h2>
+<p>To submit your work, follow the same procedure you used for <a href="reading01.html">Reading 01</a>:</p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>path/to/cse-30872-su26-assignments<span class="w">     </span><span class="c1"># Go to assignments repository</span>
+$<span class="w"> </span>git<span class="w"> </span>switch<span class="w"> </span>master<span class="w">                         </span><span class="c1"># Make sure we are on master</span>
+$<span class="w"> </span>git<span class="w"> </span>pull<span class="w"> </span>--rebase<span class="w">                         </span><span class="c1"># Pull any changes from GitHub</span>
+
+$<span class="w"> </span>git<span class="w"> </span>switch<span class="w"> </span>-c<span class="w"> </span>challenge15<span class="w">                 </span><span class="c1"># Create and checkout challenge15 branch</span>
+
+$<span class="w"> </span><span class="nv">$EDITOR</span><span class="w"> </span>challenge15/program.cpp<span class="w">           </span><span class="c1"># Edit your code</span>
+
+$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>challenge15/program.cpp<span class="w">           </span><span class="c1"># Stage your changes</span>
+$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;challenge15: done&quot;</span><span class="w">         </span><span class="c1"># Commit your changes</span>
+
+$<span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>challenge15<span class="w">            </span><span class="c1"># Send changes to GitHub</span>
+</code></pre></div>
+
+<p>To check your code, you can use the <code>.scripts/check.py</code> script or <a href="https://curl.haxx.se/">curl</a>:</p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>.scripts/check.py
+Checking<span class="w"> </span>challenge15<span class="w"> </span>program.cpp<span class="w"> </span>...
+<span class="w">  </span>Result<span class="w"> </span>Success
+<span class="w">    </span>Time<span class="w">  </span><span class="m">0</span>.00
+<span class="w">  </span>--------------------
+<span class="w">   </span>Score<span class="w">  </span><span class="m">6</span>.00<span class="w"> </span>/<span class="w">  </span><span class="m">6</span>.00
+<span class="w">   </span>Grade<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span>/<span class="w">  </span><span class="m">1</span>.00
+
+$<span class="w"> </span>curl<span class="w"> </span>-F<span class="w"> </span><span class="nv">source</span><span class="o">=</span>@challenge15/program.cpp<span class="w"> </span>https://dredd.h4x0r.space/code/cse-30872-su26/challenge15
+<span class="o">{</span><span class="s2">&quot;result&quot;</span>:<span class="w"> </span><span class="s2">&quot;Success&quot;</span>,<span class="w"> </span><span class="s2">&quot;score&quot;</span>:<span class="w"> </span><span class="m">6</span>,<span class="w"> </span><span class="s2">&quot;time&quot;</span>:<span class="w"> </span><span class="m">0</span>.0319976806640625,<span class="w"> </span><span class="s2">&quot;value&quot;</span>:<span class="w"> </span><span class="m">6</span>,<span class="w"> </span><span class="s2">&quot;status&quot;</span>:<span class="w"> </span><span class="m">0</span><span class="o">}</span>
+</code></pre></div>
+
+<div class="alert warning-bg">
+<h3 id="lifebuoy-embed_icon-acknowledgments"><i class="icon icon-medium"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>lifebuoy</title><path d="M19.79,15.41C20.74,13.24 20.74,10.75 19.79,8.59L17.05,9.83C17.65,11.21 17.65,12.78 17.06,14.17L19.79,15.41M15.42,4.21C13.25,3.26 10.76,3.26 8.59,4.21L9.83,6.94C11.22,6.35 12.79,6.35 14.18,6.95L15.42,4.21M4.21,8.58C3.26,10.76 3.26,13.24 4.21,15.42L6.95,14.17C6.35,12.79 6.35,11.21 6.95,9.82L4.21,8.58M8.59,19.79C10.76,20.74 13.25,20.74 15.42,19.78L14.18,17.05C12.8,17.65 11.22,17.65 9.84,17.06L8.59,19.79M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,8A4,4 0 0,0 8,12A4,4 0 0,0 12,16A4,4 0 0,0 16,12A4,4 0 0,0 12,8Z" /></svg>
+</i> Acknowledgments<a class="headerlink" href="#lifebuoy-embed_icon-acknowledgments" title="Permanent link">&para;</a></h3>
+<p>If you collaborated with any other students or received help from AI tools
+on this assignment, please described this support in the <strong>description</strong> of
+your <strong>Pull Request</strong>.</p>
+</div>
+<div class="alert success-bg">
+<h3 id="account-question-embed_icon-graders"><i class="icon icon-medium"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>account-question</title><path d="M13,8A4,4 0 0,1 9,12A4,4 0 0,1 5,8A4,4 0 0,1 9,4A4,4 0 0,1 13,8M17,18V20H1V18C1,15.79 4.58,14 9,14C13.42,14 17,15.79 17,18M20.5,14.5V16H19V14.5H20.5M18.5,9.5H17V9A3,3 0 0,1 20,6A3,3 0 0,1 23,9C23,9.97 22.5,10.88 21.71,11.41L21.41,11.6C20.84,12 20.5,12.61 20.5,13.3V13.5H19V13.3C19,12.11 19.6,11 20.59,10.35L20.88,10.16C21.27,9.9 21.5,9.47 21.5,9A1.5,1.5 0 0,0 20,7.5A1.5,1.5 0 0,0 18.5,9V9.5Z" /></svg>
+</i> Graders<a class="headerlink" href="#account-question-embed_icon-graders" title="Permanent link">&para;</a></h3>
+<p>Once you have committed your work and pushed it to <a href="https://github.com">GitHub</a>, remember to
+create a <strong>pull request</strong> and assign it to the <strong>instructor</strong>.</p>
+</div>
+</main>
+<footer>
+Built using <a href="https://python.org">Python</a>
+and <a href="https://jinja.palletsprojects.com">Jinja</a>
+with colors from <a href="https://nordtheme.com">Nord Theme</a>
+and icons from <a href="https://pictogrammers.com/library/mdi/">Material Design Icons</a>.</footer>
+</body>
+</html>
