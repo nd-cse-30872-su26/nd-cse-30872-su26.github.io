@@ -125,7 +125,7 @@ body:       |
         $ $EDITOR challenge15/program.cpp           # Edit your code
 
         $ git add challenge15/program.cpp           # Stage your changes
-        $ git commit -m "challenge15: done"         # Commit your changes
+        $ git commit -m "Challenge 15: Code"        # Commit your changes
 
         $ git push -u origin challenge15            # Send changes to GitHub
 
