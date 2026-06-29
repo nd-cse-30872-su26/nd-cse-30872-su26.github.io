@@ -118,9 +118,15 @@
         topics:         Representation, Traversal
         assignments:
           - Reading 05
+        items:
+          - name:       Slides 09
+            link:       https://docs.google.com/presentation/d/1JuJwCFyoeqcOJFNLLjmgiBXi54diUTX6mRwau7moIy0/edit?usp=sharing
 
       - date:           Wed 07/01
         topics:         Divide and Conquer
+        items:
+          - name:       Slides 09
+            link:       https://docs.google.com/presentation/d/1JuJwCFyoeqcOJFNLLjmgiBXi54diUTX6mRwau7moIy0/edit?usp=sharing
 
       - date:           Sat 07/04
         topics:         Programming Challenges
@@ -135,9 +141,15 @@
         topics:         Representation, Traversal
         assignments:
           - Reading 06
+        items:
+          - name:       Slides 10
+            link:       https://docs.google.com/presentation/d/1Ov_aLfQeEeEpHj9RxuclWx947RnK14gTh24r0oJLoIM/edit?usp=sharing
 
       - date:           Wed 07/08
         topics:         Shortest Paths, Spanning Trees
+        items:
+          - name:       Slides 10
+            link:       https://docs.google.com/presentation/d/1Ov_aLfQeEeEpHj9RxuclWx947RnK14gTh24r0oJLoIM/edit?usp=sharing
 
       - date:           Sat 07/11
         topics:         Programming Challenges
@@ -152,9 +164,15 @@
         topics:         Topological Sorting
         assignments:
           - Reading 07
+        items:
+          - name:       Slides 11
+            link:       https://docs.google.com/presentation/d/1dpqMXUG_w7SstoACdrUhh94ckX9OOxYQHaiiNv8jolA/edit?usp=sharing
 
       - date:           Wed 07/15
         topics:         Paths, Flows
+        items:
+          - name:       Slides 11
+            link:       https://docs.google.com/presentation/d/1dpqMXUG_w7SstoACdrUhh94ckX9OOxYQHaiiNv8jolA/edit?usp=sharing
 
       - date:           Sat 07/18
         topics:         Programming Challenges
