@@ -194,6 +194,7 @@ blockquote {
 
 code {
     color: var(--code);
+    font-family: "JetBrains Mono", monospace;
     font-weight: bold;
 }
 
