@@ -1,0 +1,63 @@
+{
+    "q01": {
+        "type": "blank",
+        "question": "\n<p>A <b>(1)</b> ____ is an ordering of nodes in a <b>(2)</b> ____ graph\nsuch that if there is a path from a node <code>a</code> to node\n<code>b</code>, then node <code>a</code> appears <b>(3)</b> ____\n<code>b</code> in the ordering.  An <b>(4)</b> ____ graph always has at\nleast one such ordering.  According to Wikipedia, we can use <b>(5)</b>\n____'s algorithm compute this ordering of nodes in a graph.</p>\n"
+    },
+    "q02": {
+        "type": "multiple",
+        "question": "\n<p>Given the following graph, which of the following orders are <b>topological\nsorts</b> (</i>choose all that apply</i>)?</p>\n\n<div class=\"centered\">\n<img src=\"static/img/reading07-tsort.png\">\n</div>\n",
+        "responses": {
+            "one": "A, B, C, D, E, F, G, H",
+            "two": "C, A, B, E, D, F, G, H",
+            "three": "A, B, C, E, D, H, G, F",
+            "four": "B, A, D, C, H, E, G, F",
+            "five": "A, B, D, F, C, E, G, H",
+            "six": "C, B, E, A, D, H, F, G",
+            "seven": "A, D, H, F, G, E, B, C",
+            "eight": "B, A, D, F, C, G, H, E"
+        }
+    },
+    "q03": {
+        "type": "blank",
+        "question": "\n<p>A path that goes through each edge exactly once is called an <b>(1)</b>\n____ path, while a path that visits each node exactly once is a <b>(2)</b> ____ path.\nA variant of either type of path that starts and ends at the same node is\ncalled a <b>(3)</b> ____.</p>\n\n<p>While there are efficient methods of determining if the former exists in\na graph, the existence of the latter is considered a <b>(4)</b> ____\nproblem, where no efficient algorithm is known for solving the problem.</p>\n"
+    },
+    "q04": {
+        "type": "multiple",
+        "question": "\n<p>For an <b>Eulerian path</b> to exist in a graph, which of the following\nconditions are sufficient (<i>choose all that apply</i>)?</p>\n",
+        "responses": {
+            "even": "The <b>degree</b> of each node is even.",
+            "odd_even": "The <b>degree</b> of exactly two nodes is odd, and the degree of all other nodes is even.",
+            "odd": "The <b>degree</b> of each node is odd.",
+            "even_odd": "The <b>degree</b> of exactly two nodes is even, and the degree of all other nodes is odd."
+        }
+    },
+    "q05": {
+        "type": "multiple",
+        "question": "\n<p>For a <b>Hamiltonian path</b> to exist in a graph, which of the\nfollowing conditions are sufficient (<i>choose all that apply</i>)?</p>\n",
+        "responses": {
+            "complete": "The <b>graph</b> is complete.",
+            "connected": "The <b>graph</b> is connected.",
+            "degree": "The <b>degree</b> of each node is at least n/2.",
+            "sum": "The sum of the <b>degrees</b> of each non-adjacent pair of nodes is at least n.",
+            "even": "The <b>degree</b> of each node is even."
+        }
+    },
+    "q06": {
+        "type": "multiple",
+        "question": "\n<p>Given the following graph, which of the following statements is\n<b>true</b> (<i>choose all that apply</i>)?</p>\n\n<div class=\"centered\">\n  <img src=\"static/img/reading07-euler.png\">\n</div>\n",
+        "responses": {
+            "epath": "There is an <b>Eulerian path</b>.",
+            "ecircuit": "There is an <b>Eulerian circuit</b>.",
+            "hpath": "There is an <b>Hamiltonian path</b>.",
+            "hcircuit": "There is an <b>Hamiltonian circuit</b>."
+        }
+    },
+    "q07": {
+        "type": "blank",
+        "question": "\n<p>In a <b>(1)</b> ____ problem, we are interested in determining how much\nflow is possible to send from the <b>(2)</b> ____ to the <b>(3)</b> ____,\nwhile in a <b>(4)</b> ____ problem, we want to know the <b>(5)</b> ____ set\nof edges that separates the two nodes of the graph.</p>\n"
+    },
+    "q08": {
+        "type": "blank",
+        "question": "\n<p>Given the following graph:</p>\n\n<div class=\"centered\">\n  <img src=\"static/img/reading07-flow.png\">\n</div>\n\n<ol>\n  <li>What is the <b>maximum flow</b> from <code>1</code> to <code>5</code>? ____</li>\n  <li>What is the <b>minimum cut</b> from <code>1</code> to <code>5</code>? ____</li>\n  <li>How many edges are in the <b>minimum cut</b>? ____</li>\n</ol>\n"
+    }
+}

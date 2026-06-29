@@ -1,0 +1,110 @@
+title:      "Reading 07: Graphs (Sorting, Paths, Flows)"
+body:       |
+
+    **Everyone**:
+
+    Next week, we will work on more problems related to [graphs] and will focus
+    on [topological sort], [hamiltonian paths], and [min-flow/max-cut]
+    problems.  Understanding these concepts will be necessary to solve
+    [Challenge 19], [Challenge 20], and [Challenge 21].
+
+    [Challenge 19]: challenge19.html
+    [Challenge 20]: challenge20.html
+    [Challenge 21]: challenge21.html
+    [graphs]:       https://en.wikipedia.org/wiki/Graph_(abstract_data_type)
+    [topological sort]: https://en.wikipedia.org/wiki/Topological_sorting
+    [hamiltonian paths]: https://en.wikipedia.org/wiki/Hamiltonian_path
+    [min-flow/max-cut]: https://en.wikipedia.org/wiki/Max-flow_min-cut_theorem
+
+    ## Reading
+
+    The readings for this week are:
+
+    1.  <div class="flex-col" markdown="1">
+
+        [Competitive Programmer's Handbook]
+
+        - Chapter 16 - Directed Graphs
+        - Chapter 19 - Paths and circuits
+        - Chapter 20 - Flows and cuts
+
+    [C++]:      https://isocpp.org/
+    [Python]:   https://www.python.org/
+
+    ## Quiz
+
+    Once you have done the readings, answer the following [Reading 07 Quiz]
+    questions:
+
+    <div id="quiz-questions"></div>
+
+    <div id="quiz-responses"></div>
+
+    <script src="static/js/dredd-quiz.js"></script>
+    <script>
+    loadQuiz('static/json/reading07.json');
+    </script>
+
+    <pre style="display: none;" id="dr-container" class="codehilite"><code id="dredd-response"></code></pre>
+
+    ## Submission
+
+    To submit you work, follow the same process outlined in [Reading 01]:
+
+        :::bash
+        $ git switch master                   # Make sure we are in master branch
+        $ git pull --rebase                   # Make sure we are up-to-date with github
+
+        $ git switch -c reading07             # Create reading07 branch and check it out
+
+        $ cd reading07                        # Go into reading07 folder
+        $ $EDITOR answers.json                # Edit your answers.json file
+
+        $ ../.scripts/check.py                # Check reading07 quiz
+        Checking reading07 quiz ...
+             Q01  5.00 /  5.00
+             Q02  6.00 /  6.00
+             Q03  4.00 /  4.00
+             Q04  2.00 /  2.00
+             Q05  3.00 /  3.00
+             Q06  3.00 /  3.00
+             Q07  5.00 /  5.00
+             Q08  3.00 /  3.00
+          --------------------
+           Score 31.00 / 31.00
+           Grade  1.00 /  1.00
+          Status Success
+
+        $ git add answers.json                # Add answers.json to staging area
+        $ git commit -m "Reading 07: Quiz"    # Commit work
+
+        $ git push -u origin reading07        # Push branch to github
+
+    <div class="alert warning-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "lifebuoy" | embed_icon }}</i> Acknowledgments
+
+    If you collaborated with any other students or received help from AI tools
+    on this assignment, please described this support in the **description** of
+    your **Pull Request**.
+
+    </div>
+
+    <div class="alert success-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "account-question" | embed_icon }}</i> Graders
+
+    Once you have committed your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the **instructor**.
+
+    </div>
+
+    [GitHub]: https://github.com
+    [Reading 01]: reading01.html
+    [Reading 07 Quiz]: static/json/reading07.json
+    [JSON]: http://www.json.org/
+    [git-branch]: https://git-scm.com/docs/git-branch
+    [dredd]: https://dredd.h4x0r.space
+    [Competitive Programmer's Handbook]: https://cses.fi/book.html
+    [C++]: https://isocpp.org/
+    [Python]: https://www.python.org/
