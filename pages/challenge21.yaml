@@ -1,0 +1,173 @@
+title:      "Challenge 21: Maximum Bandwidth"
+body:       |
+
+    <div class="flex-row" markdown="1">
+
+    <div class="flex-col" markdown="1">
+
+    [OIT] needs your help.  [eduroam] is having some problems [^1] and the
+    network engineers at [OIT] want you to help them figure out if their
+    current network configuration has enough *bandwidth* to send data from a
+    particular *source* to a specific *destination*.  If not, then they can add
+    some more <strike>NSA</strike> wireless routers to give a better user
+    experience [^2].  Otherwise, they can blame it on [nargles].
+
+    For instance, given the network on the right, we have four nodes and five
+    connections with varying bandwidth capacities.  For instance, node `1` and
+    `2` have a bandwidth of `20` and node `3` and node `1` have a bandwidth of
+    `10`.  The total maximum bandwidth between the *source* (`1`) and the
+    *destination* (`4`) is `25`.  This is because we can send bandwidth `10`
+    along the path `1-2-4`, `10` along the path `1-3-4`, and `5` along the path
+    `1-2-3-4`, for a total of `25`.
+
+    </div>
+
+    <div class="flex-col-33 centered" markdown="1">
+      <img src="static/img/challenge21-bandwidth.png" class="responsive">
+    </div>
+
+    </div>
+
+    Your mission is to write a program that computes the maximum bandwidth
+    between two given nodes in a network.  For this problem, you can assume
+    that the bandwidth of a connection is always the same in both directions
+    (which is not necessarily true in the real world).
+
+    <div class="alert info-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "trophy" | embed_icon }}</i> Programming Challenges
+
+    This is based on [820 - Internet Bandwidth] problem on the [UVa Online Judge].
+
+    </div>
+
+    [820 - Internet Bandwidth]: https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=761
+    [UVa Online Judge]: https://uva.onlinejudge.org/
+
+    [OIT]: https://oit.nd.edu/
+    [eduroam]: https://www.eduroam.org/
+    [nargles]: https://en.wikipedia.org/wiki/Magical_creatures_in_Harry_Potter#Luna_Lovegood.27s_creatures
+    [^1]: Quelle surprise.
+    [^2]: We can only wish.
+
+    ## Input
+
+    You will be given a series of networks.  The first line of the input
+    specifies the number of nodes in the network (`2 <= n <= 100`).  This is
+    followed by a line that contains the *source*, *target*, and total number
+    of *connections*.  After this, you will be given the specification for each
+    *connection* in the form of *node 1*, *node 2*, and *capacity*.
+
+    The final network will specify `0` nodes and should not be displayed.
+
+    <div class="alert warning-bg" markdown="1">
+
+    **Note**: All connections are bi-directional, and there may be multiple
+    connections between a pair of nodes (but a node cannot connect to itself).
+
+    </div>
+
+    ### Example Input
+
+    This is the sample input that corresponds to the image above:
+
+        :::text
+        4
+        1 4 5
+        1 2 20
+        1 3 10
+        2 3 5
+        2 4 10
+        3 4 20
+        0
+
+    ## Output
+
+    For each network configuration, print the network number (starting with `1`)
+    and the maximum bandwidth as shown below.
+
+    ### Example Output
+
+        :::text
+        Network 1: Bandwidth is 25.
+
+    <div class="alert danger-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "scale-balance" | embed_icon }}</i> Algorithmic Complexity
+
+    For each input test case, your solution should have the following targets:
+
+    <table class="bordered" markdown="1">
+    <tbody markdown="1">
+    <tr class="caution-bg" markdown="1">
+      <td width="165px" markdown="1">**Time Complexity**</td>
+      <td markdown="1">`O(VE^2)`, where `V` is the number of vertices and `E` is the number of edges in the graph.</td>
+    </tr>
+    <tr class="caution-bg" markdown="1">
+      <td markdown="1">**Space Complexity**</td>
+      <td markdown="1">`O(V+E)`, where `V` is the number of vertices and `E` is the number of edges in the graph.</td>
+    </tr>
+    </tbody>
+    </table>
+
+    Your solution may be below the targets, but it **should not exceed them**.
+
+    </div>
+
+    ## Submission
+
+    To submit your work, follow the same procedure you used for [Reading 01]:
+
+        :::bash
+        $ cd path/to/cse-30872-su26-assignments     # Go to assignments repository
+        $ git switch master                         # Make sure we are on master
+        $ git pull --rebase                         # Pull any changes from GitHub
+
+        $ git switch -c challenge21                 # Create and checkout challenge21 branch
+
+        $ $EDITOR challenge21/program.py            # Edit your code
+
+        $ git add challenge21/program.py            # Stage your changes
+        $ git commit -m "Challenge 21: Code"        # Commit your changes
+
+        $ git push -u origin challenge21            # Send changes to GitHub
+
+    To check your code, you can use the `.scripts/check.py` script or [curl]:
+
+        :::bash
+        $ .scripts/check.py
+        Checking challenge21 program.py ...
+          Result Success
+            Time  0.03
+          --------------------
+           Score  6.00 /  6.00
+           Grade  1.00 /  1.00
+
+        $ curl -F source=@challenge21/program.cpp https://dredd.h4x0r.space/code/cse-30872-su26/challenge21
+        {"result": "Success", "score": 6, "time": 0.06403017044067383, "value": 6, "status": 0}
+
+    <div class="alert warning-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "lifebuoy" | embed_icon }}</i> Acknowledgments
+
+    If you collaborated with any other students or received help from AI tools
+    on this assignment, please described this support in the **description** of
+    your **Pull Request**.
+
+    </div>
+
+    <div class="alert success-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "account-question" | embed_icon }}</i> Graders
+
+    Once you have committed your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the **instructor**.
+
+    </div>
+
+    [GitHub]: https://github.com
+    [Reading 01]: reading01.html
+
+    [HackerRank]: https://www.hackerrank.com
+    [LeetCode]: https://leetcode.com
+    [curl]: https://curl.haxx.se/
